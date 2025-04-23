@@ -18,7 +18,23 @@
         <script>
             // Wait 500ms to ensure GA loads, then redirect
             setTimeout(function () {
-            window.location.href = "https://www.eventbrite.com/e/misconduct-comedy-stand-up-showcase-misconduct-tavern-tickets-1319761294559";
+                // Get UTM parameters from the current URL
+                const currentParams = new URLSearchParams(window.location.search);
+                const utmParams = new URLSearchParams();
+        
+                // Copy only UTM parameters
+                for (const [key, value] of currentParams.entries()) {
+                    if (key.startsWith('utm_')) {
+                        utmParams.set(key, value);
+                    }
+                }
+        
+                // Build final URL with UTM parameters added
+                const baseUrl = "https://www.eventbrite.com/e/misconduct-comedy-stand-up-showcase-misconduct-tavern-tickets-1319761294559";
+                const finalUrl = utmParams.toString() ? `${baseUrl}?${utmParams.toString()}` : baseUrl;
+        
+                // Redirect
+                window.location.href = finalUrl;
             }, 500);
         </script>
     </head>
