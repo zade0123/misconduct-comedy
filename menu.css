@@ -1,0 +1,126 @@
+@media only screen and (min-width: 0rem) {
+  :root {
+    --primary: #083242;
+    --secondary: #1A5C74;
+    --text: #EEDFC5;
+  }
+
+  @font-face {
+        font-display: swap;
+        font-family: 'Smythe';
+        font-style: normal;
+        font-weight: 400;
+        src: url('/Smythe-Regular.ttf') format('truetype');
+    }
+
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+        font-size: 100%;
+        font-family: 'Roboto', Arial, sans-serif;
+        color: var(--bodyTextColor);
+        overflow-x: hidden;
+    }
+    *,
+    *:before,
+    *:after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .cs-body {
+        margin: auto;
+        margin-top: 5vh;
+        background-color: #000;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .cs-background {
+        position: absolute; 
+        top: -5%; 
+        left: 0%; 
+        width: 100vw; 
+        height: 105vh; 
+        object-fit: cover; 
+        z-index: -1; 
+        pointer-events: none; 
+        opacity: 0.3;
+    }
+
+    .cs-logo {
+        width: 300px;
+        align-self: center;
+    }
+
+    .cs-button-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .cs-button {
+        font-family: 'Smythe', sans-serif;
+        font-size: 32px;
+        text-align: center;
+        color: var(--text);
+        background-color: var(--primary);
+        padding: 6px 20px;
+        border-radius: 20px;
+        border: solid 5px var(--secondary);
+        text-decoration: none;
+        box-shadow: #000 0px 0px 10px;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+
+        &:hover {
+            background-color: var(--secondary);
+            border-color: var(--primary);
+        }
+    }
+
+    .cs-socials-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .cs-text {
+        font-family: 'Smythe', sans-serif;
+        font-size: 36px;
+        font-weight: 00;
+        line-height: 1.5em;
+        max-width: 450px;
+        text-shadow: #000 0px 0px 10px;
+        margin: none;
+        text-align: center;
+        color: var(--text);
+        text-decoration: none;
+    }
+
+    .cs-insta-button {
+        font-family: 'Smythe', sans-serif;
+        font-size: 32px;
+        color: var(--text);
+        background-color: var(--primary);
+        padding: 6px 20px;
+        border-radius: 20px;
+        border: solid 5px var(--secondary);
+        text-decoration: none;
+        box-shadow: #000 0px 0px 10px;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+
+        &:hover {
+            background-color: var(--secondary);
+            border-color: var(--primary);
+        }
+    }
+}
