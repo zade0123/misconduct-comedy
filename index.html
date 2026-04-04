@@ -12,6 +12,10 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/logo 100px.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/logo 100px.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/logo 100px.png">
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap" rel="stylesheet">
 
         <style>
             @font-face {
@@ -28,38 +32,241 @@
 
         gtag('config', 'G-H7GJ0KWS9R');
         </script>
-
-        <script>
-            // Wait 500ms to ensure GA loads, then redirect
-            setTimeout(function () {
-                // Get UTM parameters from the current URL
-                const currentParams = new URLSearchParams(window.location.search);
-                const utmParams = new URLSearchParams();
-        
-                // Copy only UTM parameters
-                for (const [key, value] of currentParams.entries()) {
-                    if (key.startsWith('utm_')) {
-                        utmParams.set(key, value);
-                    }
-                }
-        
-                // Build final URL with UTM parameters added
-                const baseUrl = "https://www.eventbrite.com/e/misconduct-comedy-show-featuring-philadelphias-best-standup-acts-tickets-1984188025798?aff=websiteunattributed";
-                const finalUrl = utmParams.toString() ? `${baseUrl}?${utmParams.toString()}` : baseUrl;
-        
-                // Redirect
-                window.location.href = finalUrl;
-            }, 500);
-        </script>
+        <title>Misconduct Comedy - Philadelphia's Best Stand-Up Shows</title>
     </head>
-    <body style="margin: 100px; background-color: #000; display: flex; flex-direction:column; gap: 40px; justify-content: center; align-items: center; overflow:hidden;">
+    <body>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <img src="/Misconduct Comedy Logo with Border - 750px.png" alt="Misconduct Comedy Logo" class="hero-logo">
+                <h1>PHILLY'S FUNNIEST<br>LIVE COMEDY SHOW</h1>
+                <p>Need date night plans? Or just a fun hang with friends? Misconduct Comedy has got you covered with Philly's best comedians in a cozy venue.</p>
+            </div>
+        </section>
 
-        <img src="/waves 2.svg" alt="Background Waves" style="position: absolute; top: -5%; left: 0%; width: 100vw; height: 110vh; object-fit: cover; z-index: -1; pointer-events: none; opacity: 0.4;" />
+        <!-- Shows Section -->
+        <section class="shows-section">
+            <h2>UPCOMING SHOWS</h2>
+            
+            <div class="show-card">
+                <span class="badge">Selling Fast</span>
+                <div class="card-content">
+                    <div class="show-image">
+                        <img src="/photos/specific/connorandjosh.png" alt="Show">
+                    </div>
+                    <div class="show-info">
+                        <h3>Double Trouble Special!<br>with Josh Martier and Connor Lutz</h3>
+                        <div class="show-details">
+                            <span>Co-Headliners</span>
+                            <span>21+</span>
+                        </div>
+                        <h4>Friday, April 10 • 8:00 PM</h4>
+                    </div>
+                    <div class="show-tickets">
+                        <a href="https://www.eventbrite.com/e/misconduct-comedy-double-trouble-special-with-josh-martier-connor-lutz-tickets-1985772133908?aff=websiteunattributed" class="btn-tickets" target="_blank">BUY 8:00 PM TICKETS</a>
+                    </div>
+                </div>
+            </div>
 
-        <!-- Replace the SVG below with your actual logo -->
-        <?xml version="1.0" encoding="UTF-8"?>
-        <img src="/misconduct logo border.svg" width="300px" align-self="center">
-        <img src="/redirect.svg" width="300px" align-self="center">
-      
-      </body>
+            <div class="show-card">
+                <div class="card-content">
+                    <div class="show-image">
+                        <img src="/photos/GeorgeM.webp" alt="Show">
+                    </div>
+                    <div class="show-info">
+                        <h3>Misconduct Comedy Showcase</h3>
+                        <div class="show-details">
+                            <span>Showcase</span>
+                            <span>21+</span>
+                        </div>
+                        <h4>Saturday, April 11 • 8:00 PM</h4>
+                    </div>
+                    <div class="show-tickets">
+                        <a href="https://www.eventbrite.com/e/misconduct-comedy-show-featuring-philadelphias-best-standup-acts-tickets-1986276081228?aff=websiteunattributed" class="btn-tickets" target="_blank">BUY 8:00 PM TICKETS</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="show-card">
+                <div class="card-content">
+                    <div class="show-image">
+                        <img src="/photos/JakeL.webp" alt="Show">
+                    </div>
+                    <div class="show-info">
+                        <h3>Misconduct Comedy Showcase</h3>
+                        <div class="show-details">
+                            <span>Showcase</span>
+                            <span>21+</span>
+                        </div>
+                        <h4>Saturday, April 25 • 8:00 PM</h4>
+                    </div>
+                    <div class="show-tickets">
+                        <a href="https://www.eventbrite.com/e/misconduct-comedy-show-featuring-philadelphias-best-standup-acts-tickets-1986700976100?aff=websiteunattributed" class="btn-tickets" target="_blank">BUY 8:00 PM TICKETS</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="show-card show-card-disabled">
+                <div class="card-content">
+                    <div class="show-image">
+                        <img src="/photos/SavionJ.webp" alt="Show">
+                    </div>
+                    <div class="show-info">
+                        <h3>Double Trouble Special!<br>with Dru Montana & Na'im Ali</h3>
+                        <div class="show-details">
+                            <span>Co-Headliners</span>
+                            <span>21+</span>
+                        </div>
+                        <h4>Friday, May 8 • 7:30 PM & 9:30 PM</h4>
+                    </div>
+                    <div class="show-tickets">
+                        <span class="coming-soon">COMING SOON</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="show-card show-card-disabled">
+                <div class="card-content">
+                    <div class="show-image">
+                        <img src="/photos/ShanaH.webp" alt="Show">
+                    </div>
+                    <div class="show-info">
+                        <h3>Misconduct Comedy Showcase</h3>
+                        <div class="show-details">
+                            <span>Showcase</span>
+                            <span>21+</span>
+                        </div>
+                        <h4>Saturday, May 9 • 8:00 PM</h4>
+                    </div>
+                    <div class="show-tickets">
+                        <span class="coming-soon">COMING SOON</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <h2>ABOUT MISCONDUCT COMEDY</h2>
+            <div class="about-intro">
+                <p>Misconduct Comedy brings you Philadelphia's best stand-up comedy shows in the heart of Center City. Whether you're looking for the perfect date night or a fun outing with friends, our shows feature a mix of local favorites and touring headliners in an intimate, laid-back setting.</p>
+            </div>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">📍</div>
+                    <h3>The Venue</h3>
+                    <p><strong>Misconduct Tavern</strong><br><a href="https://maps.google.com/?q=1511+Locust+Street,+Philadelphia+PA+19102" target="_blank" class="venue-address">1511 Locust Street, Philadelphia PA 19102</a><br>Cozy bar setting with full drink menu and great atmosphere for comedy.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎭</div>
+                    <h3>What to Expect</h3>
+                    <p>All of our shows run 75-90 minutes. Our showcases feature 5-7 talented local comedians and rising stars, while our Double Trouble Specials feature co-headliners doing extended 30-minute sets.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🎟️</div>
+                    <h3>Show Details</h3>
+                    <p><strong>Age:</strong> 21+<br><strong>Seating:</strong> First come, first served<br><strong>Doors:</strong> 30 minutes before showtime<br>Arrive early for best seats!<br><strong>Food/Drink:</strong> Full Menu is available 30 minutes before showtime</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+            
+            <div class="faq-item">
+                <h3>Is there an age limit?</h3>
+                <p>Yes, all attendees must be 21+ with a valid ID. This is strictly enforced at the door.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>How long is the show?</h3>
+                <p>All of our shows run between 75-90 minutes. There is no intermission.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I bring a group?</h3>
+                <p>Absolutely! Groups are welcome. Since seating is first come, first served, we recommend arriving early to ensure your group can sit together.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Is there an item minimum?</h3>
+                <p>There is a 2-item minimum and a bartender will be available for patrons to order food & drinks.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Can I buy tickets at the door?</h3>
+                <p>We recommend purchasing tickets in advance as many shows sell out. If tickets are available, they may be purchased at the door for an additional fee.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>If it's sold out, can I still attend?</h3>
+                <p>Yes! We will be offering a small amount of tickets available at the door for $20, however we cannot guarantee that your party will be seated together.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What is the refund policy?</h3>
+                <p>All sales are final. No refunds or exchanges. If you cannot attend, you may be able to receive a refund by contacting us at hausofcomedy@gmail.com.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Where can I park?</h3>
+                <p>Street parking is available in the area, and there are several paid parking garages nearby. We recommend arriving with extra time to find parking.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h2>GET IN TOUCH</h2>
+            <div class="contact-content">
+                <div class="contact-intro">
+                    <p>Have questions about our shows? Want to book a private event? Looking to get your comedy group on our stage? We'd love to hear from you!</p>
+                </div>
+                <div class="contact-options">
+                    <div class="contact-item">
+                        <svg class="contact-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <h3>Email Us</h3>
+                        <p><a href="mailto:hausofcomedy@gmail.com">hausofcomedy@gmail.com</a></p>
+                        <p class="contact-desc">We typically respond within 24 hours</p>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                        <h3>Follow Us</h3>
+                        <p><a href="https://www.instagram.com/misconductcomedy" target="_blank">@misconductcomedy</a></p>
+                        <p class="contact-desc">Stay updated on upcoming shows and behind-the-scenes content</p>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        <h3>Performer Inquiries</h3>
+                        <p>Interested in performing at Misconduct Comedy?</p>
+                        <p class="contact-desc">Send us your bio and recent set videos</p>
+                    </div>
+                    <div class="contact-item">
+                        <svg class="contact-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        <h3>Private Events</h3>
+                        <p>Looking to book a private comedy show?</p>
+                        <p class="contact-desc">Contact us for availability and pricing</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Misconduct Comedy. All rights reserved.</p>
+        </footer>
+    </body>
 </html>
