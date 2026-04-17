@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update (or master)
+
+# Uncomment to use local backend for development
+# local_backend: true
+
+media_folder: "src/photos/blog" # Media files will be stored here
+public_folder: "/photos/blog" # The public path to media files
+
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog Posts" # Used in the UI
+    folder: "src/blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template
+    fields: # The fields for each document
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog-post.njk"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Excerpt", name: "excerpt", widget: "text", required: false}
+      - {label: "Featured Image", name: "featuredImage", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}

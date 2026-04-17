@@ -1,0 +1,75 @@
+---
+layout: base.njk
+permalink: "/blog/{{ title | slugify }}/"
+---
+
+<style>
+.blog-post {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+.blog-post h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.blog-post-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.blog-post-content {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.blog-post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.blog-post-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.blog-post-content p {
+    margin-bottom: 1.5rem;
+}
+
+.back-to-blog {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.back-to-blog:hover {
+    text-decoration: underline;
+}
+</style>
+
+<article class="blog-post">
+    <a href="/blog/" class="back-to-blog">← Back to Blog</a>
+    
+    {% if featuredImage %}
+    <img src="{{ featuredImage }}" alt="{{ title }}" style="width: 100%; border-radius: 8px; margin-bottom: 2rem;">
+    {% endif %}
+    
+    <h1>{{ title }}</h1>
+    
+    <div class="blog-post-meta">
+        Published on {{ date | date }}
+    </div>
+    
+    <div class="blog-post-content">
+        {{ content | safe }}
+    </div>
+</article>
