@@ -1,23 +1,141 @@
+# Use DecapBridge classic auth (required)
 backend:
   name: git-gateway
-  branch: main # Branch to update (or master)
+  repo: zade0123/misconduct-comedy
+  branch: main
+  identity_url: https://auth.decapbridge.com/sites/e7db5f8e-155f-4571-82c5-0f9e61d27e0c
+  gateway_url: https://gateway.decapbridge.com
 
-# Uncomment to use local backend for development
-# local_backend: true
+  # See who did what (optional)
+  commit_messages:
+    create: Create {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    update: Update {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    delete: Delete {{collection}} “{{slug}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    uploadMedia: Upload “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    deleteMedia: Delete “{{path}}” - {{author-name}} <{{author-login}}> via DecapBridge
+    openAuthoring: Message {{message}} - {{author-name}} <{{author-login}}> via DecapBridge
 
-media_folder: "src/photos/blog" # Media files will be stored here
-public_folder: "/photos/blog" # The public path to media files
+# Better Decap + Bridge logo (optional)
+logo_url: https://decapbridge.com/decapcms-with-bridge.svg
+
+# Add site links in Decap CMS (optional)
+site_url: https://misconductcomedy.com
+# Local backend for development - allows CMS to work without deployment
+local_backend: true
+
+media_folder: "src/photos/shows"
+public_folder: "/photos/shows"
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog Posts" # Used in the UI
-    folder: "src/blog" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template
-    fields: # The fields for each document
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog-post.njk"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Excerpt", name: "excerpt", widget: "text", required: false}
-      - {label: "Featured Image", name: "featuredImage", widget: "image", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "shows"
+    label: "Shows"
+    label_singular: "Show"
+    folder: "src/shows"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "show.njk"}
+      - {label: "Event Name", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - label: "Start Date & Time"
+        name: "startDate"
+        widget: "datetime"
+      - label: "End Date & Time"
+        name: "endDate"
+        widget: "datetime"
+      - label: "Event Status"
+        name: "eventStatus"
+        widget: "select"
+        options:
+          - {label: "Scheduled", value: "https://schema.org/EventScheduled"}
+          - {label: "Cancelled", value: "https://schema.org/EventCancelled"}
+          - {label: "Postponed", value: "https://schema.org/EventPostponed"}
+          - {label: "Moved Online", value: "https://schema.org/EventMovedOnline"}
+          - {label: "Rescheduled", value: "https://schema.org/EventRescheduled"}
+        default: "https://schema.org/EventScheduled"
+      - label: "Attendance Mode"
+        name: "eventAttendanceMode"
+        widget: "select"
+        options:
+          - {label: "In-Person", value: "https://schema.org/OfflineEventAttendanceMode"}
+          - {label: "Online", value: "https://schema.org/OnlineEventAttendanceMode"}
+          - {label: "Mixed (In-Person & Online)", value: "https://schema.org/MixedEventAttendanceMode"}
+        default: "https://schema.org/OfflineEventAttendanceMode"
+      - label: "Location"
+        name: "location"
+        widget: "object"
+        fields:
+          - {label: "Venue Name", name: "name", widget: "string", default: "Misconduct Tavern"}
+          - {label: "Street Address", name: "streetAddress", widget: "string", default: "1511 Locust Street"}
+          - {label: "City", name: "city", widget: "string", default: "Philadelphia"}
+          - {label: "State", name: "state", widget: "string", default: "PA"}
+          - {label: "Postal Code", name: "postalCode", widget: "string", default: "19102"}
+          - {label: "Country", name: "country", widget: "string", default: "US"}
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        summary: "{{fields.src}}"
+        fields:
+          - {label: "Image", name: "src", widget: "image"}
+          - {label: "Alt Text", name: "alt", widget: "string", default: "", required: false}
+      - label: "Ticket URL"
+        name: "ticketUrl"
+        widget: "string"
+        required: false
+      - label: "Ticket Price"
+        name: "ticketPrice"
+        widget: "number"
+        value_type: "float"
+        required: false
+      - label: "Price Currency"
+        name: "priceCurrency"
+        widget: "string"
+        default: "USD"
+      - label: "Ticket Availability"
+        name: "ticketAvailability"
+        widget: "select"
+        options:
+          - {label: "In Stock", value: "https://schema.org/InStock"}
+          - {label: "Sold Out", value: "https://schema.org/SoldOut"}
+          - {label: "Pre-Order", value: "https://schema.org/PreOrder"}
+        default: "https://schema.org/InStock"
+      - label: "Ticket Sale Start"
+        name: "ticketSaleStart"
+        widget: "datetime"
+        required: false
+      - label: "Ticket Sale End"
+        name: "ticketSaleEnd"
+        widget: "datetime"
+        required: false
+      - label: "Total Tickets Available"
+        name: "totalTickets"
+        widget: "number"
+        value_type: "int"
+        required: false
+      - label: "Performers"
+        label_singular: "Performer"
+        name: "performers"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Photo", name: "photo", widget: "image", required: false}
+          - {label: "Instagram URL", name: "instagram", widget: "string", required: false, hint: "e.g., https://instagram.com/username"}
+      - label: "Show Type"
+        name: "showType"
+        widget: "string"
+        required: false
+        hint: "e.g., Showcase, Co-Headliners, Special"
+      - label: "Age Restriction"
+        name: "ageRestriction"
+        widget: "string"
+        default: "21+"
+        required: false
+      - label: "Organizer Name"
+        name: "organizerName"
+        widget: "string"
+        default: "Misconduct Comedy"
+      - label: "Organizer URL"
+        name: "organizerUrl"
+        widget: "string"
+        default: "https://misconductcomedy.com"

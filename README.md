@@ -16,12 +16,25 @@ npm install
 
 ### Development
 
-Start the development server:
+Start the development environment (website + CMS):
 ```bash
-npm start
+npm run dev
 ```
 
-This will start a local server at `http://localhost:8080` and watch for file changes.
+This runs both:
+- **11ty dev server** at http://localhost:8080 (your website)
+- **Decap CMS backend** for local content management
+
+Access the CMS at **http://localhost:8080/admin/** - no authentication needed!
+
+Or run them separately:
+```bash
+# Terminal 1 - CMS backend
+npm run cms
+
+# Terminal 2 - Website
+npm start
+```
 
 ### Building for Production
 
@@ -39,16 +52,20 @@ The built site will be in the `_site` directory.
 
 ## Managing Blog Posts
 
-### Using Decap CMS (Recommended for Non-Technical Users)
+### Using Decap CMS (Recommended)
 
-1. **Local Development**: 
-   - After deploying to Netlify/GitHub, you can access the CMS at `/admin/` on your live site
-   - For local development, you can enable local backend by uncommenting `local_backend: true` in `src/admin/config.yml`
-
-2. **Create/Edit Blog Posts**:
+**For Local Development:**
+1. Run `npm run dev`
+2. Open http://localhost:8080/admin/
+3. Enter any email and click "Login"
+4. Create and edit blog posts through the visual interface
+**For Production (After Deployment):**
    - Navigate to `yoursite.com/admin`
-   - Log in with your GitHub credentials (after setting up Git Gateway on Netlify)
-   - Click "Blog Posts" 
+   - Log in with Netlify Identity (if enabled; optional)
+   - Create/edit blog posts
+   - Changes automatically push to GitHub and rebuild your site
+
+See **[docs/DECAP-CMS-GUIDE.md](docs/DECAP-CMS-GUIDE.md)** for detailed instructions." 
    - Click "New Blog Post"
    - Fill in the title, date, excerpt, upload an image, and write your content
    - Save and publish!
@@ -87,7 +104,11 @@ And all the standard markdown features.
    - Build command: `npm run build`
    - Publish directory: `_site`
 6. Click "Deploy site"
+ (Optional)
 
+For local development, the CMS works without authentication using Decap Bridge.
+
+For production, if you want secure access:
 ### Setting Up Decap CMS Authentication
 
 1. In Netlify dashboard, go to Site settings > Identity
@@ -144,6 +165,16 @@ misconduct-comedy/
 ## Customization
 
 - Edit page templates in `src/`
+
+## Available Commands
+
+| Command | Description |
+|---------|-------------|
+| `npm install` | Install dependencies |
+| `npm run dev` | Start both CMS backend and website (recommended) |
+| `npm start` | Start 11ty dev server only |
+| `npm run cms` | Start Decap CMS backend only |
+| `npm run build` | Build site for production |
 - Modify layouts in `src/_includes/`
 - Update styles in `src/css/`
 - Configure CMS in `src/admin/config.yml`

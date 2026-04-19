@@ -1,0 +1,157 @@
+---
+layout: base.njk
+permalink: "/shows/{{ title | slugify }}/"
+---
+
+<!-- Show Event Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "{{ title }}",
+    "startDate": "{{ startDate | isoDate }}",
+    "endDate": "{{ endDate | isoDate }}",
+    "eventStatus": "{{ eventStatus }}",
+    "eventAttendanceMode": "{{ eventAttendanceMode }}",
+    "location": {
+        "@type": "Place",
+        "name": "{{ location.name }}",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "{{ location.streetAddress }}",
+            "addressLocality": "{{ location.city }}",
+            "addressRegion": "{{ location.state }}",
+            "postalCode": "{{ location.postalCode }}",
+            "addressCountry": "{{ location.country }}"
+        }
+    },
+    "description": "{{ description }}",
+    "organizer": {
+        "@type": "Organization",
+        "name": "{{ organizerName }}",
+        "url": "{{ organizerUrl }}"
+    }{% if images and images.length %},
+    "image": [{% for img in images %}"https://misconductcomedy.com{{ img.src }}"{% if not loop.last %}, {% endif %}{% endfor %}]{% endif %}{% if ticketUrl or ticketPrice %},
+    "offers": {
+        "@type": "Offer",
+        "url": "{{ ticketUrl or 'https://misconductcomedy.com' }}",
+        "availability": "{{ ticketAvailability }}"{% if ticketPrice %},
+        "price": "{{ ticketPrice }}",
+        "priceCurrency": "{{ priceCurrency }}"{% endif %}{% if ticketSaleStart %},
+        "validFrom": "{{ ticketSaleStart | isoDate }}"{% endif %}
+    }{% endif %}{% if performers and performers.length %},
+    "performer": [{% for p in performers %}{"@type": "Person", "name": "{{ p.name }}"}{% if not loop.last %}, {% endif %}{% endfor %}]{% endif %}
+}
+</script>
+
+<div class="show-detail">
+    <a href="/" class="back-link">← Back to Shows</a>
+
+    {% if images and images.length > 0 %}
+    <div class="carousel">
+        <div class="carousel-track">
+            {% for img in images %}
+            <div class="carousel-slide{% if loop.first %} active{% endif %}">
+                <img src="{{ img.src }}" alt="{{ img.alt or title }}">
+            </div>
+            {% endfor %}
+        </div>
+        {% if images.length > 1 %}
+        <button class="carousel-btn carousel-prev" aria-label="Previous image">&#10094;</button>
+        <button class="carousel-btn carousel-next" aria-label="Next image">&#10095;</button>
+        <div class="carousel-dots">
+            {% for img in images %}
+            <span class="carousel-dot{% if loop.first %} active{% endif %}" data-index="{{ loop.index0 }}"></span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+
+    <h1>{{ title }}</h1>
+
+    <div class="show-detail-meta">
+        <p class="show-detail-date">{{ startDate | showDate }}</p>
+        {% if showType %}<span class="show-tag">{{ showType }}</span>{% endif %}
+        {% if ageRestriction %}<span class="show-tag">{{ ageRestriction }}</span>{% endif %}
+    </div>
+
+    <div class="show-detail-info">
+        <div class="show-detail-description">
+            <p>{{ description }}</p>
+        </div>
+
+        <div class="show-detail-sidebar">
+            <div class="detail-block">
+                <h3>📍 Venue</h3>
+                <p><strong>{{ location.name }}</strong></p>
+                <p><a href="https://maps.google.com/?q={{ location.streetAddress | urlencode }},+{{ location.city | urlencode }}+{{ location.state }}+{{ location.postalCode }}" target="_blank" class="venue-address">{{ location.streetAddress }}, {{ location.city }} {{ location.state }} {{ location.postalCode }}</a></p>
+            </div>
+
+            {% if performers and performers.length %}
+            <div class="detail-block">
+                <h3>🎭 Performers</h3>
+                <div class="performers-list">
+                    {% for p in performers %}
+                    <div class="performer-item">
+                        {% if p.photo %}
+                        <img src="{{ p.photo }}" alt="{{ p.name }}" class="performer-photo">
+                        {% endif %}
+                        <div class="performer-info">
+                            <p class="performer-name">{{ p.name }}</p>
+                            {% if p.instagram %}
+                            <a href="{{ p.instagram }}" target="_blank" class="performer-ig">@{{ p.instagram | replace('https://instagram.com/', '') | replace('https://www.instagram.com/', '') | replace('/', '') }}</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if ticketSaleStart %}
+            <div class="detail-block">
+                <h3>🎟️ Ticket Sales</h3>
+                <p>Start: {{ ticketSaleStart | showDate }}</p>
+                {% if ticketSaleEnd %}<p>End: {{ ticketSaleEnd | showDate }}</p>{% endif %}
+                {% if totalTickets %}<p>Total Available: {{ totalTickets }}</p>{% endif %}
+            </div>
+            {% endif %}
+
+            {% if ticketAvailability == "https://schema.org/InStock" and ticketUrl %}
+            <a href="{{ ticketUrl }}" class="btn-tickets" target="_blank" onclick="gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ title }}', 'transport_type': 'beacon'});">BUY TICKETS{% if ticketPrice %} - ${{ ticketPrice }}{% endif %}</a>
+            {% elif ticketAvailability == "https://schema.org/PreOrder" %}
+            <span class="coming-soon">COMING SOON</span>
+            {% elif ticketAvailability == "https://schema.org/SoldOut" %}
+            <span class="coming-soon">SOLD OUT</span>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<script>
+(function() {
+    var track = document.querySelector('.carousel-track');
+    if (!track) return;
+
+    var slides = track.querySelectorAll('.carousel-slide');
+    var dots = document.querySelectorAll('.carousel-dot');
+    var prevBtn = document.querySelector('.carousel-prev');
+    var nextBtn = document.querySelector('.carousel-next');
+    var current = 0;
+
+    function goTo(index) {
+        slides[current].classList.remove('active');
+        if (dots.length) dots[current].classList.remove('active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        if (dots.length) dots[current].classList.add('active');
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', function() { goTo(current - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', function() { goTo(current + 1); });
+    for (var i = 0; i < dots.length; i++) {
+        dots[i].addEventListener('click', function() { goTo(parseInt(this.dataset.index)); });
+    }
+})();
+</script>

@@ -41,10 +41,10 @@
         gtag('config', 'G-H7GJ0KWS9R');
         </script>
         
-        {% if schemaData %}
+        {% if generateShowSchema and collections.showsByDate %}
         <!-- Google Event Schema -->
         <script type="application/ld+json">
-        {{ schemaData | safe }}
+        {{ collections.showsByDate | eventSchema | safe }}
         </script>
         {% endif %}
         

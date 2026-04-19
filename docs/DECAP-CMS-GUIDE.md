@@ -6,7 +6,87 @@ This guide will help you start managing your blog posts without touching any cod
 
 Decap CMS (formerly Netlify CMS) is a user-friendly content management system that gives you a simple interface to create and edit blog posts. No coding required!
 
-## Setup Steps
+## Two Ways to Use the CMS
+
+### Option 1: Local Development (Recommended to Start)
+
+Work with the CMS on your local computer - no deployment needed!
+
+**Advantages:**
+- ✅ Start immediately
+- ✅ No GitHub/Netlify setup required yet
+- ✅ Test everything locally first
+- ✅ See changes instantly
+
+### Option 2: Production (After Deployment)
+
+Use the CMS on your live website after deploying to Netlify.
+
+---
+
+## Getting Started Locally (Decap Bridge)
+
+### 1. Install Dependencies
+
+Open a terminal in your project folder and run:
+
+```bash
+npm install
+```
+
+This installs Decap Server and other required tools.
+
+### 2. Start the Development Environment
+
+Start both the website and CMS with one command:
+
+```bash
+npm run dev
+```
+
+Or run them separately in two terminals:
+
+**Terminal 1 - CMS Backend:**
+```bash
+npm run cms
+```
+
+**Terminal 2 - Website:**
+```bash
+npm start
+```
+
+### 3. Access the CMS
+
+1. Open your browser to **http://localhost:8080/admin/**
+2. You'll see the Decap CMS login screen
+3. Enter any email (it doesn't matter for local use)
+4. Click "Login"
+5. You're in! 🎉
+
+### 4. Create Your First Blog Post
+
+1. Click **"Blog Posts"** in the left sidebar
+2. Click **"New Blog Post"** button
+3. Fill in the fields:
+   - **Title**: Your blog post title
+   - **Publish Date**: When the post should be published
+   - **Excerpt**: A short summary
+   - **Featured Image**: Upload an image (optional)
+   - **Body**: Write your content
+4. Click **"Save"** (top right)
+5. Click **"Publish"** → "Publish now"
+6. Refresh your homepage to see your new post!
+
+---
+
+## Deploying to Production
+
+---
+
+## Deploying to Production
+
+Once you're happy with your local setup, deploy to make it live!
 
 ### 1. Deploy Your Site to Netlify
 
@@ -63,9 +143,11 @@ The editor supports:
 
 ### Publishing
 
-1. When you're ready, click **"Publish"** in the top right
-2. Choose "Publish now" or "Publish and create new"
+1. When you're ready, click **"Save"** in the top right (saves as draft)
+2. Then click **"Publish"** → "Publish now"
 3. Your post will automatically appear on your website!
+   - **Locally**: Refresh http://localhost:8080 to see it
+   - **Production**: Changes push to GitHub and trigger a rebuild
 
 ### Editing Existing Posts
 
@@ -75,8 +157,37 @@ The editor supports:
 4. Click **"Publish"** to save
 
 ### Unpublishing a Post
+lick "Set status" → Change to "Draft"
+3. Click "Save"
 
-1. Open the post in the CMS
+## How It Works
+
+### Local Development (Decap Bridge)
+
+When you run `npm run dev`:
+- **Decap Server** runs on port 8081 (you don't see this)
+- **11ty dev server** runs on port 8080 (your website)
+- **CMS admin** is accessible at localhost:8080/admin/
+- Changes are made directly to your local files
+- No authentication needed!
+
+### Production (After Deployment)
+
+When deployed to Netlify:
+- CMS uses Git Gateway for authentication
+- Changes are committed to your GitHub repository
+- Netlify automatically rebuilds your site
+- Secure access via Netlify Identity (optional)
+
+## Commands Reference
+
+| Command | What It Does |
+|---------|-------------|
+| `npm install` | Install all dependencies |
+| `npm start` | Start 11ty dev server only |
+| `npm run cms` | Start Decap backend only |
+| `npm run dev` | Start both CMS and website (recommended) |
+| `npm run build` | Build site for production | the CMS
 2. Change the status from "Published" to "Draft"
 3. Save the changes
 
@@ -90,28 +201,44 @@ The editor supports:
 
 ## Troubleshooting
 
-### Can't log in?
-- Make sure you've accepted the invitation email from Netlify
+### CMS won't load locally?
+- Make sure you ran `npm install` first
+- Check that `npm run cms` is running (if running separately)
+- Try accessing http://localhost:8080/admin/ directly
 - Clear your browser cache and try again
-- Check that Git Gateway is enabled in Netlify settings
 
-### Changes not appearing?
-- Wait 1-2 minutes after publishing (Netlify needs time to rebuild your site)
-- Check the "Deploys" tab in Netlify to see if the build succeeded
-- Hard refresh your browser (Ctrl+F5 on Windows, Cmd+Shift+R on Mac)
+### Can't see my changes?
+- **Locally**: Just refresh your browser (Ctrl+R or F5)
+- **Production**: Wait 1-2 minutes for Netlify to rebuild
+- Check that you clicked "Publish" not just "Save"
+
+### Port already in use?
+- Close other instances of `npm start` or `npm run dev`
+- Restart your terminal
+- Or kill the process using that port
+
+### Changes not committing to GitHub?
+- Make sure you've published (not just saved) in the CMS
+- Check your Git credentials are set up
+- Verify the repository URL in `.git/config`
 
 ### Need help?
 Email hausofcomedy@gmail.com
 
-## Local Development (Advanced)
+---
 
-If you want to test the CMS locally:
+## Production Setup (Netlify Identity - Optional)
 
-1. Open `src/admin/config.yml`
-2. Uncomment this line: `# local_backend: true`
-3. Run `npx decap-server` in one terminal
-4. Run `npm start` in another terminal
-5. Access the CMS at `http://localhost:8080/admin/`
+If you want secure authentication for your production CMS, you can enable Netlify Identity:
+
+1. In Netlify dashboard, go to **Site settings** > **Identity**
+2. Click "Enable Identity"
+3. Under **Registration**, select "Invite only"
+4. Go to **Services** > **Git Gateway** and enable it
+5. Invite users via the **Identity** tab
+6. They can then log in at `yoursite.com/admin`
+
+**Note:** With Decap Bridge enabled, the CMS works great locally without this setup!
 
 ---
 
