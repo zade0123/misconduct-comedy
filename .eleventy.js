@@ -51,6 +51,27 @@ module.exports = function(eleventyConfig) {
     return `${days[eastern.getDay()]}, ${months[eastern.getMonth()]} ${eastern.getDate()} \u2022 ${hours}:${minutes} ${ampm}`;
   });
 
+  // Format date only (no time) in Eastern Time: "Saturday, April 25"
+  eleventyConfig.addFilter("showDateOnly", function(date) {
+    const d = new Date(date);
+    const eastern = new Date(d.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const months = ["January", "February", "March", "April", "May", "June",
+                    "July", "August", "September", "October", "November", "December"];
+    return `${days[eastern.getDay()]}, ${months[eastern.getMonth()]} ${eastern.getDate()}`;
+  });
+
+  // Format time only in Eastern Time: "8:00 PM"
+  eleventyConfig.addFilter("showTimeOnly", function(date) {
+    const d = new Date(date);
+    const eastern = new Date(d.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+    let hours = eastern.getHours();
+    const minutes = eastern.getMinutes().toString().padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12 || 12;
+    return `${hours}:${minutes} ${ampm}`;
+  });
+
   // ISO date filter for schema (Eastern Time offset)
   eleventyConfig.addFilter("isoDate", function(date) {
     return toEasternISO(date);

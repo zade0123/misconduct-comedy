@@ -33,6 +33,7 @@ collections:
     folder: "src/shows"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{startDate | date('MMM D, YYYY h:mm A')}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "show.njk"}
       - {label: "Event Name", name: "title", widget: "string"}

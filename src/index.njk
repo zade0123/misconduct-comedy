@@ -35,11 +35,11 @@ generateShowSchema: true
                     {% if show.data.showType %}<span>{{ show.data.showType }}</span>{% endif %}
                     {% if show.data.ageRestriction %}<span>{{ show.data.ageRestriction }}</span>{% endif %}
                 </div>
-                <h4>{{ show.data.startDate | showDate }}</h4>
+                <h4>{{ show.data.startDate | showDateOnly }}</h4>
             </div>
             <div class="show-tickets">
                 {% if show.data.ticketAvailability == "https://schema.org/InStock" and show.data.ticketUrl %}
-                <a href="{{ show.data.ticketUrl }}" class="btn-tickets" target="_blank" onclick="gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ show.data.title }}', 'transport_type': 'beacon'});">BUY TICKETS{% if show.data.ticketPrice %} - ${{ show.data.ticketPrice }}{% endif %}</a>
+                <a href="{{ show.data.ticketUrl }}" class="btn-tickets" target="_blank" onclick="gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ show.data.title }}', 'transport_type': 'beacon'});">GET TICKETS • {{ show.data.startDate | showTimeOnly }}</a>
                 {% elif show.data.ticketAvailability == "https://schema.org/PreOrder" %}
                 <span class="coming-soon">COMING SOON</span>
                 {% elif show.data.ticketAvailability == "https://schema.org/SoldOut" %}
