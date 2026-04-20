@@ -1,13 +1,18 @@
 ---
 layout: show.njk
 title: Misconduct Comedy Showcase
+subtitle: ""
 description: Need date night plans? Or just a fun hang with friends? Misconduct
   Comedy has got you covered with Philly's best comedians in a cozy venue.
   Experience Philadelphia's best stand-up comedy showcase featuring talented
   local comedians and rising stars. An unforgettable night of laughs in the
   heart of Center City. 21+ only.
-startDate: 2026-04-25T20:00:00-04:00
-endDate: 2026-04-25T21:30:00-04:00
+showtimes:
+  - startDate: 2026-04-25T20:00:00-04:00
+    endDate: 2026-04-25T21:30:00-04:00
+    ticketUrl: https://www.eventbrite.com/e/misconduct-comedy-show-featuring-philadelphias-best-standup-acts-tickets-1986700976100?aff=websiteunattributed
+    ticketPrice: 15
+    ticketAvailability: https://schema.org/InStock
 eventStatus: https://schema.org/EventScheduled
 eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
 location:
@@ -20,10 +25,7 @@ location:
 images:
   - alt: ""
     src: /photos/shows/savionj.webp
-ticketUrl: https://www.eventbrite.com/e/misconduct-comedy-show-featuring-philadelphias-best-standup-acts-tickets-1986700976100?aff=websiteunattributed
-ticketPrice: 15
 priceCurrency: USD
-ticketAvailability: https://schema.org/InStock
 ticketSaleStart: 2026-04-10T12:00:00.000-04:00
 ticketSaleEnd: 2026-04-25T20:00:00.000-04:00
 totalTickets: 40

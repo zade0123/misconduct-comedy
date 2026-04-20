@@ -33,17 +33,49 @@ collections:
     folder: "src/shows"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{title}} — {{startDate | date('MMM D, YYYY h:mm A')}}"
+    summary: "{{title}} — {{filename}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "show.njk"}
       - {label: "Event Name", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
-      - label: "Start Date & Time"
-        name: "startDate"
-        widget: "datetime"
-      - label: "End Date & Time"
-        name: "endDate"
-        widget: "datetime"
+      - label: "Subtitle"
+        name: "subtitle"
+        widget: "string"
+        required: false
+        hint: "Optional subtitle shown below title, e.g. 'with Dru Montana & Na'im Ali'"
+        default: ""
+      - {label: "Description", name: "description", widget: "text", hint: "SEO-friendly description. Include keywords like 'Philadelphia comedy', 'stand-up', 'live comedy'."}
+      - label: "Showtimes"
+        name: "showtimes"
+        widget: "list"
+        label_singular: "Showtime"
+        min: 1
+        max: 2
+        hint: "Add 1 showtime for a regular show, or 2 for an early/late show (e.g. 7:30 PM & 9:30 PM)."
+        fields:
+          - label: "Start Date & Time"
+            name: "startDate"
+            widget: "datetime"
+          - label: "End Date & Time"
+            name: "endDate"
+            widget: "datetime"
+          - label: "Ticket URL (Eventbrite)"
+            name: "ticketUrl"
+            widget: "string"
+            required: false
+            hint: "Eventbrite link for this showtime"
+          - label: "Ticket Price"
+            name: "ticketPrice"
+            widget: "number"
+            value_type: "float"
+            required: false
+          - label: "Ticket Availability"
+            name: "ticketAvailability"
+            widget: "select"
+            options:
+              - {label: "In Stock", value: "https://schema.org/InStock"}
+              - {label: "Sold Out", value: "https://schema.org/SoldOut"}
+              - {label: "Pre-Order (Coming Soon)", value: "https://schema.org/PreOrder"}
+            default: "https://schema.org/InStock"
       - label: "Event Status"
         name: "eventStatus"
         widget: "select"
@@ -76,30 +108,14 @@ collections:
         name: "images"
         widget: "list"
         summary: "{{fields.src}}"
+        hint: "Add multiple images for the show gallery on the detail page. First image is used on the show card."
         fields:
           - {label: "Image", name: "src", widget: "image"}
-          - {label: "Alt Text", name: "alt", widget: "string", default: "", required: false}
-      - label: "Ticket URL"
-        name: "ticketUrl"
-        widget: "string"
-        required: false
-      - label: "Ticket Price"
-        name: "ticketPrice"
-        widget: "number"
-        value_type: "float"
-        required: false
+          - {label: "Alt Text", name: "alt", widget: "string", default: "", required: false, hint: "Describe the image for accessibility & SEO"}
       - label: "Price Currency"
         name: "priceCurrency"
         widget: "string"
         default: "USD"
-      - label: "Ticket Availability"
-        name: "ticketAvailability"
-        widget: "select"
-        options:
-          - {label: "In Stock", value: "https://schema.org/InStock"}
-          - {label: "Sold Out", value: "https://schema.org/SoldOut"}
-          - {label: "Pre-Order", value: "https://schema.org/PreOrder"}
-        default: "https://schema.org/InStock"
       - label: "Ticket Sale Start"
         name: "ticketSaleStart"
         widget: "datetime"

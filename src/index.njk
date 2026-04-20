@@ -18,35 +18,38 @@ generateShowSchema: true
 </section>
 
 <!-- Shows Section -->
-<section class="shows-section">
+<section class="shows-section" id="shows">
     <h2>UPCOMING SHOWS</h2>
     
     {%- for show in collections.showsByDate -%}
-    <div class="show-card{% if show.data.ticketAvailability == 'https://schema.org/SoldOut' %} show-card-disabled{% endif %}">
+    <div class="show-card{% if show.data.showtimes | allSoldOut %} show-card-disabled{% endif %}">
         <div class="card-content">
             <div class="show-image">
                 {% if show.data.images and show.data.images.length %}
-                <img src="{{ show.data.images[0].src }}" alt="{{ show.data.images[0].alt or show.data.title }}">
+                <img src="{{ show.data.images[0].src }}" alt="{{ show.data.images[0].alt or show.data.title }} - Live Stand-Up Comedy in Philadelphia">
                 {% endif %}
             </div>
             <div class="show-info">
-                <h3><a href="{{ show.url }}" style="color: #fff; text-decoration: none;">{{ show.data.title }}</a></h3>
+                <h3><a href="{{ show.url }}" class="show-card-link">{{ show.data.title }}{% if show.data.subtitle %}<br><span class="show-subtitle">{{ show.data.subtitle }}</span>{% endif %}</a></h3>
                 <div class="show-details">
+                    <span>{{ show.data.showtimes[0].startDate | showDayOfWeek }}</span>
                     {% if show.data.showType %}<span>{{ show.data.showType }}</span>{% endif %}
                     {% if show.data.ageRestriction %}<span>{{ show.data.ageRestriction }}</span>{% endif %}
                 </div>
-                <h4>{{ show.data.startDate | showDateOnly }}</h4>
+                <h4>{{ show.data.showtimes[0].startDate | showDateOnly }} • {% for st in show.data.showtimes %}{{ st.startDate | showTimeOnly }}{% if not loop.last %} &amp; {% endif %}{% endfor %}</h4>
             </div>
             <div class="show-tickets">
-                {% if show.data.ticketAvailability == "https://schema.org/InStock" and show.data.ticketUrl %}
-                <a href="{{ show.data.ticketUrl }}" class="btn-tickets" target="_blank" onclick="gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ show.data.title }}', 'transport_type': 'beacon'});">GET TICKETS • {{ show.data.startDate | showTimeOnly }}</a>
-                {% elif show.data.ticketAvailability == "https://schema.org/PreOrder" %}
-                <span class="coming-soon">COMING SOON</span>
-                {% elif show.data.ticketAvailability == "https://schema.org/SoldOut" %}
-                <span class="coming-soon">SOLD OUT</span>
-                {% else %}
-                <span class="coming-soon">COMING SOON</span>
-                {% endif %}
+                {% for st in show.data.showtimes %}
+                    {% if st.ticketAvailability == "https://schema.org/InStock" and st.ticketUrl %}
+                    <a href="{{ st.ticketUrl }}" class="btn-tickets" target="_blank" rel="noopener" onclick="gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ show.data.title }} {{ st.startDate | showTimeOnly }}', 'transport_type': 'beacon'});">BUY {{ st.startDate | showTimeOnly }} TICKETS</a>
+                    {% elif st.ticketAvailability == "https://schema.org/SoldOut" %}
+                    <span class="coming-soon">{{ st.startDate | showTimeOnly }} — SOLD OUT</span>
+                    {% elif st.ticketAvailability == "https://schema.org/PreOrder" %}
+                    <span class="coming-soon">COMING SOON</span>
+                    {% else %}
+                    <span class="coming-soon">COMING SOON</span>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>

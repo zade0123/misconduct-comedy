@@ -51,14 +51,21 @@ module.exports = function(eleventyConfig) {
     return `${days[eastern.getDay()]}, ${months[eastern.getMonth()]} ${eastern.getDate()} \u2022 ${hours}:${minutes} ${ampm}`;
   });
 
-  // Format date only (no time) in Eastern Time: "Saturday, April 25"
+  // Format date only (no time, no day name) in Eastern Time: "April 25"
   eleventyConfig.addFilter("showDateOnly", function(date) {
     const d = new Date(date);
     const eastern = new Date(d.toLocaleString('en-US', { timeZone: 'America/New_York' }));
-    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const months = ["January", "February", "March", "April", "May", "June",
                     "July", "August", "September", "October", "November", "December"];
-    return `${days[eastern.getDay()]}, ${months[eastern.getMonth()]} ${eastern.getDate()}`;
+    return `${months[eastern.getMonth()]} ${eastern.getDate()}`;
+  });
+
+  // Day of week only in Eastern Time: "Saturday"
+  eleventyConfig.addFilter("showDayOfWeek", function(date) {
+    const d = new Date(date);
+    const eastern = new Date(d.toLocaleString('en-US', { timeZone: 'America/New_York' }));
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    return days[eastern.getDay()];
   });
 
   // Format time only in Eastern Time: "8:00 PM"
@@ -77,135 +84,90 @@ module.exports = function(eleventyConfig) {
     return toEasternISO(date);
   });
 
-  // Generate event schema JSON-LD for a collection of shows
+  // Check if all showtimes are sold out
+  eleventyConfig.addFilter("allSoldOut", function(showtimes) {
+    if (!showtimes || !showtimes.length) return false;
+    return showtimes.every(function(st) {
+      return st.ticketAvailability === 'https://schema.org/SoldOut';
+    });
+  });
+
+  // Generate event schema JSON-LD for a collection of shows (one Event per showtime)
   eleventyConfig.addFilter("eventSchema", function(shows) {
     if (!shows || !shows.length) return '[]';
-    const events = shows.map(function(show) {
-      const d = show.data;
-      const event = {
-        "@context": "https://schema.org",
-        "@type": "Event",
-        "name": d.title,
-        "startDate": toEasternISO(d.startDate),
-        "endDate": toEasternISO(d.endDate),
-        "eventStatus": d.eventStatus,
-        "eventAttendanceMode": d.eventAttendanceMode,
-        "location": {
-          "@type": "Place",
-          "name": d.location.name,
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": d.location.streetAddress,
-            "addressLocality": d.location.city,
-            "addressRegion": d.location.state,
-            "postalCode": d.location.postalCode,
-            "addressCountry": d.location.country
+    var events = [];
+    shows.forEach(function(show) {
+      var d = show.data;
+      if (!d.showtimes || !d.showtimes.length) return;
+
+      d.showtimes.forEach(function(st) {
+        var event = {
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "name": d.title + (d.subtitle ? ' ' + d.subtitle : ''),
+          "startDate": toEasternISO(st.startDate),
+          "endDate": toEasternISO(st.endDate),
+          "eventStatus": d.eventStatus,
+          "eventAttendanceMode": d.eventAttendanceMode,
+          "location": {
+            "@type": "Place",
+            "name": d.location.name,
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": d.location.streetAddress,
+              "addressLocality": d.location.city,
+              "addressRegion": d.location.state,
+              "postalCode": d.location.postalCode,
+              "addressCountry": d.location.country
+            }
+          },
+          "description": d.description,
+          "organizer": {
+            "@type": "Organization",
+            "name": d.organizerName || "Misconduct Comedy",
+            "url": d.organizerUrl || "https://misconductcomedy.com"
           }
-        },
-        "description": d.description,
-        "organizer": {
-          "@type": "Organization",
-          "name": d.organizerName || "Misconduct Comedy",
-          "url": d.organizerUrl || "https://misconductcomedy.com"
-        }
-      };
-
-      if (d.images && d.images.length) {
-        event.image = d.images.map(function(img) {
-          return "https://misconductcomedy.com" + img.src;
-        });
-      }
-
-      if (d.ticketUrl || d.ticketPrice) {
-        event.offers = {
-          "@type": "Offer",
-          "url": d.ticketUrl || "https://misconductcomedy.com",
-          "availability": d.ticketAvailability || "https://schema.org/InStock"
         };
-        if (d.ticketPrice) {
-          event.offers.price = d.ticketPrice.toString();
-          event.offers.priceCurrency = d.priceCurrency || "USD";
-        }
-        if (d.ticketSaleStart) {
-          event.offers.validFrom = toEasternISO(d.ticketSaleStart);
-        }
-      }
 
-      if (d.performers && d.performers.length) {
-        event.performer = d.performers.map(function(p) {
-          return { "@type": "Person", "name": p.name };
-        });
-      }
+        if (d.images && d.images.length) {
+          event.image = d.images.map(function(img) {
+            return "https://misconductcomedy.com" + img.src;
+          });
+        }
 
-      return event;
+        if (st.ticketUrl || st.ticketPrice) {
+          event.offers = {
+            "@type": "Offer",
+            "url": st.ticketUrl || "https://misconductcomedy.com",
+            "availability": st.ticketAvailability || "https://schema.org/InStock"
+          };
+          if (st.ticketPrice) {
+            event.offers.price = st.ticketPrice.toString();
+            event.offers.priceCurrency = d.priceCurrency || "USD";
+          }
+          if (d.ticketSaleStart) {
+            event.offers.validFrom = toEasternISO(d.ticketSaleStart);
+          }
+        }
+
+        if (d.performers && d.performers.length) {
+          event.performer = d.performers.map(function(p) {
+            return { "@type": "Person", "name": p.name };
+          });
+        }
+
+        events.push(event);
+      });
     });
     return JSON.stringify(events, null, 2);
   });
 
-  // Generate single event schema JSON-LD
-  eleventyConfig.addFilter("singleEventSchema", function(d) {
-    const event = {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": d.title,
-      "startDate": toEasternISO(d.startDate),
-      "endDate": toEasternISO(d.endDate),
-      "eventStatus": d.eventStatus,
-      "eventAttendanceMode": d.eventAttendanceMode,
-      "location": {
-        "@type": "Place",
-        "name": d.location.name,
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": d.location.streetAddress,
-          "addressLocality": d.location.city,
-          "addressRegion": d.location.state,
-          "postalCode": d.location.postalCode,
-          "addressCountry": d.location.country
-        }
-      },
-      "description": d.description,
-      "organizer": {
-        "@type": "Organization",
-        "name": d.organizerName || "Misconduct Comedy",
-        "url": d.organizerUrl || "https://misconductcomedy.com"
-      }
-    };
-
-    if (d.images && d.images.length) {
-      event.image = d.images.map(function(img) {
-        return "https://misconductcomedy.com" + img.src;
-      });
-    }
-
-    if (d.ticketUrl || d.ticketPrice) {
-      event.offers = {
-        "@type": "Offer",
-        "url": d.ticketUrl || "https://misconductcomedy.com",
-        "availability": d.ticketAvailability || "https://schema.org/InStock"
-      };
-      if (d.ticketPrice) {
-        event.offers.price = d.ticketPrice.toString();
-        event.offers.priceCurrency = d.priceCurrency || "USD";
-      }
-      if (d.ticketSaleStart) {
-        event.offers.validFrom = toEasternISO(d.ticketSaleStart);
-      }
-    }
-
-    if (d.performers && d.performers.length) {
-      event.performer = d.performers.map(function(p) {
-        return { "@type": "Person", "name": p.name };
-      });
-    }
-
-    return JSON.stringify(event, null, 2);
-  });
-
-  // Custom collection: shows sorted by start date
+  // Custom collection: shows sorted by first showtime's start date
   eleventyConfig.addCollection("showsByDate", function(collectionApi) {
     return collectionApi.getFilteredByTag("shows").sort(function(a, b) {
-      return new Date(a.data.startDate) - new Date(b.data.startDate);
+      var aDate = a.data.showtimes && a.data.showtimes.length ? new Date(a.data.showtimes[0].startDate) : new Date(0);
+      var bDate = b.data.showtimes && b.data.showtimes.length ? new Date(b.data.showtimes[0].startDate) : new Date(0);
+      return aDate - bDate;
     });
   });
   

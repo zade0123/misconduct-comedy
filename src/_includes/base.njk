@@ -48,7 +48,7 @@
         </script>
         {% endif %}
         
-        <title>{{ title }}</title>
+        <title>{{ pageTitle or title }}</title>
     </head>
     <body{{ ' class="' + bodyClass + '"' if bodyClass else '' }}>
         <!-- Google Tag Manager (noscript) -->
