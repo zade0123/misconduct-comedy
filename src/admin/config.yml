@@ -33,17 +33,23 @@ collections:
     folder: "src/shows"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    summary: "{{title}} — {{filename}}"
+    summary: "{{title}} — {{showDate | date('MMMM D, YYYY')}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "show.njk"}
       - {label: "Event Name", name: "title", widget: "string"}
+      - label: "Show Date"
+        name: "showDate"
+        widget: "datetime"
+        date_format: "MMMM D, YYYY"
+        time_format: false
+        hint: "The date of this show (used for CMS display and URL slug)"
       - label: "Subtitle"
         name: "subtitle"
         widget: "string"
         required: false
         hint: "Optional subtitle shown below title, e.g. 'with Dru Montana & Na'im Ali'"
         default: ""
-      - {label: "Description", name: "description", widget: "text", hint: "SEO-friendly description. Include keywords like 'Philadelphia comedy', 'stand-up', 'live comedy'."}
+      - {label: "Description", name: "description", widget: "markdown", hint: "SEO-friendly description. Include keywords like 'Philadelphia comedy', 'stand-up', 'live comedy'."}
       - label: "Showtimes"
         name: "showtimes"
         widget: "list"

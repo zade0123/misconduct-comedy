@@ -113,7 +113,7 @@ generateShowSchema: false
     <div class="show-detail-info">
         <div class="show-detail-description">
             <h2>About This {{ showType or 'Show' }}</h2>
-            <p>{{ description }}</p>
+            <div class="description-content">{{ description | safe }}</div>
             {{ content | safe }}
 
             <div class="show-seo-content">
@@ -127,7 +127,7 @@ generateShowSchema: false
                 <h3>🎟️ Get Tickets</h3>
                 {% for st in showtimes %}
                     {% if st.ticketAvailability == "https://schema.org/InStock" and st.ticketUrl %}
-                    <a href="{{ st.ticketUrl }}" class="btn-tickets" target="_blank" rel="noopener" onclick="gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ title }} {{ st.startDate | showTimeOnly }}', 'transport_type': 'beacon'});">BUY {{ st.startDate | showTimeOnly }} TICKETS{% if st.ticketPrice %} — ${{ st.ticketPrice }}{% endif %}</a>
+                    <a href="{{ st.ticketUrl }}" class="btn-tickets" target="_blank" rel="noopener" onclick="gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ title }} {{ st.startDate | showTimeOnly }}', 'transport_type': 'beacon'});">BUY {{ st.startDate | showTimeOnly }} TICKETS</a>
                     {% elif st.ticketAvailability == "https://schema.org/PreOrder" %}
                     <span class="coming-soon">{{ st.startDate | showTimeOnly }} — COMING SOON</span>
                     {% elif st.ticketAvailability == "https://schema.org/SoldOut" %}
@@ -172,16 +172,7 @@ generateShowSchema: false
                 <p><strong>Doors:</strong> 30 minutes before showtime</p>
                 <p><strong>Duration:</strong> 75-90 minutes</p>
                 <p><strong>Minimum:</strong> 2-item minimum (food &amp; drinks available)</p>
-                {% if totalTickets %}<p><strong>Capacity:</strong> {{ totalTickets }} seats</p>{% endif %}
             </div>
-
-            {% if ticketSaleStart %}
-            <div class="detail-block">
-                <h3>📅 Ticket Sales</h3>
-                <p>Start: {{ ticketSaleStart | showDate }}</p>
-                {% if ticketSaleEnd %}<p>End: {{ ticketSaleEnd | showDate }}</p>{% endif %}
-            </div>
-            {% endif %}
         </div>
     </div>
 </div>

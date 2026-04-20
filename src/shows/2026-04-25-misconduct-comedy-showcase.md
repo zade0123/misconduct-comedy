@@ -1,6 +1,7 @@
 ---
 layout: show.njk
 title: Misconduct Comedy Showcase
+showDate: 2026-04-25
 subtitle: ""
 description: Need date night plans? Or just a fun hang with friends? Misconduct
   Comedy has got you covered with Philly's best comedians in a cozy venue.
@@ -25,6 +26,10 @@ location:
 images:
   - alt: ""
     src: /photos/shows/savionj.webp
+  - alt: ""
+    src: /photos/shows/seano.webp
+  - alt: ""
+    src: /photos/shows/shanah.webp
 priceCurrency: USD
 ticketSaleStart: 2026-04-10T12:00:00.000-04:00
 ticketSaleEnd: 2026-04-25T20:00:00.000-04:00
@@ -32,7 +37,7 @@ totalTickets: 40
 performers:
   - name: Dennis Mar
     instagram: https://www.instagram.com/dennismarcomedy/
-    photo: /photos/shows/dennism.jpg
+    photo: /photos/shows/DennisM.webp
 showType: Showcase
 ageRestriction: 21+
 organizerName: Misconduct Comedy
