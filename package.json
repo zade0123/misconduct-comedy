@@ -1,0 +1,19 @@
+{
+  "name": "misconduct-comedy",
+  "version": "1.0.0",
+  "description": "Misconduct Comedy website with 11ty and Decap CMS",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "cms": "npx decap-server",
+    "dev": "npx concurrently \"npm run cms\" \"npm start\""
+  },
+  "keywords": ["11ty", "eleventy", "decap-cms"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "concurrently": "^8.2.2",
+    "decap-server": "^3.0.0"
+  }
+}

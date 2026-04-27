@@ -1,0 +1,178 @@
+---
+layout: base.njk
+title: Misconduct Comedy - Philadelphia's Best Stand-Up Shows
+metaTitle: Misconduct Comedy
+metaDescription: Come see the funniest stand-up show in the heart of Center City with Philly and NYC's best comedians! Tickets sell fast, Get yours now!
+permalink: /index.html
+generateShowSchema: true
+---
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <img src="/Misconduct Comedy Logo with Border - 750px.png" alt="Misconduct Comedy Logo" class="hero-logo">
+        <h1>PHILLY'S FUNNIEST<br>LIVE COMEDY SHOW</h1>
+        <p>Need date night plans? Or just a fun hang with friends? Misconduct Comedy has got you covered with Philly's best comedians in a cozy venue.</p>
+    </div>
+</section>
+
+<!-- Shows Section -->
+<section class="shows-section" id="shows">
+    <h2>UPCOMING SHOWS</h2>
+    
+    {%- for show in collections.showsByDate -%}
+    <div class="show-card{% if show.data.showtimes | allSoldOut %} show-card-disabled{% endif %}">
+        <div class="card-content">
+            <div class="show-image">
+                {% if show.data.images and show.data.images.length %}
+                <img src="{{ show.data.images[0].src }}" alt="{{ show.data.images[0].alt or show.data.title }} - Live Stand-Up Comedy in Philadelphia">
+                {% endif %}
+            </div>
+            <div class="show-info">
+                <h3><a href="{{ show.url }}" class="show-card-link">{{ show.data.title }}{% if show.data.subtitle %}<br><span class="show-subtitle">{{ show.data.subtitle }}</span>{% endif %}</a></h3>
+                <div class="show-details">
+                    <span>{{ show.data.showtimes[0].startDate | showDayOfWeek }}</span>
+                    {% if show.data.showType %}<span>{{ show.data.showType }}</span>{% endif %}
+                    {% if show.data.ageRestriction %}<span>{{ show.data.ageRestriction }}</span>{% endif %}
+                </div>
+                <h4>{{ show.data.showtimes[0].startDate | showDateOnly }} • {% for st in show.data.showtimes %}{{ st.startDate | showTimeOnly }}{% if not loop.last %} &amp; {% endif %}{% endfor %}</h4>
+            </div>
+            <div class="show-tickets">
+                {% for st in show.data.showtimes %}
+                    {% if st.ticketAvailability == "https://schema.org/InStock" and st.ticketUrl %}
+                    <a href="{{ st.ticketUrl }}" class="btn-tickets" target="_blank" rel="noopener" onclick="gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ show.data.title }} {{ st.startDate | showTimeOnly }}', 'transport_type': 'beacon'});">BUY {{ st.startDate | showTimeOnly }} TICKETS</a>
+                    {% elif st.ticketAvailability == "https://schema.org/SoldOut" %}
+                    <span class="coming-soon">{{ st.startDate | showTimeOnly }} — SOLD OUT</span>
+                    {% elif st.ticketAvailability == "https://schema.org/PreOrder" %}
+                    <span class="coming-soon">COMING SOON</span>
+                    {% else %}
+                    <span class="coming-soon">COMING SOON</span>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {%- else -%}
+    <p style="text-align: center; color: #aaa; padding: 2rem;">No shows scheduled yet. Check back soon!</p>
+    {%- endfor -%}
+</section>
+
+<!-- About Section -->
+<section class="about-section">
+    <h2>ABOUT MISCONDUCT COMEDY</h2>
+    <div class="about-intro">
+        <p>Misconduct Comedy brings you Philadelphia's best stand-up comedy shows in the heart of Center City. Whether you're looking for the perfect date night or a fun outing with friends, our shows feature a mix of local favorites and touring headliners in an intimate, laid-back setting.</p>
+    </div>
+    <div class="features">
+        <div class="feature">
+            <div class="feature-icon">📍</div>
+            <h3>The Venue</h3>
+            <p><strong>Misconduct Tavern</strong><br><a href="https://maps.google.com/?q=1511+Locust+Street,+Philadelphia+PA+19102" target="_blank" class="venue-address">1511 Locust Street, Philadelphia PA 19102</a><br>Cozy bar setting with full drink menu and great atmosphere for comedy.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🎭</div>
+            <h3>What to Expect</h3>
+            <p>All of our shows run 75-90 minutes. Our showcases feature 5-7 talented local comedians and rising stars, while our Double Trouble Specials feature co-headliners doing extended 30-minute sets.</p>
+        </div>
+        <div class="feature">
+            <div class="feature-icon">🎟️</div>
+            <h3>Show Details</h3>
+            <p><strong>Age:</strong> 21+<br><strong>Seating:</strong> First come, first served<br><strong>Doors:</strong> 30 minutes before showtime<br>Arrive early for best seats!<br><strong>Food/Drink:</strong> Full Menu is available 30 minutes before showtime</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <h2>FREQUENTLY ASKED QUESTIONS</h2>
+    
+    <div class="faq-item">
+        <h3>Is there an age limit?</h3>
+        <p>Yes, all attendees must be 21+ with a valid ID. This is strictly enforced at the door.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>How long is the show?</h3>
+        <p>All of our shows run between 75-90 minutes. There is no intermission.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Can I bring a group?</h3>
+        <p>Absolutely! Groups are welcome. Since seating is first come, first served, we recommend arriving early to ensure your group can sit together.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Is there an item minimum?</h3>
+        <p>There is a 2-item minimum and a bartender will be available for patrons to order food & drinks.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Can I buy tickets at the door?</h3>
+        <p>We recommend purchasing tickets in advance as many shows sell out. If tickets are available, they may be purchased at the door for an additional fee.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>If it's sold out, can I still attend?</h3>
+        <p>Yes! We will be offering a small amount of tickets available at the door for $20, however we cannot guarantee that your party will be seated together.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>What is the refund policy?</h3>
+        <p>All sales are final. No refunds or exchanges. If you cannot attend, you may be able to receive a refund by contacting us at hausofcomedy@gmail.com.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Where can I park?</h3>
+        <p>Street parking is available in the area, and there are several paid parking garages nearby. We recommend arriving with extra time to find parking.</p>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+    <h2>GET IN TOUCH</h2>
+    <div class="contact-content">
+        <div class="contact-intro">
+            <p>Have questions about our shows? Want to book a private event? Looking to get your comedy group on our stage? We'd love to hear from you!</p>
+        </div>
+        <div class="contact-options">
+            <div class="contact-item">
+                <svg class="contact-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <h3>Email Us</h3>
+                <p><a href="mailto:hausofcomedy@gmail.com">hausofcomedy@gmail.com</a></p>
+                <p class="contact-desc">We typically respond within 24 hours</p>
+            </div>
+            <div class="contact-item">
+                <svg class="contact-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                <h3>Follow Us</h3>
+                <p><a href="https://www.instagram.com/misconductcomedy" target="_blank">@misconductcomedy</a></p>
+                <p class="contact-desc">Stay updated on upcoming shows and behind-the-scenes content</p>
+            </div>
+            <div class="contact-item">
+                <svg class="contact-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+                <h3>Performer Inquiries</h3>
+                <p>Interested in performing at Misconduct Comedy?</p>
+                <p class="contact-desc">Send us your bio and recent set videos</p>
+            </div>
+            <div class="contact-item">
+                <svg class="contact-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                <h3>Private Events</h3>
+                <p>Looking to book a private comedy show?</p>
+                <p class="contact-desc">Contact us for availability and pricing</p>
+            </div>
+        </div>
+    </div>
+</section>

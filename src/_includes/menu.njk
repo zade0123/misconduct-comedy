@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="{{ metaTitle or title }}"/>
+        <meta property="og:description" content="{{ metaDescription }}"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="/Logo Final 1000px.png"/>
+        <meta property="og:image:secure_url" content="/Logo Final 1000px.png"/>
+
+        <link rel="icon" type="image/png" sizes="32x32" href="/logo 100px.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/logo 100px.png">
+
+        <style>
+            @font-face {
+              font-family: 'Smythe';
+              src: url('/Smythe-Regular.ttf') format('truetype');
+            }
+        </style>
+        <link rel="preload" as="font" type="font/truetype" href="/Smythe-Regular.ttf" crossorigin>
+
+        <link rel="stylesheet" type="text/css" href="/css/menu.css">
+
+        <title>{{ title }}</title>
+    </head>
+    <body class="cs-body">
+
+        {{ content | safe }}
+
+      </body>
+</html>

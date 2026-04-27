@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Manager</title>
+  <style>
+    /* Hide default Decap preview and show ours */
+    [data-slate-editor] { min-height: 80px; }
+  </style>
+</head>
+<body>
+  <!-- Include Decap CMS via CDN -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+  // --- Show Preview Template ---
+  var ShowPreview = createClass({
+    formatDate: function(dateStr) {
+      if (!dateStr) return '';
+      var d = new Date(dateStr);
+      if (isNaN(d)) return '';
+      var months = ['January','February','March','April','May','June',
+                    'July','August','September','October','November','December'];
+      return months[d.getMonth()] + ' ' + d.getDate();
+    },
+
+    formatTime: function(dateStr) {
+      if (!dateStr) return '';
+      var d = new Date(dateStr);
+      if (isNaN(d)) return '';
+      var hours = d.getHours();
+      var minutes = String(d.getMinutes()).padStart(2, '0');
+      var ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12 || 12;
+      return hours + ':' + minutes + ' ' + ampm;
+    },
+
+    dayOfWeek: function(dateStr) {
+      if (!dateStr) return '';
+      var d = new Date(dateStr);
+      if (isNaN(d)) return '';
+      var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+      return days[d.getDay()];
+    },
+
+    render: function() {
+      var entry = this.props.entry;
+      var data = entry.get('data');
+      var title = data.get('title') || 'Untitled Show';
+      var subtitle = data.get('subtitle') || '';
+      var description = data.get('description') || '';
+      var showType = data.get('showType') || '';
+      var ageRestriction = data.get('ageRestriction') || '21+';
+      var totalTickets = data.get('totalTickets') || '';
+
+      var images = data.get('images');
+      var firstImage = images && images.size > 0 ? images.getIn([0, 'src']) : null;
+      var firstImageAlt = images && images.size > 0 ? (images.getIn([0, 'alt']) || title) : title;
+
+      var showtimes = data.get('showtimes');
+      var location = data.get('location');
+      var venueName = location ? location.get('name') : 'Misconduct Tavern';
+      var streetAddress = location ? location.get('streetAddress') : '1511 Locust Street';
+      var city = location ? location.get('city') : 'Philadelphia';
+      var state = location ? location.get('state') : 'PA';
+      var postalCode = location ? location.get('postalCode') : '19102';
+
+      var performers = data.get('performers');
+
+      var self = this;
+
+      // Build showtime date string
+      var dateStr = '';
+      var timeStr = '';
+      if (showtimes && showtimes.size > 0) {
+        dateStr = self.formatDate(showtimes.getIn([0, 'startDate']));
+        var times = [];
+        showtimes.forEach(function(st) {
+          times.push(self.formatTime(st.get('startDate')));
+        });
+        timeStr = times.join(' & ');
+      }
+
+      var dayStr = showtimes && showtimes.size > 0 ? self.dayOfWeek(showtimes.getIn([0, 'startDate'])) : '';
+
+      return h('div', { style: { background: '#0a0a0a', color: '#fff', fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif", minHeight: '100vh', padding: '0' } },
+
+        // Show Detail Container
+        h('div', { style: { maxWidth: '1000px', margin: '0 auto', padding: '40px 20px' } },
+
+          // Breadcrumb
+          h('nav', { style: { fontSize: '0.9rem', color: '#666', marginBottom: '2rem' } },
+            h('span', { style: { color: '#aaa' } }, 'Home'),
+            h('span', { style: { color: '#555', margin: '0 8px' } }, '›'),
+            h('span', { style: { color: '#aaa' } }, 'Shows'),
+            h('span', { style: { color: '#555', margin: '0 8px' } }, '›'),
+            h('span', {}, title)
+          ),
+
+          // Image
+          firstImage ? h('div', { style: { width: '100%', maxWidth: '800px', margin: '0 auto 2rem', borderRadius: '12px', overflow: 'hidden', background: '#111' } },
+            h('img', { src: this.props.getAsset(firstImage).toString(), alt: firstImageAlt, style: { width: '100%', height: '400px', objectFit: 'cover', display: 'block' } })
+          ) : null,
+
+          // Title
+          h('h1', { style: { fontFamily: "'Oregano', cursive", fontSize: '2.5rem', marginBottom: '1rem', color: '#fff' } },
+            title,
+            subtitle ? h('br') : null,
+            subtitle ? h('span', { style: { fontSize: '1.5rem', fontWeight: '400', color: '#ccc', fontStyle: 'italic' } }, subtitle) : null
+          ),
+
+          // Meta tags
+          h('div', { style: { display: 'flex', alignItems: 'center', gap: '15px', flexWrap: 'wrap', marginBottom: '2rem' } },
+            h('p', { style: { fontSize: '1.1rem', color: '#aaa', margin: 0 } }, dateStr + ' • ' + timeStr),
+            dayStr ? h('span', { style: { fontSize: '0.8rem', color: '#fff', background: 'rgba(255,255,255,0.15)', padding: '4px 12px', borderRadius: '12px', fontWeight: '600' } }, dayStr) : null,
+            showType ? h('span', { style: { fontSize: '0.8rem', color: '#fff', background: 'rgba(255,255,255,0.15)', padding: '4px 12px', borderRadius: '12px', fontWeight: '600' } }, showType) : null,
+            ageRestriction ? h('span', { style: { fontSize: '0.8rem', color: '#fff', background: 'rgba(255,255,255,0.15)', padding: '4px 12px', borderRadius: '12px', fontWeight: '600' } }, ageRestriction) : null
+          ),
+
+          // Two column layout
+          h('div', { style: { display: 'grid', gridTemplateColumns: '1fr 350px', gap: '40px', marginTop: '2rem' } },
+
+            // Left: Description
+            h('div', {},
+              h('h2', { style: { fontFamily: "'Oregano', cursive", fontSize: '1.5rem', marginBottom: '1rem', color: '#fff' } }, 'About This ' + (showType || 'Show')),
+              h('div', { style: { fontSize: '1.1rem', lineHeight: '1.8', color: '#ccc' } },
+                this.props.widgetFor('description')
+              ),
+              h('div', { style: { marginTop: '2rem', paddingTop: '2rem', borderTop: '1px solid #333' } },
+                h('h2', { style: { fontFamily: "'Oregano', cursive", fontSize: '1.5rem', marginBottom: '1rem', color: '#fff' } }, 'Live Stand-Up Comedy in Philadelphia'),
+                h('p', { style: { fontSize: '1rem', lineHeight: '1.8', color: '#aaa' } },
+                  'Join us for an unforgettable evening of live stand-up comedy at ' + venueName + ' in the heart of Center City Philadelphia. ' + title + (subtitle ? ' ' + subtitle : '') + ' is the perfect choice for date night, a fun night out with friends, or anyone seeking the best comedy shows in Philadelphia. Located at ' + streetAddress + ', our intimate venue offers a cozy atmosphere paired with great food and drinks for an incredible live entertainment experience.'
+                )
+              )
+            ),
+
+            // Right: Sidebar
+            h('div', { style: { display: 'flex', flexDirection: 'column', gap: '25px' } },
+
+              // Tickets block
+              h('div', { style: { padding: '25px', border: '2px solid #333', background: 'rgba(255,255,255,0.05)' } },
+                h('h3', { style: { fontFamily: "'Oregano', cursive", fontSize: '1.2rem', marginBottom: '10px', color: '#fff' } }, '🎟️ Get Tickets'),
+                showtimes ? showtimes.map(function(st, i) {
+                  var avail = st.get('ticketAvailability') || '';
+                  var time = self.formatTime(st.get('startDate'));
+                  var price = st.get('ticketPrice');
+                  if (avail === 'https://schema.org/InStock' && st.get('ticketUrl')) {
+                    return h('a', { key: i, href: '#', style: { display: 'block', padding: '12px 25px', background: '#fff', color: '#0a0a0a', textDecoration: 'none', borderRadius: '8px', fontSize: '0.9rem', fontWeight: '700', textAlign: 'center', textTransform: 'uppercase', letterSpacing: '0.03em', marginBottom: '8px' } },
+                      'BUY ' + time + ' TICKETS' + (price ? ' — $' + price : '')
+                    );
+                  } else if (avail === 'https://schema.org/SoldOut') {
+                    return h('span', { key: i, style: { display: 'block', padding: '12px 25px', background: 'transparent', color: '#666', border: '2px solid #444', borderRadius: '8px', fontSize: '0.9rem', fontWeight: '700', textAlign: 'center', textTransform: 'uppercase', marginBottom: '8px' } }, time + ' — SOLD OUT');
+                  } else {
+                    return h('span', { key: i, style: { display: 'block', padding: '12px 25px', background: 'transparent', color: '#666', border: '2px solid #444', borderRadius: '8px', fontSize: '0.9rem', fontWeight: '700', textAlign: 'center', textTransform: 'uppercase', marginBottom: '8px' } }, 'COMING SOON');
+                  }
+                }).toArray() : null
+              ),
+
+              // Venue block
+              h('div', { style: { padding: '25px', border: '2px solid #333' } },
+                h('h3', { style: { fontFamily: "'Oregano', cursive", fontSize: '1.2rem', marginBottom: '10px', color: '#fff' } }, '📍 Venue'),
+                h('p', { style: { fontSize: '0.95rem', color: '#aaa', marginBottom: '5px' } }, h('strong', { style: { color: '#fff' } }, venueName)),
+                h('p', { style: { fontSize: '0.95rem', color: '#fff', textDecoration: 'underline' } }, streetAddress + ', ' + city + ' ' + state + ' ' + postalCode)
+              ),
+
+              // Performers block
+              performers && performers.size > 0 ? h('div', { style: { padding: '25px', border: '2px solid #333' } },
+                h('h3', { style: { fontFamily: "'Oregano', cursive", fontSize: '1.2rem', marginBottom: '10px', color: '#fff' } }, '🎭 Performers'),
+                h('div', { style: { display: 'flex', flexDirection: 'column', gap: '15px' } },
+                  performers.map(function(p, i) {
+                    return h('div', { key: i, style: { display: 'flex', alignItems: 'center', gap: '12px' } },
+                      p.get('photo') ? h('img', { src: self.props.getAsset(p.get('photo')).toString(), style: { width: '50px', height: '50px', borderRadius: '50%', objectFit: 'cover' } }) : null,
+                      h('div', {},
+                        h('p', { style: { fontSize: '0.95rem', color: '#fff', fontWeight: '600', margin: 0 } }, p.get('name')),
+                        p.get('instagram') ? h('span', { style: { fontSize: '0.85rem', color: '#aaa' } }, '@' + p.get('instagram').replace('https://instagram.com/', '').replace('https://www.instagram.com/', '').replace('/', '')) : null
+                      )
+                    );
+                  }).toArray()
+                )
+              ) : null,
+
+              // Show Details block
+              h('div', { style: { padding: '25px', border: '2px solid #333' } },
+                h('h3', { style: { fontFamily: "'Oregano', cursive", fontSize: '1.2rem', marginBottom: '10px', color: '#fff' } }, '📋 Show Details'),
+                ageRestriction ? h('p', { style: { fontSize: '0.95rem', color: '#aaa', marginBottom: '5px' } }, h('strong', { style: { color: '#fff' } }, 'Age: '), ageRestriction) : null,
+                h('p', { style: { fontSize: '0.95rem', color: '#aaa', marginBottom: '5px' } }, h('strong', { style: { color: '#fff' } }, 'Seating: '), 'First come, first served'),
+                h('p', { style: { fontSize: '0.95rem', color: '#aaa', marginBottom: '5px' } }, h('strong', { style: { color: '#fff' } }, 'Doors: '), '30 minutes before showtime'),
+                h('p', { style: { fontSize: '0.95rem', color: '#aaa', marginBottom: '5px' } }, h('strong', { style: { color: '#fff' } }, 'Duration: '), '75-90 minutes'),
+                h('p', { style: { fontSize: '0.95rem', color: '#aaa', marginBottom: '5px' } }, h('strong', { style: { color: '#fff' } }, 'Minimum: '), '2-item minimum (food & drinks available)'),
+                totalTickets ? h('p', { style: { fontSize: '0.95rem', color: '#aaa', marginBottom: '5px' } }, h('strong', { style: { color: '#fff' } }, 'Capacity: '), totalTickets + ' seats') : null
+              )
+            )
+          )
+        )
+      );
+    }
+  });
+
+  CMS.registerPreviewTemplate('shows', ShowPreview);
+  CMS.registerPreviewStyle('https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap');
+  CMS.registerPreviewStyle('/css/index.css');
+  </script>
+</body>
+</html>
