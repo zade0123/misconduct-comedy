@@ -3,7 +3,8 @@ layout: show.njk
 title: Misconduct Comedy Double Trouble Special!
 showDate: May 8, 2026
 subtitle: With Dru Montana & Na'im Ali
-description: Need date night plans or fun hang with friends? Check out this special show featuring Durag & The Deertag's Dru Montana & Na'im Ali!
+description: Need date night plans or fun hang with friends? Check out this
+  special show featuring Durag & The Deertag's Dru Montana & Na'im Ali!
 showtimes:
   - startDate: 2026-05-08T19:30:00.000-04:00
     endDate: 2026-05-08T21:00:00.000-04:00
@@ -35,7 +36,7 @@ totalTickets: 40
 performers:
   - name: Dru Montana
   - name: Na'im Ali
-showType: Special
+showType: Co-Headliners
 ageRestriction: 21+
 organizerName: Misconduct Comedy
 organizerUrl: https://misconductcomedy.com
