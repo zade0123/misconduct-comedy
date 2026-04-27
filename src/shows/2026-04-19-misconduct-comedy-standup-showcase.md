@@ -11,8 +11,8 @@ description: Need date night plans? Or just a fun hang with friends? Misconduct
   heart of Center City. 21+ only.
 showtimes:
   - ticketAvailability: https://schema.org/InStock
-    startDate: 2026-04-25T20:00:00.000-04:00
-    endDate: 2026-04-25T21:30:00.000-04:00
+    startDate: 2026-04-19T20:00:00.000-04:00
+    endDate: 2026-04-19T21:30:00.000-04:00
     ticketUrl: https://www.eventbrite.com/e/misconduct-comedy-show-featuring-philadelphias-best-standup-acts-tickets-1986700976100?aff=websiteunattributed
     ticketPrice: 15
 eventStatus: https://schema.org/EventScheduled
@@ -28,18 +28,18 @@ images:
   - alt: ""
     src: /photos/shows/savionj.webp
 ticketSaleStart: 2026-04-10T12:00:00.000-04:00
-ticketSaleEnd: 2026-04-25T20:00:00.000-04:00
+ticketSaleEnd: 2026-04-19T20:00:00.000-04:00
 totalTickets: 40
 performers:
   - name: Dennis Mar
     instagram: https://www.instagram.com/dennismarcomedy/
     photo: /photos/shows/dennism.jpg
 ticketAvailability: https://schema.org/InStock
-endDate: 2026-04-25T21:30:00.000-04:00
+endDate: 2026-04-19T21:30:00.000-04:00
 priceCurrency: USD
 showType: Showcase
 ageRestriction: 21+
-startDate: 2026-04-25T20:00:00.000-04:00
+startDate: 2026-04-19T20:00:00.000-04:00
 organizerName: Misconduct Comedy
 ticketPrice: 15
 ---

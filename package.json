@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
-    "cms": "npx decap-server",
+    "cms": "set PORT=8082&& npx decap-server",
     "dev": "npx concurrently \"npm run cms\" \"npm start\""
   },
   "keywords": ["11ty", "eleventy", "decap-cms"],
