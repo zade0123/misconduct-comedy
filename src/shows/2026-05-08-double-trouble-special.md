@@ -26,8 +26,10 @@ location:
   postalCode: "19102"
   country: US
 images:
-  - alt: Dru Montana stand-up promo image
+  - alt: Dru Montana & Na'im Ali stand-up promo image
     src: /photos/shows/frame-72.png
+  - alt: Dru Montana stand-up comedy promo image
+    src: /photos/shows/DruM1.webp
   - alt: Misconduct Comedy show poster
     src: /photos/shows/RoomMic.webp
 priceCurrency: USD
