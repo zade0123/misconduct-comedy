@@ -27,7 +27,7 @@ location:
   country: US
 images:
   - alt: Dru Montana stand-up promo image
-    src: /photos/shows/DruM.webp
+    src: /photos/shows/frame-72.png
   - alt: Misconduct Comedy show poster
     src: /photos/shows/RoomMic.webp
 priceCurrency: USD
