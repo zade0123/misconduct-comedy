@@ -246,13 +246,17 @@ body.home2-page {
 }
 
 .h2-grid-img {
-  height: 50vh;
   width: 17.5vw;
+  aspect-ratio: 4/5;
   object-fit: cover;
   object-position: center top;
   display: block;
   flex-shrink: 0;
   border-radius: 6px;
+}
+
+.h2-grid-track .h2-grid-img:nth-child(even) {
+  aspect-ratio: 9/16;
 }
 
 /* Edge vignette + overall darkening */
@@ -1011,33 +1015,31 @@ body.home2-page {
     position: relative;
     flex: 0 0 55svh;
     width: 100%;
+    overflow: hidden;
   }
 
   .h2-grid-inner {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: none;
+    top: -20%;
+    left: -10%;
+    width: 180%;
+    height: 180%;
+    transform: perspective(600px) rotateX(12deg) rotateZ(-6deg);
+    transform-origin: 50% 50%;
     flex-direction: row;
     justify-content: flex-start;
     align-items: stretch;
   }
 
-  /* Show only 3 columns on mobile */
-  .h2-grid-row:nth-child(n+4) {
-    display: none;
-  }
-
   .h2-grid-row {
-    flex: 1;
+    flex: none;
+    width: 30vw;
     overflow: hidden;
   }
 
   .h2-grid-img {
     width: 100%;
-    height: 180px;
+    height: auto;
   }
 
   .h2-grid-vignette {
