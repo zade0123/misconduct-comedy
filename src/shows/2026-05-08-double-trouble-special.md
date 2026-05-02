@@ -9,12 +9,12 @@ showtimes:
   - startDate: 2026-05-08T19:30:00.000-04:00
     endDate: 2026-05-08T21:00:00.000-04:00
     ticketUrl: https://www.eventbrite.com/e/misconduct-comedy-double-trouble-special-with-dru-montana-naim-ali-tickets-1987098772921?aff=websiteunattributed
-    ticketPrice: 17.85
+    ticketPrice: 15
     ticketAvailability: https://schema.org/InStock
   - startDate: 2026-05-08T21:30:00.000-04:00
     endDate: 2026-05-08T23:00:00.000-04:00
     ticketUrl: https://www.eventbrite.com/e/misconduct-comedy-double-trouble-special-with-dru-montana-naim-ali-tickets-1987098772921?aff=websiteunattributed
-    ticketPrice: 17.85
+    ticketPrice: 15
     ticketAvailability: https://schema.org/InStock
 eventStatus: https://schema.org/EventScheduled
 eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
