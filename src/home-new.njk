@@ -1,0 +1,377 @@
+---
+layout: base.njk
+title: Misconduct Comedy — Philadelphia's Best Stand-Up Shows
+metaTitle: Misconduct Comedy
+metaDescription: Come see the funniest stand-up show in the heart of Center City with Philly and NYC's best comedians! Tickets sell fast, Get yours now!
+permalink: /home-new/index.html
+stylesheet: home-new.css
+bodyClass: home-new-page
+generateShowSchema: true
+---
+
+{#
+  Find the first show with an available (InStock) showtime.
+  Falls back to the first show in the collection if none are in-stock.
+  collections.showsByDate is sorted ascending by showtime date.
+#}
+{%- set heroShow = null -%}
+{%- set heroShowtime = null -%}
+{%- for show in collections.showsByDate -%}
+  {%- if not heroShow -%}
+    {%- for st in show.data.showtimes -%}
+      {%- if not heroShowtime and st.ticketAvailability == "https://schema.org/InStock" -%}
+        {%- set heroShow = show -%}
+        {%- set heroShowtime = st -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if not heroShow and collections.showsByDate | length -%}
+  {%- set heroShow = collections.showsByDate | first -%}
+  {%- set heroShowtime = heroShow.data.showtimes | first -%}
+{%- endif -%}
+
+<div class="hn-page">
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hn-hero">
+
+    <!-- 2×2 comedian photo grid -->
+    <div class="hn-grid">
+      <div class="hn-grid-cell">
+        <img src="/photos/shows/SavionJ1.webp" alt="Stand-up comedian" loading="eager">
+      </div>
+      <div class="hn-grid-cell">
+        <img src="/photos/shows/DruM1.webp" alt="Stand-up comedian" loading="eager">
+      </div>
+      <div class="hn-grid-cell">
+        <img src="/photos/shows/MonikaN.webp" alt="Stand-up comedian" loading="eager">
+      </div>
+      <div class="hn-grid-cell">
+        <img src="/photos/shows/KyleR.webp" alt="Stand-up comedian" loading="eager">
+      </div>
+
+      <!-- Transparent nav overlaid on the grid -->
+      <nav class="hn-nav" aria-label="Site navigation">
+        <a href="/">
+          <img
+            src="/images/Misconduct Comedy Logo with Border - 750px.png"
+            alt="Misconduct Comedy"
+            class="hn-logo"
+          >
+        </a>
+        <span class="hn-location-badge">Center City, Philly</span>
+      </nav>
+
+      <div class="hn-grid-fade" aria-hidden="true"></div>
+    </div><!-- /.hn-grid -->
+
+    <!-- Hero content -->
+    <div class="hn-content">
+
+      <div class="hn-tag">
+        <div class="hn-tag-rule" aria-hidden="true"></div>
+        <span class="hn-tag-text">Standup Comedy &middot; Philadelphia</span>
+      </div>
+
+      <h1 class="hn-headline">
+        Date Night Done<br>
+        <span class="hn-headline-accent">Right.</span>
+      </h1>
+
+      {%- if heroShow and heroShowtime -%}
+      <div class="hn-date-price">
+        <div class="hn-dp-cell hn-dp-cell--date">
+          <div class="hn-dp-label">Date</div>
+          <div class="hn-dp-value">
+            {{- heroShowtime.startDate | showDayOfWeek -}},
+            {{- " " -}}
+            {{- heroShowtime.startDate | showDateOnly -}}
+            {{- " · " -}}
+            {{- heroShowtime.startDate | showTimeOnly -}}
+          </div>
+        </div>
+        <div class="hn-dp-divider" aria-hidden="true"></div>
+        <div class="hn-dp-cell hn-dp-cell--price">
+          <div class="hn-dp-label">Price</div>
+          <div class="hn-dp-value hn-dp-value--price">${{- heroShowtime.ticketPrice | int -}}</div>
+        </div>
+      </div>
+      {%- endif -%}
+
+      <div class="hn-headshots">
+        <div class="hn-avatar-row" role="img" aria-label="Comedian headshots">
+          <div class="hn-avatar"><img src="/photos/shows/savionj.webp" alt="Comedian"></div>
+          <div class="hn-avatar"><img src="/photos/shows/DruM.webp" alt="Comedian"></div>
+          <div class="hn-avatar"><img src="/photos/shows/MonikaN.webp" alt="Comedian"></div>
+          <div class="hn-avatar"><img src="/photos/shows/KyleR.webp" alt="Comedian"></div>
+          <div class="hn-avatar"><img src="/photos/shows/JimG.webp" alt="Comedian"></div>
+        </div>
+        <span class="hn-headshots-label">5&ndash;7 of Philly &amp;<br>NYC's finest</span>
+      </div>
+
+      <div class="hn-scarcity" role="status">
+        <div class="hn-scarcity-dot" aria-hidden="true"></div>
+        <span class="hn-scarcity-text">Shows sell out fast &mdash; grab your tickets</span>
+      </div>
+
+      {%- if heroShowtime -%}
+        {%- if heroShowtime.ticketAvailability == "https://schema.org/InStock" and heroShowtime.ticketUrl -%}
+      <a
+        href="{{ heroShowtime.ticketUrl }}"
+        class="hn-cta"
+        target="_blank"
+        rel="noopener"
+        onclick="gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ heroShow.data.title }} {{ heroShowtime.startDate | showTimeOnly }}', 'transport_type': 'beacon'});"
+      >Get Tickets &mdash; ${{- heroShowtime.ticketPrice | int -}} &rarr;</a>
+        {%- elif heroShowtime.ticketAvailability == "https://schema.org/SoldOut" -%}
+      <span class="hn-cta hn-cta--unavailable" aria-disabled="true">Sold Out</span>
+        {%- else -%}
+      <span class="hn-cta hn-cta--unavailable" aria-disabled="true">Coming Soon</span>
+        {%- endif -%}
+      {%- else -%}
+      <a href="#shows" class="hn-cta">See Upcoming Shows &rarr;</a>
+      {%- endif -%}
+
+      <div class="hn-review">
+        <div class="hn-stars" aria-label="5 out of 5 stars">
+          {%- for i in range(5) -%}
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="#c9a96e" aria-hidden="true">
+            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+          </svg>
+          {%- endfor -%}
+        </div>
+        <span class="hn-review-text">&ldquo;Perfect date night&rdquo; &mdash; Jess K., Google</span>
+      </div>
+
+    </div><!-- /.hn-content -->
+  </section><!-- /.hn-hero -->
+
+
+  <!-- ══════════════════════════════════════
+       UPCOMING SHOWS
+  ══════════════════════════════════════ -->
+  <section class="hn-section hn-shows" id="shows">
+    <div class="hn-section-tag">
+      <div class="hn-section-tag-rule" aria-hidden="true"></div>
+      <span class="hn-section-tag-text">Live Stand-Up</span>
+    </div>
+    <h2 class="hn-section-heading">Upcoming Shows</h2>
+
+    <div class="hn-show-list">
+      {%- for show in collections.showsByDate -%}
+      <article class="hn-show-card{% if show.data.showtimes | allSoldOut %} hn-show-card--soldout{% endif %}">
+
+        <div class="hn-show-inner">
+          <div class="hn-show-thumb">
+            {%- if show.data.images and show.data.images.length -%}
+            <img src="{{ show.data.images[0].src }}" alt="{{ show.data.images[0].alt or show.data.title }}">
+            {%- endif -%}
+          </div>
+          <div class="hn-show-info">
+            <h3 class="hn-show-title">
+              <a href="{{ show.url }}" class="hn-show-link">{{ show.data.title }}</a>
+            </h3>
+            {%- if show.data.subtitle -%}
+            <span class="hn-show-subtitle">{{ show.data.subtitle }}</span>
+            {%- endif -%}
+            <p class="hn-show-date">
+              {{ show.data.showtimes[0].startDate | showDateOnly }} &middot;
+              {%- for st in show.data.showtimes -%}
+                {{ st.startDate | showTimeOnly }}{% if not loop.last %} &amp; {% endif %}
+              {%- endfor -%}
+            </p>
+            <div class="hn-show-tags">
+              <span class="hn-show-tag">{{ show.data.showtimes[0].startDate | showDayOfWeek }}</span>
+              {%- if show.data.showType %}<span class="hn-show-tag">{{ show.data.showType }}</span>{%- endif -%}
+              {%- if show.data.ageRestriction %}<span class="hn-show-tag">{{ show.data.ageRestriction }}</span>{%- endif -%}
+            </div>
+          </div>
+        </div>
+
+        <div class="hn-show-tickets">
+          {%- for st in show.data.showtimes -%}
+            {%- if st.ticketAvailability == "https://schema.org/InStock" and st.ticketUrl -%}
+            <a
+              href="{{ st.ticketUrl }}"
+              class="hn-ticket-btn"
+              target="_blank"
+              rel="noopener"
+              onclick="gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ show.data.title }} {{ st.startDate | showTimeOnly }}', 'transport_type': 'beacon'});"
+            >Buy {{ st.startDate | showTimeOnly }} &rarr;</a>
+            {%- elif st.ticketAvailability == "https://schema.org/SoldOut" -%}
+            <span class="hn-ticket-unavailable">{{ st.startDate | showTimeOnly }} &mdash; Sold Out</span>
+            {%- else -%}
+            <span class="hn-ticket-unavailable">Coming Soon</span>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+
+      </article>
+      {%- else -%}
+      <p class="hn-no-shows">No shows scheduled yet. Check back soon!</p>
+      {%- endfor -%}
+    </div>
+  </section><!-- /.hn-shows -->
+
+
+  <!-- ══════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════ -->
+  <section class="hn-section hn-about">
+    <div class="hn-section-tag">
+      <div class="hn-section-tag-rule" aria-hidden="true"></div>
+      <span class="hn-section-tag-text">The Lowdown</span>
+    </div>
+    <h2 class="hn-section-heading">About Misconduct Comedy</h2>
+
+    <p class="hn-about-intro">Misconduct Comedy brings you Philadelphia's best stand-up comedy in the heart of Center City. Whether it's the perfect date night or a fun hang with friends, our shows feature local favorites and rising stars in an intimate, laid-back setting.</p>
+
+    <div class="hn-features">
+
+      <div class="hn-feature">
+        <div class="hn-feature-eyebrow">The Venue</div>
+        <h3>Misconduct Tavern</h3>
+        <p>
+          <a href="https://maps.google.com/?q=1511+Locust+Street,+Philadelphia+PA+19102" target="_blank" rel="noopener">1511 Locust Street, Philadelphia PA 19102</a><br>
+          Cozy bar setting with a full drink menu and great atmosphere for comedy.
+        </p>
+      </div>
+
+      <div class="hn-feature">
+        <div class="hn-feature-eyebrow">What to Expect</div>
+        <h3>75&ndash;90 Min of Laughs</h3>
+        <p>Our showcases feature 5&ndash;7 talented local comedians and rising stars. Double Trouble Specials feature co-headliners doing extended 30-minute sets.</p>
+      </div>
+
+      <div class="hn-feature">
+        <div class="hn-feature-eyebrow">Show Details</div>
+        <h3>Good to Know</h3>
+        <p>
+          <strong>Age:</strong> 21+ with valid ID &nbsp;&middot;&nbsp; <strong>Seating:</strong> First come, first served<br>
+          <strong>Doors:</strong> 30 min before showtime &nbsp;&middot;&nbsp; <strong>Bar:</strong> Full menu available
+        </p>
+      </div>
+
+    </div>
+  </section><!-- /.hn-about -->
+
+
+  <!-- ══════════════════════════════════════
+       FAQ
+  ══════════════════════════════════════ -->
+  <section class="hn-section hn-faq">
+    <div class="hn-section-tag">
+      <div class="hn-section-tag-rule" aria-hidden="true"></div>
+      <span class="hn-section-tag-text">Need to Know</span>
+    </div>
+    <h2 class="hn-section-heading">FAQ</h2>
+
+    <div class="hn-faq-list">
+
+      <div class="hn-faq-item">
+        <p class="hn-faq-q">Is there an age limit?</p>
+        <p class="hn-faq-a">Yes, all attendees must be 21+ with a valid ID. This is strictly enforced at the door.</p>
+      </div>
+
+      <div class="hn-faq-item">
+        <p class="hn-faq-q">How long is the show?</p>
+        <p class="hn-faq-a">All of our shows run between 75&ndash;90 minutes. There is no intermission.</p>
+      </div>
+
+      <div class="hn-faq-item">
+        <p class="hn-faq-q">Can I bring a group?</p>
+        <p class="hn-faq-a">Absolutely! Since seating is first come, first served, we recommend arriving early to make sure your group can sit together.</p>
+      </div>
+
+      <div class="hn-faq-item">
+        <p class="hn-faq-q">Is there an item minimum?</p>
+        <p class="hn-faq-a">There is a 2-item minimum and a bartender will be available for patrons to order food &amp; drinks.</p>
+      </div>
+
+      <div class="hn-faq-item">
+        <p class="hn-faq-q">Can I buy tickets at the door?</p>
+        <p class="hn-faq-a">We recommend purchasing in advance &mdash; many shows sell out. If tickets are available they may be purchased at the door for an additional fee.</p>
+      </div>
+
+      <div class="hn-faq-item">
+        <p class="hn-faq-q">If it's sold out, can I still attend?</p>
+        <p class="hn-faq-a">Yes! We offer a small number of door tickets at $20, however we can't guarantee your party will be seated together.</p>
+      </div>
+
+      <div class="hn-faq-item">
+        <p class="hn-faq-q">What is the refund policy?</p>
+        <p class="hn-faq-a">All sales are final. If you cannot attend, you may be able to receive a refund by contacting us at <a href="mailto:hausofcomedy@gmail.com">hausofcomedy@gmail.com</a>.</p>
+      </div>
+
+      <div class="hn-faq-item">
+        <p class="hn-faq-q">Where can I park?</p>
+        <p class="hn-faq-a">Street parking is available nearby, and there are several paid garages in the area. We recommend arriving with extra time.</p>
+      </div>
+
+    </div>
+  </section><!-- /.hn-faq -->
+
+
+  <!-- ══════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════ -->
+  <section class="hn-section hn-contact">
+    <div class="hn-section-tag">
+      <div class="hn-section-tag-rule" aria-hidden="true"></div>
+      <span class="hn-section-tag-text">Reach Out</span>
+    </div>
+    <h2 class="hn-section-heading">Get in Touch</h2>
+
+    <p class="hn-contact-intro">Have questions about our shows? Want to book a private event? Looking to get on our stage? We&rsquo;d love to hear from you.</p>
+
+    <div class="hn-contact-grid">
+
+      <div class="hn-contact-card">
+        <svg class="hn-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        <h3>Email Us</h3>
+        <p><a href="mailto:hausofcomedy@gmail.com">hausofcomedy@gmail.com</a></p>
+        <p class="hn-contact-note">Usually respond within 24 hours</p>
+      </div>
+
+      <div class="hn-contact-card">
+        <svg class="hn-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+        <h3>Follow Us</h3>
+        <p><a href="https://www.instagram.com/misconductcomedy" target="_blank" rel="noopener">@misconductcomedy</a></p>
+        <p class="hn-contact-note">Shows, clips &amp; behind the scenes</p>
+      </div>
+
+      <div class="hn-contact-card">
+        <svg class="hn-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="16"/>
+          <line x1="8" y1="12" x2="16" y2="12"/>
+        </svg>
+        <h3>Perform With Us</h3>
+        <p>Interested in getting on stage?</p>
+        <p class="hn-contact-note">Send your bio &amp; recent set videos</p>
+      </div>
+
+      <div class="hn-contact-card">
+        <svg class="hn-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+        <h3>Private Events</h3>
+        <p>Looking to book a private show?</p>
+        <p class="hn-contact-note">Contact us for availability &amp; pricing</p>
+      </div>
+
+    </div>
+  </section><!-- /.hn-contact -->
+
+</div><!-- /.hn-page -->
