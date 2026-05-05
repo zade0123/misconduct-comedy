@@ -85,6 +85,15 @@ module.exports = function(eleventyConfig) {
     return toEasternISO(date);
   });
 
+  // Netlify Image CDN: returns optimized URL in production, original src in local dev
+  eleventyConfig.addFilter("netlifyImg", function(src, width, height) {
+    if (!src) return src;
+    if (!process.env.NETLIFY) return src;
+    var params = "url=" + encodeURIComponent(src) + "&w=" + width + "&fit=cover&format=auto";
+    if (height) params += "&h=" + height;
+    return "/.netlify/images?" + params;
+  });
+
   // Check if all showtimes are sold out
   eleventyConfig.addFilter("allSoldOut", function(showtimes) {
     if (!showtimes || !showtimes.length) return false;
