@@ -172,6 +172,15 @@ module.exports = function(eleventyConfig) {
     return JSON.stringify(events, null, 2);
   });
 
+  // Format date as YYYY-MM-DD for sitemaps
+  eleventyConfig.addFilter("sitemapDate", function(date) {
+    const d = new Date(date);
+    const year = d.getUTCFullYear();
+    const month = String(d.getUTCMonth() + 1).padStart(2, '0');
+    const day = String(d.getUTCDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  });
+
   // Custom collection: shows sorted by first showtime's start date
   eleventyConfig.addCollection("showsByDate", function(collectionApi) {
     return collectionApi.getFilteredByTag("shows").sort(function(a, b) {

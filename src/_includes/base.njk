@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="{{ metaDescription or description }}"/>
         <meta property="og:title" content="{{ metaTitle or title }}"/>
-        <meta property="og:description" content="{{ metaDescription }}"/>
+        <meta property="og:description" content="{{ metaDescription or description }}"/>
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="/images/Logo Final 1000px.png"/>
         <meta property="og:image:secure_url" content="/images/Logo Final 1000px.png"/>
@@ -12,17 +13,9 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/images/logo 100px.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/images/logo 100px.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/images/logo 100px.png">
+        <link rel="stylesheet" href="/css/root.css">
         <link rel="stylesheet" href="/css/{{ stylesheet or 'index.css' }}">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap" rel="stylesheet">
 
-        <style>
-            @font-face {
-              font-family: 'Smythe';
-              src: url('/fonts/Smythe-Regular.ttf') format('truetype');
-            }
-        </style>
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
