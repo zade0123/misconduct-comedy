@@ -27,7 +27,7 @@ location:
   country: US
 images:
   - alt: Dru Montana & Na'im Ali stand-up promo image
-    src: /photos/shows/frame-72.png
+    src: /photos/shows/dru&naimdoubletrouble.webp
   - alt: Dru Montana stand-up comedy promo image
     src: /photos/shows/DruM1.webp
   - alt: Misconduct Comedy show poster
