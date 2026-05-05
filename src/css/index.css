@@ -67,7 +67,7 @@
   border-radius: 6px;
 }
 
-.h2-grid-track .h2-grid-img:nth-child(even) {
+.h2-grid-img--9x16 {
   aspect-ratio: 9/16;
 }
 
