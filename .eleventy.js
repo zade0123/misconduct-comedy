@@ -89,7 +89,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("netlifyImg", function(src, width, height) {
     if (!src) return src;
     if (!process.env.NETLIFY) return src;
-    var params = "url=" + encodeURIComponent(src) + "&w=" + width + "&fit=cover&format=auto";
+    var params = "url=" + encodeURIComponent(src) + "&w=" + width + "&fit=cover";
     if (height) params += "&h=" + height;
     return "/.netlify/images?" + params;
   });
