@@ -17,6 +17,8 @@ bodyClass: home2-page
   {%- set navLinks %}<li><a href="#about" class="h2-nav-link">About</a></li><li><a href="#shows" class="h2-nav-link">Shows</a></li>{% endset -%}
   {%- include "h2-nav.njk" -%}
 
+  <main id="main-content">
+
   <!-- ══════════════════════════════════════
        HERO
   ══════════════════════════════════════ -->
@@ -218,7 +220,7 @@ bodyClass: home2-page
       {%- endif -%}
 
       <div class="mc-review">
-        <div class="mc-stars" aria-label="5 out of 5 stars">
+        <div class="mc-stars" role="img" aria-label="5 out of 5 stars">
           <svg width="13" height="13" viewBox="0 0 24 24" fill="#c9a96e" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
           <svg width="13" height="13" viewBox="0 0 24 24" fill="#c9a96e" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
           <svg width="13" height="13" viewBox="0 0 24 24" fill="#c9a96e" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
@@ -319,7 +321,7 @@ bodyClass: home2-page
             </div>
 
             <div class="h2-show-featured-proof">
-              <div class="mc-stars" aria-label="5 out of 5 stars">
+              <div class="mc-stars" role="img" aria-label="5 out of 5 stars">
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="#c9a96e" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="#c9a96e" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
                 <svg width="11" height="11" viewBox="0 0 24 24" fill="#c9a96e" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
@@ -446,6 +448,8 @@ bodyClass: home2-page
 
     </div>
   </section><!-- /.h2-about -->
+
+  </main>
 
   {%- include "h2-footer.njk" -%}
 
