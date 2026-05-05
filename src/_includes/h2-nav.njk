@@ -1,0 +1,23 @@
+  <header class="h2-header">
+    <nav class="h2-nav" aria-label="Site navigation">
+
+      <a href="/" class="h2-logo-link">
+        <img
+          src="/images/logonotext.svg"
+          alt="Misconduct Comedy"
+          class="h2-logo"
+        >
+      </a>
+
+      <button class="h2-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="h2-nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="h2-nav-links" id="h2-nav-menu" role="list">
+        {{ navLinks | safe }}
+      </ul>
+
+    </nav>
+  </header>

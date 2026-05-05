@@ -145,6 +145,12 @@ collections:
           - {label: "Name", name: "name", widget: "string"}
           - {label: "Photo", name: "photo", widget: "image", required: false}
           - {label: "Instagram URL", name: "instagram", widget: "string", required: false, hint: "e.g., https://instagram.com/username"}
+      - label: "Featured"
+        name: "featured"
+        widget: "boolean"
+        default: false
+        required: false
+        hint: "Featured shows appear at the top of the shows list with a larger card"
       - label: "Show Type"
         name: "showType"
         widget: "string"

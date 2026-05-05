@@ -10,8 +10,8 @@ description: Need date night plans? Or just a fun hang with friends? Misconduct
   heart of Center City. 21+ only.
 showtimes:
   - ticketAvailability: https://schema.org/InStock
-    startDate: 2026-05-09T20:00:00.000-04:00
-    endDate: 2026-05-09T21:30:00.000-04:00
+    startDate: 2026-05-09T21:00:00.000-04:00
+    endDate: 2026-05-09T22:30:00.000-04:00
     ticketUrl: https://www.eventbrite.com/e/misconduct-comedy-show-featuring-philadelphias-best-standup-acts-tickets-1987793143803?aff=websiteunattributed
     ticketPrice: 15
 eventStatus: https://schema.org/EventScheduled
@@ -34,9 +34,10 @@ images:
     src: /photos/shows/DennisM1.webp
 priceCurrency: USD
 ticketSaleStart: 2026-04-26T12:00:00.000-04:00
-ticketSaleEnd: 2026-05-09T20:00:00.000-04:00
+ticketSaleEnd: 2026-05-09T21:00:00.000-04:00
 totalTickets: 40
 showType: Showcase
+featured: true
 ageRestriction: 21+
 organizerName: Misconduct Comedy
 organizerUrl: https://misconductcomedy.com
