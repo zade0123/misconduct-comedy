@@ -86,12 +86,29 @@ module.exports = function(eleventyConfig) {
   });
 
   // Netlify Image CDN: returns optimized URL in production, original src in local dev
-  eleventyConfig.addFilter("netlifyImg", function(src, width, height) {
+  eleventyConfig.addFilter("netlifyImg", function(src, width, height, quality) {
     if (!src) return src;
     if (!process.env.NETLIFY) return src;
     var params = "url=" + encodeURIComponent(src) + "&w=" + width;
     if (height) params += "&h=" + height + "&fit=cover";
+    // Default to high quality (85) if not specified
+    params += "&q=" + (quality || 85);
     return "/.netlify/images?" + params;
+  });
+
+  // Generate responsive srcset for different screen sizes
+  eleventyConfig.addFilter("netlifyImgSrcset", function(src, sizes, quality) {
+    if (!src) return src;
+    if (!process.env.NETLIFY) return src;
+    // sizes should be an array like [200, 400, 800, 1200]
+    // Default to common breakpoints if not provided
+    var widths = sizes || [200, 400, 800, 1200];
+    var q = quality || 85;
+    
+    return widths.map(function(w) {
+      var params = "url=" + encodeURIComponent(src) + "&w=" + w + "&q=" + q;
+      return "/.netlify/images?" + params + " " + w + "w";
+    }).join(", ");
   });
 
   // Check if all showtimes are sold out
