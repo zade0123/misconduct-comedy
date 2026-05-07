@@ -236,6 +236,104 @@ bodyClass: home2-page
 
 
   <!-- ══════════════════════════════════════
+       LOOK INSIDE
+  ══════════════════════════════════════ -->
+  <section class="h2-section h2-look-inside">
+    <div class="h2-section-inner">
+      
+      <div class="h2-section-header">
+        <div class="mc-topper">
+          <div class="mc-topper-rule" aria-hidden="true"></div>
+          <span class="mc-topper-text">Philly Comedy, Up Close</span>
+        </div>
+        <h2 class="h2-section-heading">A Look Inside</h2>
+        <p class="h2-look-inside-subline">Misconduct Comedy is an indie stand-up show ran by local comedians featuring handpicked lineups that promise an unforgettable night. Check our some viral clips from our show!</p>
+      </div>
+
+      <div class="h2-look-inside-videos">
+          
+          <div class="h2-video-reel">
+            <video 
+              class="h2-video-player" 
+              poster="/videos/an-offer-you-cant-refuse-thumbnail.png"
+              preload="metadata"
+              playsinline
+              loop>
+              <source src="/videos/An Offer You Can't Refuse.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+            <button class="h2-video-play-btn" aria-label="Play video">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <circle cx="32" cy="32" r="31" fill="rgba(0,0,0,0.6)" stroke="white" stroke-width="2"/>
+                <path d="M26 20L44 32L26 44V20Z" fill="white"/>
+              </svg>
+            </button>
+            <div class="h2-video-instagram-icon">
+              <img src="/svgs/instacoloricon.svg" alt="Instagram" width="24" height="24">
+            </div>
+            <div class="h2-video-views">
+              <img src="/svgs/view.svg" alt="Views" width="16" height="16">
+              <span>2.7M</span>
+            </div>
+          </div>
+
+          <div class="h2-video-reel">
+            <video 
+              class="h2-video-player" 
+              poster="/videos/PhiladelphiaMayorEagles-thumbnail.png"
+              preload="metadata"
+              playsinline
+              loop>
+              <source src="/videos/PhiladelphiaMayorEaglesAmberBorn.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+            <button class="h2-video-play-btn" aria-label="Play video">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <circle cx="32" cy="32" r="31" fill="rgba(0,0,0,0.6)" stroke="white" stroke-width="2"/>
+                <path d="M26 20L44 32L26 44V20Z" fill="white"/>
+              </svg>
+            </button>
+            <div class="h2-video-instagram-icon">
+              <img src="/svgs/instacoloricon.svg" alt="Instagram" width="24" height="24">
+            </div>
+            <div class="h2-video-views">
+              <img src="/svgs/view.svg" alt="Views" width="16" height="16">
+              <span>104K</span>
+            </div>
+          </div>
+
+          <div class="h2-video-reel">
+            <video 
+              class="h2-video-player" 
+              poster="/videos/ShoheiOhtaniSeanM-thumbnail.png"
+              preload="metadata"
+              playsinline
+              loop>
+              <source src="/videos/ShoheiOhtaniBaseballStandupComedySeanMurphy.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+            <button class="h2-video-play-btn" aria-label="Play video">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <circle cx="32" cy="32" r="31" fill="rgba(0,0,0,0.6)" stroke="white" stroke-width="2"/>
+                <path d="M26 20L44 32L26 44V20Z" fill="white"/>
+              </svg>
+            </button>
+            <div class="h2-video-instagram-icon">
+              <img src="/svgs/instacoloricon.svg" alt="Instagram" width="24" height="24">
+            </div>
+            <div class="h2-video-views">
+              <img src="/svgs/view.svg" alt="Views" width="16" height="16">
+              <span>196K</span>
+            </div>
+          </div>
+
+        </div><!-- /.h2-look-inside-videos -->
+
+    </div><!-- /.h2-section-inner -->
+  </section><!-- /.h2-look-inside -->
+
+
+  <!-- ══════════════════════════════════════
        UPCOMING SHOWS
   ══════════════════════════════════════ -->
   <section class="h2-section h2-shows" id="shows">
@@ -298,7 +396,7 @@ bodyClass: home2-page
             {%- if not (show.data.showtimes | allSoldOut) -%}
             <div class="mc-scarcity h2-show-featured-scarcity" role="status">
               <div class="mc-scarcity-dot" aria-hidden="true"></div>
-              <span class="mc-scarcity-text">Selling fast &mdash; limited seats available</span>
+              <span class="mc-scarcity-text">Selling fast</span>
             </div>
             {%- endif -%}
 
@@ -404,7 +502,7 @@ bodyClass: home2-page
             <span class="mc-topper-text">The Lowdown</span>
           </div>
           <h2 class="h2-section-heading">About Misconduct Comedy</h2>
-          <p class="h2-about-intro">Misconduct Comedy brings you Philadelphia's best stand-up comedy in the heart of Center City. Whether it's the perfect date night or a fun hang with friends, our shows feature local favorites and rising stars in an intimate, laid-back setting.</p>
+          <p class="h2-about-intro">Misconduct Comedy is an indie comedy show run by local comedians striving to showcase Philadelphia's best stand-up comics. Whether you're looking for the perfect date night or a fun hang with friends, our shows feature local favorites and rising stars in an intimate, laid-back setting.</p>
           <a href="#shows" class="h2-about-cta">See Upcoming Shows &rarr;</a>
         </div>
 
@@ -422,7 +520,7 @@ bodyClass: home2-page
 
           <div class="h2-feature">
             <div class="h2-feature-eyebrow">What to Expect</div>
-            <h3>75&ndash;90 Min of Laughs</h3>
+            <h3>75&ndash;90 Min of Laughter</h3>
             <p>Our showcases feature 5&ndash;7 talented local comedians and rising stars. Double Trouble Specials feature co-headliners doing extended 30-minute sets.</p>
           </div>
 
@@ -453,6 +551,25 @@ bodyClass: home2-page
 
   {%- include "h2-footer.njk" -%}
 
+  <!-- ══════════════════════════════════════
+       MOBILE STICKY TICKET BAR
+  ══════════════════════════════════════ -->
+  {%- if heroShow -%}
+  <div class="h2-sticky-ticket-bar">
+    <div class="h2-sticky-ticket-content">
+      <div class="h2-sticky-ticket-info">
+        <div class="h2-sticky-ticket-label">Next Show</div>
+        <div class="h2-sticky-ticket-date">{{ heroShow.data.showtimes[0].startDate | showDayOfWeek }}, {{ heroShow.data.showtimes[0].startDate | showDateOnly }}</div>
+      </div>
+      {%- set heroTicketUrl = null -%}
+      {%- for st in heroShow.data.showtimes -%}
+        {%- if st.ticketUrl and not heroTicketUrl -%}{%- set heroTicketUrl = st.ticketUrl -%}{%- endif -%}
+      {%- endfor -%}
+      <a href="{{ heroTicketUrl or heroShow.url }}" class="h2-sticky-ticket-btn"{% if heroTicketUrl %} target="_blank" rel="noopener"{% endif %}>Get Tickets</a>
+    </div>
+  </div>
+  {%- endif -%}
+
 </div><!-- /.h2-page -->
 
 <script>
@@ -471,6 +588,40 @@ bodyClass: home2-page
       link.addEventListener('click', function () {
         btn.setAttribute('aria-expanded', 'false');
         menu.classList.remove('is-open');
+      });
+    });
+
+    // Video player controls
+    const videoReels = document.querySelectorAll('.h2-video-reel');
+    
+    videoReels.forEach(function (reel) {
+      const video = reel.querySelector('.h2-video-player');
+      const playBtn = reel.querySelector('.h2-video-play-btn');
+      
+      // Play button click
+      playBtn.addEventListener('click', function () {
+        video.muted = false;
+        video.setAttribute('controls', 'controls');
+        video.play();
+        reel.classList.add('is-playing');
+      });
+      
+      // Click video to pause (controls will handle this now)
+      // Removed manual click handler since controls are now visible
+      
+      // Show play button when video ends
+      video.addEventListener('ended', function () {
+        reel.classList.remove('is-playing');
+      });
+      
+      // Show play button when video is paused
+      video.addEventListener('pause', function () {
+        reel.classList.remove('is-playing');
+      });
+      
+      // Hide play button when video is playing
+      video.addEventListener('play', function () {
+        reel.classList.add('is-playing');
       });
     });
   })();
