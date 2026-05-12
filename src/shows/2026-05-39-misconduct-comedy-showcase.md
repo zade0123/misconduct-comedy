@@ -1,7 +1,7 @@
 ---
 layout: show.njk
 title: Misconduct Comedy Showcase
-showDate: May 9, 2026
+showDate: May 30, 2026
 subtitle: Featuring Philly & NYC's Best Comedians
 description: Need date night plans? Or just a fun hang with friends? Misconduct
   Comedy has got you covered with Philly's best comedians in a cozy venue.
@@ -37,6 +37,7 @@ ticketSaleStart: 2026-04-26T12:00:00.000-04:00
 ticketSaleEnd: 2026-05-30T20:00:00.000-04:00
 totalTickets: 40
 showType: Showcase
+featured: true
 ageRestriction: 21+
 organizerName: Misconduct Comedy
 organizerUrl: https://misconductcomedy.com
