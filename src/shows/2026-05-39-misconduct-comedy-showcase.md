@@ -9,8 +9,8 @@ description: Need date night plans? Or just a fun hang with friends? Misconduct
   local comedians and rising stars. An unforgettable night of laughs in the
   heart of Center City. 21+ only.
 showtimes:
-  - startDate: 2026-05-29T22:00:00.000-04:00
-    endDate: 2026-05-29T23:30:00.000-04:00
+  - startDate: 2026-05-29T22:30:00.000-04:00
+    endDate: 2026-05-29T23:50:00.000-04:00
     ticketUrl: https://www.eventbrite.com/e/misconduct-comedy-show-featuring-philadelphias-best-standup-acts-tickets-1988593597983?aff=websiteunattributed
     ticketPrice: 15
     ticketAvailability: https://schema.org/InStock
