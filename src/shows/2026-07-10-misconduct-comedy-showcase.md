@@ -1,7 +1,7 @@
 ---
 layout: show.njk
 title: Misconduct Comedy Showcase
-showDate: May 29, 2026
+showDate: July 10, 2026
 subtitle: Featuring Philly & NYC's Best Comedians
 description: Need date night plans? Or just a fun hang with friends? Misconduct
   Comedy has got you covered with Philly's best comedians in a cozy venue.
@@ -9,9 +9,9 @@ description: Need date night plans? Or just a fun hang with friends? Misconduct
   local comedians and rising stars. An unforgettable night of laughs in the
   heart of Center City. 21+ only.
 showtimes:
-  - startDate: 2026-05-29T22:30:00.000-04:00
-    endDate: 2026-05-29T23:50:00.000-04:00
-    ticketUrl: https://www.eventbrite.com/e/misconduct-comedy-show-late-night-standup-special-tickets-1988593597983?aff=websiteunattributed
+  - startDate: 2026-07-10T20:00:00.000-04:00
+    endDate: 2026-05-29T21:30:00.000-04:00
+    ticketUrl: https://www.eventbrite.com/e/misconduct-comedy-show-featuring-philadelphias-best-standup-acts-tickets-1990738562630?aff=websiteunattributed
     ticketPrice: 15
     ticketAvailability: https://schema.org/InStock
 eventStatus: https://schema.org/EventScheduled
@@ -34,7 +34,7 @@ images:
     src: /photos/shows/RoomMic.webp
 priceCurrency: USD
 ticketSaleStart: 2026-04-26T12:00:00.000-04:00
-ticketSaleEnd: 2026-05-29T22:00:00.000-04:00
+ticketSaleEnd: 2026-07-10T20:00:00.000-04:00
 totalTickets: 40
 showType: Showcase
 featured: true
