@@ -536,8 +536,10 @@ body.home2-page {
 .h2-ticket-btn {
   display: inline-flex;
   align-items: center;
-  padding: 11px 20px;
+  padding: 16px 20px;
   border: none;
+  -webkit-appearance: none;
+  appearance: none;
   background: var(--h2-accent);
   color: #fff;
   text-decoration: none;
@@ -563,7 +565,7 @@ body.home2-page {
 
 .h2-ticket-btn--featured {
   font-size: 15px;
-  padding: 14px 28px;
+  padding: 16px 28px;
   border-radius: 11px;
   box-shadow: 0 4px 20px rgba(212, 98, 42, 0.38);
 }
@@ -571,7 +573,7 @@ body.home2-page {
 .h2-ticket-unavailable {
   display: inline-flex;
   align-items: center;
-  padding: 11px 20px;
+  padding: 16px 20px;
   color: rgba(255, 255, 255, 0.28);
   font-weight: 700;
   font-size: 13px;

@@ -106,12 +106,14 @@
   display: inline-block;
   align-self: flex-start;
   border: none;
+  -webkit-appearance: none;
+  appearance: none;
   background: var(--h2-accent);
   color: var(--h2-cream);
   text-decoration: none;
   font-size: 16px;
   font-weight: 700;
-  padding: 14px 32px;
+  padding: 16px 32px;
   border-radius: 10px;
   letter-spacing: 0.04em;
   transition: opacity 0.18s ease, transform 0.18s ease;
@@ -1206,8 +1208,10 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 24px;
+    padding: 14px 24px;
     border: none;
+    -webkit-appearance: none;
+    appearance: none;
     background: var(--h2-accent);
     color: var(--h2-cream);
     font-size: 14px;
