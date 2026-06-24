@@ -70,6 +70,11 @@ collections:
             widget: "string"
             required: false
             hint: "Eventbrite link for this showtime"
+          - label: "Eventbrite Event ID"
+            name: "eventbriteEventId"
+            widget: "string"
+            required: false
+            hint: "Eventbrite event ID (numbers only) for embedded checkout, e.g. 1990738562630"
           - label: "Ticket Price"
             name: "ticketPrice"
             widget: "number"

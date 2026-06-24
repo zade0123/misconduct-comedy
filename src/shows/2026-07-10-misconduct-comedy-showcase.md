@@ -11,7 +11,8 @@ description: Need date night plans? Or just a fun hang with friends? Misconduct
 showtimes:
   - startDate: 2026-07-10T20:00:00.000-04:00
     endDate: 2026-05-29T21:30:00.000-04:00
-    ticketUrl: https://www.eventbrite.com/e/misconduct-comedy-show-featuring-philadelphias-best-standup-acts-tickets-1990738562630?aff=websiteunattributed
+    ticketUrl: https://www.eventbrite.com/e/misconduct-comedy-show-featuring-philadelphias-best-standup-acts-tickets-1990738562630
+    eventbriteEventId: "1990738562630"
     ticketPrice: 20
     ticketAvailability: https://schema.org/InStock
 eventStatus: https://schema.org/EventScheduled

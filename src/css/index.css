@@ -105,6 +105,7 @@
 .h2-hero-cta {
   display: inline-block;
   align-self: flex-start;
+  border: none;
   background: var(--h2-accent);
   color: var(--h2-cream);
   text-decoration: none;
@@ -1206,6 +1207,7 @@
     align-items: center;
     justify-content: center;
     padding: 10px 24px;
+    border: none;
     background: var(--h2-accent);
     color: var(--h2-cream);
     font-size: 14px;

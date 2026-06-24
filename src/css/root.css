@@ -537,6 +537,7 @@ body.home2-page {
   display: inline-flex;
   align-items: center;
   padding: 11px 20px;
+  border: none;
   background: var(--h2-accent);
   color: #fff;
   text-decoration: none;
