@@ -412,17 +412,27 @@ bodyClass: home2-page
         }
       });
       var ebContainer = document.getElementById('eb-inline-' + eventId);
-      var ebObserver = new MutationObserver(function () {
-        var iframe = ebContainer.querySelector('iframe');
-        if (iframe) {
-          ebObserver.disconnect();
-          iframe.addEventListener('load', function () {
+      function attachLoadListener(iframe) {
+        iframe.addEventListener('load', function () {
+          setTimeout(function () {
             var loader = modalBody.querySelector('.eb-loading');
             if (loader) loader.remove();
-          });
-        }
-      });
-      ebObserver.observe(ebContainer, { childList: true });
+          }, 250);
+        });
+      }
+      var existingIframe = ebContainer.querySelector('iframe');
+      if (existingIframe) {
+        attachLoadListener(existingIframe);
+      } else {
+        var ebObserver = new MutationObserver(function () {
+          var iframe = ebContainer.querySelector('iframe');
+          if (iframe) {
+            ebObserver.disconnect();
+            attachLoadListener(iframe);
+          }
+        });
+        ebObserver.observe(ebContainer, { childList: true, subtree: true });
+      }
       modal.removeAttribute('hidden');
       document.body.style.overflow = 'hidden';
       if (typeof gtag !== 'undefined') { gtag('event', 'checkout_start', { event_category: 'Tickets' }); }
