@@ -218,7 +218,7 @@ bodyClass: home2-page
         {%- endfor -%}
       {%- if heroEbEventId -%}
       <noscript><a href="{{ heroTicketUrl or heroShow.url }}" class="h2-hero-cta" target="_blank" rel="noopener noreferrer">Get Tickets &rarr;</a></noscript>
-      <button id="eb-trigger-{{ heroEbEventId }}-hero-cta" type="button" class="h2-hero-cta">Get Tickets &rarr;</button>
+      <button type="button" class="h2-hero-cta" onclick="openEbModal('{{ heroEbEventId }}')">Get Tickets &rarr;</button>
       {%- else -%}
       <a href="{{ heroTicketUrl or heroShow.url }}" class="h2-hero-cta"{% if heroTicketUrl %} target="_blank" rel="noopener"{% endif %}>Get Tickets &rarr;</a>
       {%- endif -%}
@@ -412,10 +412,9 @@ bodyClass: home2-page
                 {%- if st.eventbriteEventId -%}
                 <noscript><a href="{{ st.ticketUrl }}" rel="noopener noreferrer" target="_blank" class="h2-ticket-btn h2-ticket-btn--featured">Get Tickets {{ st.startDate | showTimeOnly }} &rarr;</a></noscript>
                 <button
-                  id="eb-trigger-{{ st.eventbriteEventId }}-feat"
                   type="button"
                   class="h2-ticket-btn h2-ticket-btn--featured"
-                  onclick="gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ show.data.title }} {{ st.startDate | showTimeOnly }}', 'transport_type': 'beacon'});"
+                  onclick="openEbModal('{{ st.eventbriteEventId }}'); gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ show.data.title }} {{ st.startDate | showTimeOnly }}', 'transport_type': 'beacon'});"
                 >Get Tickets {{ st.startDate | showTimeOnly }} &rarr;</button>
                 {%- else -%}
                 <a
@@ -480,10 +479,9 @@ bodyClass: home2-page
                 {%- if st.eventbriteEventId -%}
                 <noscript><a href="{{ st.ticketUrl }}" rel="noopener noreferrer" target="_blank" class="h2-ticket-btn">{{ st.startDate | showTimeOnly }} &rarr;</a></noscript>
                 <button
-                  id="eb-trigger-{{ st.eventbriteEventId }}-compact"
                   type="button"
                   class="h2-ticket-btn"
-                  onclick="gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ show.data.title }} {{ st.startDate | showTimeOnly }}', 'transport_type': 'beacon'});"
+                  onclick="openEbModal('{{ st.eventbriteEventId }}'); gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ show.data.title }} {{ st.startDate | showTimeOnly }}', 'transport_type': 'beacon'});"
                 >{{ st.startDate | showTimeOnly }} &rarr;</button>
                 {%- else -%}
                 <a
@@ -593,7 +591,7 @@ bodyClass: home2-page
       {%- endfor -%}
       {%- if heroEbEventId -%}
       <noscript><a href="{{ heroTicketUrl or heroShow.url }}" class="h2-sticky-ticket-btn" target="_blank" rel="noopener noreferrer">Get Tickets</a></noscript>
-      <button id="eb-trigger-{{ heroEbEventId }}-sticky" type="button" class="h2-sticky-ticket-btn">Get Tickets</button>
+      <button type="button" class="h2-sticky-ticket-btn" onclick="openEbModal('{{ heroEbEventId }}')">Get Tickets</button>
       {%- else -%}
       <a href="{{ heroTicketUrl or heroShow.url }}" class="h2-sticky-ticket-btn"{% if heroTicketUrl %} target="_blank" rel="noopener"{% endif %}>Get Tickets</a>
       {%- endif -%}
@@ -665,40 +663,51 @@ bodyClass: home2-page
   {%- endfor -%}
 {%- endfor -%}
 {%- if hasAnyEbWidget -%}
+<!-- Eventbrite inline checkout modal -->
+<div id="eb-modal" class="eb-modal" role="dialog" aria-modal="true" aria-label="Get Tickets" hidden>
+  <div class="eb-modal-inner">
+    <div class="eb-modal-header">
+      <span class="eb-modal-title">Get Tickets</span>
+      <button class="eb-modal-close" aria-label="Close checkout">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="eb-modal-body" class="eb-modal-body"></div>
+  </div>
+</div>
 <script src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
 <script>
-  {%- if heroEbEventId -%}
-  window.EBWidgets.createWidget({
-    widgetType: 'checkout',
-    eventId: '{{ heroEbEventId }}',
-    themeSettings: { brandColor: '#F17E3C', fontColor: '#f0e8d0', background: '#080e10' },
-    modal: true,
-    modalTriggerElementId: 'eb-trigger-{{ heroEbEventId }}-hero-cta',
-    onOrderComplete: function() { if (typeof gtag !== 'undefined') { gtag('event', 'purchase', {'event_category': 'Tickets', 'event_label': '{{ heroShow.data.title }}'}); } }
-  });
-  window.EBWidgets.createWidget({
-    widgetType: 'checkout',
-    eventId: '{{ heroEbEventId }}',
-    themeSettings: { brandColor: '#F17E3C', fontColor: '#f0e8d0', background: '#080e10' },
-    modal: true,
-    modalTriggerElementId: 'eb-trigger-{{ heroEbEventId }}-sticky',
-    onOrderComplete: function() { if (typeof gtag !== 'undefined') { gtag('event', 'purchase', {'event_category': 'Tickets', 'event_label': '{{ heroShow.data.title }}'}); } }
-  });
-  {%- endif -%}
-  {%- for show in collections.showsByDate -%}
-  {%- for st in show.data.showtimes -%}
-  {%- if st.eventbriteEventId and st.ticketAvailability == "https://schema.org/InStock" and st.ticketUrl -%}
-  {%- set btnSuffix = 'feat' if show.data.featured else 'compact' -%}
-  window.EBWidgets.createWidget({
-    widgetType: 'checkout',
-    eventId: '{{ st.eventbriteEventId }}',
-    themeSettings: { brandColor: '#F17E3C', fontColor: '#f0e8d0', background: '#080e10' },
-    modal: true,
-    modalTriggerElementId: 'eb-trigger-{{ st.eventbriteEventId }}-{{ btnSuffix }}',
-    onOrderComplete: function() { if (typeof gtag !== 'undefined') { gtag('event', 'purchase', {'event_category': 'Tickets', 'event_label': '{{ show.data.title }}'}); } }
-  });
-  {%- endif -%}
-  {%- endfor -%}
-  {%- endfor -%}
+  (function () {
+    var modal = document.getElementById('eb-modal');
+    var modalBody = document.getElementById('eb-modal-body');
+    var closeBtn = modal.querySelector('.eb-modal-close');
+
+    window.openEbModal = function (eventId) {
+      modalBody.innerHTML = '<div id="eb-inline-' + eventId + '"></div>';
+      window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: eventId,
+        iframeContainerId: 'eb-inline-' + eventId,
+        iframeContainerHeight: 425,
+        themeSettings: { brandColor: '#F17E3C', fontColor: '#f0e8d0', background: '#080e10' },
+        onOrderComplete: function () {
+          if (typeof gtag !== 'undefined') { gtag('event', 'purchase', { event_category: 'Tickets' }); }
+          closeEbModal();
+        }
+      });
+      modal.removeAttribute('hidden');
+      document.body.style.overflow = 'hidden';
+    };
+
+    window.closeEbModal = function () {
+      modal.setAttribute('hidden', '');
+      document.body.style.overflow = '';
+      modalBody.innerHTML = '';
+    };
+
+    closeBtn.addEventListener('click', closeEbModal);
+    modal.addEventListener('click', function (e) { if (e.target === modal) closeEbModal(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hasAttribute('hidden')) closeEbModal(); });
+  })();
 </script>
 {%- endif -%}
