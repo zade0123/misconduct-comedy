@@ -692,6 +692,7 @@ body.home2-page {
   position: relative;
   overflow-y: auto;
   flex: 1;
+  min-height: 300px;
 }
 
 .eb-modal-body iframe {
