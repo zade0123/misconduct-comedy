@@ -397,7 +397,9 @@ bodyClass: home2-page
 
     window.openEbModal = function (eventId) {
       orderCompleted = false;
-      modalBody.innerHTML = '<div id="eb-inline-' + eventId + '"></div>';
+      modalBody.innerHTML =
+        '<div class="eb-loading"><div class="eb-spinner"></div><p class="eb-loading-text">Loading checkout…</p></div>' +
+        '<div id="eb-inline-' + eventId + '"></div>';
       window.EBWidgets.createWidget({
         widgetType: 'checkout',
         eventId: eventId,
@@ -409,6 +411,18 @@ bodyClass: home2-page
           if (typeof gtag !== 'undefined') { gtag('event', 'purchase', { event_category: 'Tickets' }); }
         }
       });
+      var ebContainer = document.getElementById('eb-inline-' + eventId);
+      var ebObserver = new MutationObserver(function () {
+        var iframe = ebContainer.querySelector('iframe');
+        if (iframe) {
+          ebObserver.disconnect();
+          iframe.addEventListener('load', function () {
+            var loader = modalBody.querySelector('.eb-loading');
+            if (loader) loader.remove();
+          });
+        }
+      });
+      ebObserver.observe(ebContainer, { childList: true });
       modal.removeAttribute('hidden');
       document.body.style.overflow = 'hidden';
       if (typeof gtag !== 'undefined') { gtag('event', 'checkout_start', { event_category: 'Tickets' }); }
