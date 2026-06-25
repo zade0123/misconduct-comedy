@@ -681,25 +681,32 @@ bodyClass: home2-page
     var modal = document.getElementById('eb-modal');
     var modalBody = document.getElementById('eb-modal-body');
     var closeBtn = modal.querySelector('.eb-modal-close');
+    var orderCompleted = false;
 
     window.openEbModal = function (eventId) {
+      orderCompleted = false;
       modalBody.innerHTML = '<div id="eb-inline-' + eventId + '"></div>';
       window.EBWidgets.createWidget({
         widgetType: 'checkout',
         eventId: eventId,
         iframeContainerId: 'eb-inline-' + eventId,
-        iframeContainerHeight: 425,
+        iframeAutoAdapt: 90,
         themeSettings: { brandColor: '#F17E3C', fontColor: '#f0e8d0', background: '#080e10' },
         onOrderComplete: function () {
+          orderCompleted = true;
           if (typeof gtag !== 'undefined') { gtag('event', 'purchase', { event_category: 'Tickets' }); }
-          closeEbModal();
         }
       });
       modal.removeAttribute('hidden');
       document.body.style.overflow = 'hidden';
+      if (typeof gtag !== 'undefined') { gtag('event', 'checkout_start', { event_category: 'Tickets' }); }
     };
 
     window.closeEbModal = function () {
+      if (!orderCompleted) {
+        if (typeof gtag !== 'undefined') { gtag('event', 'checkout_cancelled', { event_category: 'Tickets' }); }
+      }
+      orderCompleted = false;
       modal.setAttribute('hidden', '');
       document.body.style.overflow = '';
       modalBody.innerHTML = '';
