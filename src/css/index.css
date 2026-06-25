@@ -1233,3 +1233,32 @@
     opacity: 1;
   }
 }
+
+/* ===================================================
+   EVENTBRITE EMBEDDED CHECKOUT OVERRIDES
+   =================================================== */
+
+/* Modal backdrop: much more transparent */
+.eds-modal {
+  background: rgba(8, 14, 16, 0.65) !important;
+}
+
+/* Read-more fade: gradient to site dark background instead of white */
+.eds-read-more__content::after {
+  background: linear-gradient(rgba(8, 14, 16, 0), #080e10) !important;
+}
+
+.JourneyBreadcrumb-module__container___2URKX {
+  box-sizing: border-box !important;
+}
+
+/* Targets the select options specifically within the buyer survey section */
+#buyer select option {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+}
+
+/* Also ensure the select itself shows black text when an item is selected */
+#buyer select {
+    color: #000000 !important;
+}
