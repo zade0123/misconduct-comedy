@@ -1,18 +1,19 @@
 ---
 layout: show.njk
 title: Misconduct Comedy Showcase
-showDate: 2026-04-25
-subtitle: ""
+showDate: July 10, 2026
+subtitle: Featuring Philly & NYC's Best Comedians
 description: Need date night plans? Or just a fun hang with friends? Misconduct
   Comedy has got you covered with Philly's best comedians in a cozy venue.
   Experience Philadelphia's best stand-up comedy showcase featuring talented
   local comedians and rising stars. An unforgettable night of laughs in the
   heart of Center City. 21+ only.
 showtimes:
-  - startDate: 2026-04-25T20:00:00-04:00
-    endDate: 2026-04-25T21:30:00-04:00
-    ticketUrl: https://www.eventbrite.com/e/misconduct-comedy-show-featuring-philadelphias-best-standup-acts-tickets-1986700976100?aff=websiteunattributed
-    ticketPrice: 15
+  - startDate: 2026-07-10T20:00:00.000-04:00
+    endDate: 2026-05-29T21:30:00.000-04:00
+    ticketUrl: https://www.eventbrite.com/e/misconduct-comedy-show-featuring-philadelphias-best-standup-acts-tickets-1990738562630
+    eventbriteEventId: "1990738562630"
+    ticketPrice: 20
     ticketAvailability: https://schema.org/InStock
 eventStatus: https://schema.org/EventScheduled
 eventAttendanceMode: https://schema.org/OfflineEventAttendanceMode
@@ -24,21 +25,20 @@ location:
   postalCode: "19102"
   country: US
 images:
-  - alt: ""
-    src: /photos/shows/savionj.webp
-  - alt: ""
-    src: /photos/shows/seano.webp
-  - alt: ""
-    src: /photos/shows/shanah.webp
+  - alt: Misconduct Comedy show poster
+    src: /photos/shows/PatrickS.webp
+  - alt: Misconduct Comedy show poster
+    src: /photos/shows/ShanaH.webp
+  - alt: Misconduct Comedy show poster
+    src: /photos/shows/ZadeD.webp
+  - alt: Misconduct Comedy show poster
+    src: /photos/shows/RoomMic.webp
 priceCurrency: USD
-ticketSaleStart: 2026-04-10T12:00:00.000-04:00
-ticketSaleEnd: 2026-04-25T20:00:00.000-04:00
+ticketSaleStart: 2026-04-26T12:00:00.000-04:00
+ticketSaleEnd: 2026-07-10T20:00:00.000-04:00
 totalTickets: 40
-performers:
-  - name: Dennis Mar
-    instagram: https://www.instagram.com/dennismarcomedy/
-    photo: /photos/shows/DennisM.webp
 showType: Showcase
+featured: true
 ageRestriction: 21+
 organizerName: Misconduct Comedy
 organizerUrl: https://misconductcomedy.com

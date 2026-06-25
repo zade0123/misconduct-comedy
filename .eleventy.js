@@ -22,7 +22,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/photos");
   eleventyConfig.addPassthroughCopy("src/admin");
-  eleventyConfig.addPassthroughCopy("src/*.{png,svg,ttf,webp}");
+  eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/fonts");
+  eleventyConfig.addPassthroughCopy("src/videos");
+  eleventyConfig.addPassthroughCopy("src/svgs");
   
   // Add date filter for Nunjucks
   eleventyConfig.addFilter("date", function(date, format) {
@@ -82,6 +85,32 @@ module.exports = function(eleventyConfig) {
   // ISO date filter for schema (Eastern Time offset)
   eleventyConfig.addFilter("isoDate", function(date) {
     return toEasternISO(date);
+  });
+
+  // Netlify Image CDN: returns optimized URL in production, original src in local dev
+  eleventyConfig.addFilter("netlifyImg", function(src, width, height, quality) {
+    if (!src) return src;
+    if (!process.env.NETLIFY) return src;
+    var params = "url=" + encodeURIComponent(src) + "&w=" + width;
+    if (height) params += "&h=" + height + "&fit=cover";
+    // Default to high quality (85) if not specified
+    params += "&q=" + (quality || 85);
+    return "/.netlify/images?" + params;
+  });
+
+  // Generate responsive srcset for different screen sizes
+  eleventyConfig.addFilter("netlifyImgSrcset", function(src, sizes, quality) {
+    if (!src) return src;
+    if (!process.env.NETLIFY) return src;
+    // sizes should be an array like [200, 400, 800, 1200]
+    // Default to common breakpoints if not provided
+    var widths = sizes || [200, 400, 800, 1200];
+    var q = quality || 85;
+    
+    return widths.map(function(w) {
+      var params = "url=" + encodeURIComponent(src) + "&w=" + w + "&q=" + q;
+      return "/.netlify/images?" + params + " " + w + "w";
+    }).join(", ");
   });
 
   // Check if all showtimes are sold out
@@ -160,6 +189,15 @@ module.exports = function(eleventyConfig) {
       });
     });
     return JSON.stringify(events, null, 2);
+  });
+
+  // Format date as YYYY-MM-DD for sitemaps
+  eleventyConfig.addFilter("sitemapDate", function(date) {
+    const d = new Date(date);
+    const year = d.getUTCFullYear();
+    const month = String(d.getUTCMonth() + 1).padStart(2, '0');
+    const day = String(d.getUTCDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
   });
 
   // Custom collection: shows sorted by first showtime's start date
