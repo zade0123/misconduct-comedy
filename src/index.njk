@@ -690,7 +690,7 @@ bodyClass: home2-page
         widgetType: 'checkout',
         eventId: eventId,
         iframeContainerId: 'eb-inline-' + eventId,
-        iframeAutoAdapt: 90,
+        iframeContainerHeight: Math.floor(window.innerHeight * 0.8),
         themeSettings: { brandColor: '#F17E3C', fontColor: '#f0e8d0', background: '#080e10' },
         onOrderComplete: function () {
           orderCompleted = true;
