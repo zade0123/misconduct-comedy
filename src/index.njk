@@ -671,6 +671,7 @@ bodyClass: home2-page
   window.EBWidgets.createWidget({
     widgetType: 'checkout',
     eventId: '{{ heroEbEventId }}',
+    themeSettings: { brandColor: '#F17E3C', fontColor: '#f0e8d0', background: '#080e10' },
     modal: true,
     modalTriggerElementId: 'eb-trigger-{{ heroEbEventId }}-hero-cta',
     onOrderComplete: function() { if (typeof gtag !== 'undefined') { gtag('event', 'purchase', {'event_category': 'Tickets', 'event_label': '{{ heroShow.data.title }}'}); } }
@@ -678,6 +679,7 @@ bodyClass: home2-page
   window.EBWidgets.createWidget({
     widgetType: 'checkout',
     eventId: '{{ heroEbEventId }}',
+    themeSettings: { brandColor: '#F17E3C', fontColor: '#f0e8d0', background: '#080e10' },
     modal: true,
     modalTriggerElementId: 'eb-trigger-{{ heroEbEventId }}-sticky',
     onOrderComplete: function() { if (typeof gtag !== 'undefined') { gtag('event', 'purchase', {'event_category': 'Tickets', 'event_label': '{{ heroShow.data.title }}'}); } }
@@ -690,6 +692,7 @@ bodyClass: home2-page
   window.EBWidgets.createWidget({
     widgetType: 'checkout',
     eventId: '{{ st.eventbriteEventId }}',
+    themeSettings: { brandColor: '#F17E3C', fontColor: '#f0e8d0', background: '#080e10' },
     modal: true,
     modalTriggerElementId: 'eb-trigger-{{ st.eventbriteEventId }}-{{ btnSuffix }}',
     onOrderComplete: function() { if (typeof gtag !== 'undefined') { gtag('event', 'purchase', {'event_category': 'Tickets', 'event_label': '{{ show.data.title }}'}); } }
