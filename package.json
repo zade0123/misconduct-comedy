@@ -6,14 +6,30 @@
     "start": "npx @11ty/eleventy --serve",
     "build": "npx @11ty/eleventy",
     "cms": "set PORT=8082&& npx decap-server",
-    "dev": "npx concurrently \"npm run cms\" \"npm start\""
+    "dev": "npx concurrently \"npm run cms\" \"npm start\"",
+    "event:record": "node scripts/event-posting/record.js",
+    "event:suggest": "node scripts/event-posting/suggest-template.js",
+    "event:post": "node scripts/event-posting/post.js",
+    "event:validate": "node scripts/event-posting/validate.js"
   },
-  "keywords": ["11ty", "eleventy", "decap-cms"],
+  "keywords": [
+    "11ty",
+    "eleventy",
+    "decap-cms"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "chalk": "^4.1.2",
     "concurrently": "^8.2.2",
-    "decap-server": "^3.0.0"
+    "dayjs": "^1.11.21",
+    "decap-server": "^3.0.0",
+    "fs-extra": "^11.3.6",
+    "gray-matter": "^4.0.3",
+    "inquirer": "^14.0.2",
+    "playwright": "^1.61.1",
+    "sharp": "^0.35.3",
+    "yargs": "^18.0.0"
   }
 }
