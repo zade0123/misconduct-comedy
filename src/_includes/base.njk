@@ -38,12 +38,6 @@
         <title>{{ pageTitle or title }}</title>
     </head>
     <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript>
-            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6ZWBDHV" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-        </noscript>
-        <!-- End Google Tag Manager (noscript) -->
-        
         {{ content | safe }}
     </body>
 </html>
