@@ -16,8 +16,7 @@
         <link rel="preload" as="font" href="/fonts/dm-sans-latin.woff2" type="font/woff2" crossorigin>
         <link rel="preload" as="font" href="/fonts/dm-sans-italic-latin.woff2" type="font/woff2" crossorigin>
         <link rel="preload" as="font" href="/fonts/fontdiner-swanky-latin.woff2" type="font/woff2" crossorigin>
-        <link rel="stylesheet" href="/css/root.css">
-        <link rel="stylesheet" href="/css/{{ stylesheet or 'index.css' }}">
+        <style>{{ "root.css" | inlineCss | safe }}{{ (stylesheet or "index.css") | inlineCss | safe }}</style>
 
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-H7GJ0KWS9R"></script>

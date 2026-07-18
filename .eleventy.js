@@ -1,3 +1,6 @@
+const fs = require('fs');
+const path = require('path');
+
 module.exports = function(eleventyConfig) {
   // Helper: convert any date to an ISO string with Eastern Time offset
   function toEasternISO(date) {
@@ -17,6 +20,12 @@ module.exports = function(eleventyConfig) {
     const seconds = String(eastern.getSeconds()).padStart(2, '0');
     return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}${offset}`;
   }
+
+  // Inline CSS at build time to eliminate render-blocking stylesheet requests
+  eleventyConfig.addFilter("inlineCss", function(filename) {
+    const cssPath = path.join(__dirname, 'src/css', filename);
+    return fs.readFileSync(cssPath, 'utf8');
+  });
 
   // Copy static assets to output
   eleventyConfig.addPassthroughCopy("src/css");
