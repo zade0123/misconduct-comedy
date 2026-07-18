@@ -262,10 +262,10 @@ bodyClass: home2-page
             <video 
               class="h2-video-player" 
               poster="/videos/an-offer-you-cant-refuse-thumbnail.png"
-              preload="metadata"
+              preload="none"
               playsinline
               loop>
-              <source src="/videos/An Offer You Can't Refuse.webm" type="video/webm">
+              <source data-src="/videos/An Offer You Can't Refuse.webm" type="video/webm">
               Your browser does not support the video tag.
             </video>
             <button class="h2-video-play-btn" aria-label="Play video">
@@ -287,10 +287,10 @@ bodyClass: home2-page
             <video 
               class="h2-video-player" 
               poster="/videos/PhiladelphiaMayorEagles-thumbnail.png"
-              preload="metadata"
+              preload="none"
               playsinline
               loop>
-              <source src="/videos/PhiladelphiaMayorEaglesAmberBorn.webm" type="video/webm">
+              <source data-src="/videos/PhiladelphiaMayorEaglesAmberBorn.webm" type="video/webm">
               Your browser does not support the video tag.
             </video>
             <button class="h2-video-play-btn" aria-label="Play video">
@@ -312,10 +312,10 @@ bodyClass: home2-page
             <video 
               class="h2-video-player" 
               poster="/videos/ShoheiOhtaniSeanM-thumbnail.png"
-              preload="metadata"
+              preload="none"
               playsinline
               loop>
-              <source src="/videos/ShoheiOhtaniBaseballStandupComedySeanMurphy.webm" type="video/webm">
+              <source data-src="/videos/ShoheiOhtaniBaseballStandupComedySeanMurphy.webm" type="video/webm">
               Your browser does not support the video tag.
             </video>
             <button class="h2-video-play-btn" aria-label="Play video">
@@ -620,8 +620,37 @@ bodyClass: home2-page
       });
     });
 
-    // Video player controls
+    // Video player controls with lazy loading
     const videoReels = document.querySelectorAll('.h2-video-reel');
+
+    function loadVideo(video) {
+      video.querySelectorAll('source[data-src]').forEach(function (source) {
+        source.src = source.dataset.src;
+        source.removeAttribute('data-src');
+      });
+      video.load();
+    }
+
+    // Lazy load videos via IntersectionObserver
+    if ('IntersectionObserver' in window) {
+      var videoObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            loadVideo(entry.target);
+            videoObserver.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '200px' });
+
+      videoReels.forEach(function (reel) {
+        videoObserver.observe(reel.querySelector('.h2-video-player'));
+      });
+    } else {
+      // Fallback: load all videos immediately
+      videoReels.forEach(function (reel) {
+        loadVideo(reel.querySelector('.h2-video-player'));
+      });
+    }
     
     videoReels.forEach(function (reel) {
       const video = reel.querySelector('.h2-video-player');
@@ -629,6 +658,8 @@ bodyClass: home2-page
       
       // Play button click
       playBtn.addEventListener('click', function () {
+        // Ensure source is loaded before playing
+        if (video.querySelector('source[data-src]')) { loadVideo(video); }
         video.muted = false;
         video.setAttribute('controls', 'controls');
         video.play();
