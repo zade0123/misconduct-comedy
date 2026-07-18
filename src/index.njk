@@ -1,178 +1,711 @@
 ---
 layout: base.njk
-title: Misconduct Comedy - Philadelphia's Best Stand-Up Shows
-metaTitle: Misconduct Comedy
+title: Misconduct Comedy | Philadelphia's Best Stand-Up Comedy Shows
+metaTitle: Misconduct Comedy | Philly's Best Stand-Up Comedy Show
 metaDescription: Come see the funniest stand-up show in the heart of Center City with Philly and NYC's best comedians! Tickets sell fast, Get yours now!
 permalink: /index.html
 generateShowSchema: true
+stylesheet: index.css
+bodyClass: home2-page
 ---
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <img src="/Misconduct Comedy Logo with Border - 750px.png" alt="Misconduct Comedy Logo" class="hero-logo">
-        <h1>PHILLY'S FUNNIEST<br>LIVE COMEDY SHOW</h1>
-        <p>Need date night plans? Or just a fun hang with friends? Misconduct Comedy has got you covered with Philly's best comedians in a cozy venue.</p>
-    </div>
-</section>
+<div class="h2-page">
 
-<!-- Shows Section -->
-<section class="shows-section" id="shows">
-    <h2>UPCOMING SHOWS</h2>
+  <!-- ══════════════════════════════════════
+       NAV
+  ══════════════════════════════════════ -->
+  {%- set navLinks %}<li><a href="#about" class="h2-nav-link">About</a></li><li><a href="#shows" class="h2-nav-link">Shows</a></li>{% endset -%}
+  {%- include "h2-nav.njk" -%}
+
+  <main id="main-content">
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="h2-hero" id="hero">
+
+    <!-- Animated photo grid background -->
+    <div class="h2-hero-grid" aria-hidden="true">
+      <div class="h2-grid-inner">
+
+        <div class="h2-grid-row">
+          <div class="h2-grid-track h2-grid-track--1">
+            <img src="{{ '/photos/hero/cropped/BrendannB_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/BrendannB_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/AnnaG_9x16.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/AnnaG_9x16.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img h2-grid-img--9x16" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/AshleyS1_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/AshleyS1_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/DennisM_9x16.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/DennisM_9x16.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img h2-grid-img--9x16" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/JimG_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/JimG_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/KyleR_9x16.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/KyleR_9x16.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img h2-grid-img--9x16" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/savionj_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/savionj_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/MonikaN_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/MonikaN_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+          </div>
+        </div>
+
+        <div class="h2-grid-row">
+          <div class="h2-grid-track h2-grid-track--2">
+            <img src="{{ '/photos/hero/cropped/DruM_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/DruM_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/JamieF_9x16.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/JamieF_9x16.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img h2-grid-img--9x16" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/CharlieG_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/CharlieG_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/JackT_9x16.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/JackT_9x16.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img h2-grid-img--9x16" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/LoganM_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/LoganM_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/GeorgeM_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/GeorgeM_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/JakeL_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/JakeL_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/JamesM_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/JamesM_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+          </div>
+        </div>
+
+        <div class="h2-grid-row">
+          <div class="h2-grid-track h2-grid-track--3">
+            <img src="{{ '/photos/hero/cropped/MattP_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/MattP_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/KirstinC_9x16.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/KirstinC_9x16.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img h2-grid-img--9x16" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/MichaelB_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/MichaelB_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/OmriL_9x16.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/OmriL_9x16.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img h2-grid-img--9x16" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/NickB1_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/NickB1_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/ParrishM_9x16.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/ParrishM_9x16.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img h2-grid-img--9x16" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/PatR_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/PatR_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/PaulC_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/PaulC_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+          </div>
+        </div>
+
+        <div class="h2-grid-row">
+          <div class="h2-grid-track h2-grid-track--4">
+            <img src="{{ '/photos/hero/cropped/AshleyS2_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/AshleyS2_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/DruM1_9x16.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/DruM1_9x16.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img h2-grid-img--9x16" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/BenS_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/BenS_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/JemS_9x16.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/JemS_9x16.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img h2-grid-img--9x16" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/CampbellG_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/CampbellG_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/ChrisA_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/ChrisA_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/MonikaN1_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/MonikaN1_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/NicoleP_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/NicoleP_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+          </div>
+        </div>
+
+        <div class="h2-grid-row">
+          <div class="h2-grid-track h2-grid-track--5">
+            <img src="{{ '/photos/hero/cropped/OmriL1_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/OmriL1_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/RachelP_9x16.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/RachelP_9x16.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img h2-grid-img--9x16" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/PatrickS_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/PatrickS_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/SeanM_9x16.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/SeanM_9x16.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img h2-grid-img--9x16" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/RayC_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/RayC_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/PJM_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/PJM_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/SavionJ1_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/SavionJ1_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/seano_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/seano_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+          </div>
+        </div>
+
+        <div class="h2-grid-row">
+          <div class="h2-grid-track h2-grid-track--6">
+            <img src="{{ '/photos/hero/cropped/SteveB_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/SteveB_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/ZoeD_9x16.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/ZoeD_9x16.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img h2-grid-img--9x16" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/ZadeD_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/ZadeD_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/BenS2_9x16.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/BenS2_9x16.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img h2-grid-img--9x16" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/SeanO1_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/SeanO1_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/CharlieG1_9x16.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/CharlieG1_9x16.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img h2-grid-img--9x16" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/DennisM1_4x5.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/DennisM1_4x5.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img" alt="" loading="eager" decoding="async">
+            <img src="{{ '/photos/hero/cropped/shanah_9x16.webp' | netlifyImg(1200, null, 85) }}" srcset="{{ '/photos/hero/cropped/shanah_9x16.webp' | netlifyImgSrcset([200, 400, 800, 1200], 85) }}" sizes="(max-width: 768px) 200px, 400px" class="h2-grid-img h2-grid-img--9x16" alt="" loading="eager" decoding="async">
+          </div>
+        </div>
+
+      </div>
+      <div class="h2-grid-vignette" aria-hidden="true"></div>
+    </div>
+
+    <!-- CTA panel (left on desktop, bottom on mobile) -->
+    <div class="h2-hero-panel">
+
+      <div class="mc-topper">
+        <div class="mc-topper-rule" aria-hidden="true"></div>
+        <span class="mc-topper-text">Standup Comedy &middot; Philadelphia</span>
+      </div>
+
+      <h1 class="mc-headline">
+        Philly's Funniest<br>
+        <span class="mc-headline-accent">Night Out.</span>
+      </h1>
+
+      {%- set heroShow = null -%}
+      {%- for show in collections.showsByDate -%}
+        {%- if show.data.featured and not heroShow -%}{%- set heroShow = show -%}{%- endif -%}
+      {%- endfor -%}
+      {%- if not heroShow and collections.showsByDate.length -%}
+        {%- set heroShow = collections.showsByDate[0] -%}
+      {%- endif -%}
+
+      {%- if heroShow -%}
+      <div class="mc-date-price">
+        <div class="mc-dp-cell mc-dp-cell--date">
+          <div class="mc-dp-label">Next Show</div>
+          <div class="mc-dp-value">{{ heroShow.data.showtimes[0].startDate | showDayOfWeek }}, {{ heroShow.data.showtimes[0].startDate | showDateOnly }} &middot; {{ heroShow.data.showtimes[0].startDate | showTimeOnly }}</div>
+        </div>
+        <div class="mc-dp-divider" aria-hidden="true"></div>
+        <div class="mc-dp-cell mc-dp-cell--price">
+          <div class="mc-dp-label">Price</div>
+          <div class="mc-dp-value mc-dp-value--price">${{ heroShow.data.showtimes[0].ticketPrice | int }}</div>
+        </div>
+      </div>
+      {%- endif -%}
+
+      <div class="mc-headshots">
+        <div class="mc-avatar-row" role="img" aria-label="Comedian headshots">
+          <div class="mc-avatar"><img src="{{ '/photos/shows/savionj.webp' | netlifyImg(400, null, 85) }}" srcset="{{ '/photos/shows/savionj.webp' | netlifyImgSrcset([100, 200, 400], 85) }}" sizes="(max-width: 768px) 80px, 120px" alt="Comedian"></div>
+          <div class="mc-avatar"><img src="{{ '/photos/shows/DruM.webp' | netlifyImg(400, null, 85) }}" srcset="{{ '/photos/shows/DruM.webp' | netlifyImgSrcset([100, 200, 400], 85) }}" sizes="(max-width: 768px) 80px, 120px" alt="Comedian"></div>
+          <div class="mc-avatar"><img src="{{ '/photos/shows/MonikaN.webp' | netlifyImg(400, null, 85) }}" srcset="{{ '/photos/shows/MonikaN.webp' | netlifyImgSrcset([100, 200, 400], 85) }}" sizes="(max-width: 768px) 80px, 120px" alt="Comedian"></div>
+          <div class="mc-avatar"><img src="{{ '/photos/shows/KyleR.webp' | netlifyImg(400, null, 85) }}" srcset="{{ '/photos/shows/KyleR.webp' | netlifyImgSrcset([100, 200, 400], 85) }}" sizes="(max-width: 768px) 80px, 120px" alt="Comedian"></div>
+          <div class="mc-avatar"><img src="{{ '/photos/shows/JimG.webp' | netlifyImg(400, null, 85) }}" srcset="{{ '/photos/shows/JimG.webp' | netlifyImgSrcset([100, 200, 400], 85) }}" sizes="(max-width: 768px) 80px, 120px" alt="Comedian"></div>
+        </div>
+        <span class="mc-headshots-label">5&ndash;7 of Philly &amp; NYC's Best Comics</span>
+      </div>
+
+      <div class="mc-scarcity" role="status">
+        <div class="mc-scarcity-dot" aria-hidden="true"></div>
+        <span class="mc-scarcity-text">Shows sell out fast &mdash; grab your tickets</span>
+      </div>
+
+      {%- if heroShow -%}
+        {%- set heroTicketUrl = null -%}
+        {%- set heroEbEventId = null -%}
+        {%- for st in heroShow.data.showtimes -%}
+          {%- if st.ticketUrl and not heroTicketUrl -%}{%- set heroTicketUrl = st.ticketUrl -%}{%- endif -%}
+          {%- if st.eventbriteEventId and not heroEbEventId -%}{%- set heroEbEventId = st.eventbriteEventId -%}{%- endif -%}
+        {%- endfor -%}
+      {%- if heroEbEventId -%}
+      <noscript><a href="{{ heroTicketUrl or heroShow.url }}" class="h2-hero-cta" target="_blank" rel="noopener noreferrer">Get Tickets &rarr;</a></noscript>
+      <button type="button" class="h2-hero-cta" onclick="openEbModal('{{ heroEbEventId }}')">Get Tickets &rarr;</button>
+      {%- else -%}
+      <a href="{{ heroTicketUrl or heroShow.url }}" class="h2-hero-cta"{% if heroTicketUrl %} target="_blank" rel="noopener"{% endif %}>Get Tickets &rarr;</a>
+      {%- endif -%}
+      {%- else -%}
+      <a href="/shows/" class="h2-hero-cta">Get Tickets &rarr;</a>
+      {%- endif -%}
+
+      <div class="mc-review">
+        <div class="mc-stars" role="img" aria-label="5 out of 5 stars">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="#c9a96e" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="#c9a96e" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="#c9a96e" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="#c9a96e" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="#c9a96e" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+        </div>
+        <span class="mc-review-text">&ldquo;Perfect date night&rdquo; &mdash; Jess K.</span>
+      </div>
+    </div><!-- /.h2-hero-panel -->
+
+  </section><!-- /.h2-hero -->
+
+
+  <!-- ══════════════════════════════════════
+       LOOK INSIDE
+  ══════════════════════════════════════ -->
+  <section class="h2-section h2-look-inside">
+    <div class="h2-section-inner">
+      
+      <div class="h2-section-header">
+        <div class="mc-topper">
+          <div class="mc-topper-rule" aria-hidden="true"></div>
+          <span class="mc-topper-text">Philly Comedy, Up Close</span>
+        </div>
+        <h2 class="h2-section-heading">A Look Inside</h2>
+        <p class="h2-look-inside-subline">Misconduct Comedy is an indie stand-up show ran by local comedians featuring handpicked lineups that promise an unforgettable night. Check out some viral clips from our show!</p>
+      </div>
+
+      <div class="h2-look-inside-videos">
+          
+          <div class="h2-video-reel">
+            <video 
+              class="h2-video-player" 
+              poster="/videos/an-offer-you-cant-refuse-thumbnail.webp"
+              preload="none"
+              playsinline
+              loop>
+              <source data-src="/videos/An Offer You Can't Refuse.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+            <button class="h2-video-play-btn" aria-label="Play video">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <circle cx="32" cy="32" r="31" fill="rgba(0,0,0,0.6)" stroke="white" stroke-width="2"/>
+                <path d="M26 20L44 32L26 44V20Z" fill="white"/>
+              </svg>
+            </button>
+            <div class="h2-video-instagram-icon">
+              <img src="/svgs/instacoloricon.svg" alt="Instagram" width="24" height="24">
+            </div>
+            <div class="h2-video-views">
+              <img src="/svgs/view.svg" alt="Views" width="16" height="16">
+              <span>2.7M</span>
+            </div>
+          </div>
+
+          <div class="h2-video-reel">
+            <video 
+              class="h2-video-player" 
+              poster="/videos/PhiladelphiaMayorEagles-thumbnail.webp"
+              preload="none"
+              playsinline
+              loop>
+              <source data-src="/videos/PhiladelphiaMayorEaglesAmberBorn.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+            <button class="h2-video-play-btn" aria-label="Play video">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <circle cx="32" cy="32" r="31" fill="rgba(0,0,0,0.6)" stroke="white" stroke-width="2"/>
+                <path d="M26 20L44 32L26 44V20Z" fill="white"/>
+              </svg>
+            </button>
+            <div class="h2-video-instagram-icon">
+              <img src="/svgs/instacoloricon.svg" alt="Instagram" width="24" height="24">
+            </div>
+            <div class="h2-video-views">
+              <img src="/svgs/view.svg" alt="Views" width="16" height="16">
+              <span>104K</span>
+            </div>
+          </div>
+
+          <div class="h2-video-reel">
+            <video 
+              class="h2-video-player" 
+              poster="/videos/ShoheiOhtaniSeanM-thumbnail.webp"
+              preload="none"
+              playsinline
+              loop>
+              <source data-src="/videos/ShoheiOhtaniBaseballStandupComedySeanMurphy.webm" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+            <button class="h2-video-play-btn" aria-label="Play video">
+              <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                <circle cx="32" cy="32" r="31" fill="rgba(0,0,0,0.6)" stroke="white" stroke-width="2"/>
+                <path d="M26 20L44 32L26 44V20Z" fill="white"/>
+              </svg>
+            </button>
+            <div class="h2-video-instagram-icon">
+              <img src="/svgs/instacoloricon.svg" alt="Instagram" width="24" height="24">
+            </div>
+            <div class="h2-video-views">
+              <img src="/svgs/view.svg" alt="Views" width="16" height="16">
+              <span>196K</span>
+            </div>
+          </div>
+
+        </div><!-- /.h2-look-inside-videos -->
+
+    </div><!-- /.h2-section-inner -->
+  </section><!-- /.h2-look-inside -->
+
+
+  <!-- ══════════════════════════════════════
+       UPCOMING SHOWS
+  ══════════════════════════════════════ -->
+  <section class="h2-section h2-shows" id="shows">
+    <div class="h2-section-inner">
+
+      <div class="h2-section-header">
+        <div class="mc-topper">
+          <div class="mc-topper-rule" aria-hidden="true"></div>
+          <span class="mc-topper-text">Live Stand-Up</span>
+        </div>
+        <h2 class="h2-section-heading">Upcoming Shows</h2>
+        <p class="h2-shows-subline">Tickets sell out &mdash; don&rsquo;t wait.</p>
+      </div>
+
+      <div class="h2-shows-layout">
+
+        {%- if not collections.showsByDate or collections.showsByDate.length == 0 -%}
+        <p class="h2-no-shows">No shows scheduled yet. Check back soon!</p>
+        {%- endif -%}
+
+        {%- for show in collections.showsByDate -%}
+        {%- if show.data.featured -%}
+        <!-- Featured show card -->
+        <article class="h2-show-featured{% if show.data.showtimes | allSoldOut %} h2-show-card--soldout{% endif %}">
+
+          <div class="h2-show-featured-img">
+            {%- if show.data.images and show.data.images.length -%}
+            <img src="{{ show.data.images[0].src | netlifyImg(1200, null, 85) }}" srcset="{{ show.data.images[0].src | netlifyImgSrcset([400, 800, 1200, 1600], 85) }}" sizes="(max-width: 768px) 400px, (max-width: 1200px) 800px, 1200px" alt="{{ show.data.images[0].alt or show.data.title }}" loading="lazy" decoding="async">
+            {%- endif -%}
+          </div>
+
+          <div class="h2-show-featured-body">
+
+            <div class="h2-show-featured-badges">
+              <span class="h2-show-badge h2-show-badge--next">Featured</span>
+              {%- if show.data.showType %}<span class="h2-show-badge">{{ show.data.showType }}</span>{%- endif -%}
+              {%- if show.data.ageRestriction %}<span class="h2-show-badge">{{ show.data.ageRestriction }}</span>{%- endif -%}
+            </div>
+
+            <h3 class="h2-show-featured-title">
+              <a href="{{ show.url }}" class="h2-show-link">{{ show.data.title }}</a>
+            </h3>
+
+            {%- if show.data.subtitle -%}
+            <p class="h2-show-featured-sub">{{ show.data.subtitle }}</p>
+            {%- endif -%}
+
+            <div class="h2-show-featured-meta">
+              <div class="h2-show-featured-date">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                {{ show.data.showtimes[0].startDate | showDayOfWeek }}, {{ show.data.showtimes[0].startDate | showDateOnly }}
+                &nbsp;&middot;&nbsp;
+                {%- for st in show.data.showtimes -%}{{ st.startDate | showTimeOnly }}{% if not loop.last %} &amp; {% endif %}{%- endfor -%}
+              </div>
+              <div class="h2-show-featured-price">
+                From <strong>${{ show.data.showtimes[0].ticketPrice | int }}</strong>
+              </div>
+            </div>
+
+            {%- if not (show.data.showtimes | allSoldOut) -%}
+            <div class="mc-scarcity h2-show-featured-scarcity" role="status">
+              <div class="mc-scarcity-dot" aria-hidden="true"></div>
+              <span class="mc-scarcity-text">Selling fast</span>
+            </div>
+            {%- endif -%}
+
+            <div class="h2-show-featured-tickets">
+              {%- for st in show.data.showtimes -%}
+                {%- if st.ticketAvailability == "https://schema.org/InStock" and st.ticketUrl -%}
+                {%- if st.eventbriteEventId -%}
+                <noscript><a href="{{ st.ticketUrl }}" rel="noopener noreferrer" target="_blank" class="h2-ticket-btn h2-ticket-btn--featured">Get Tickets {{ st.startDate | showTimeOnly }} &rarr;</a></noscript>
+                <button
+                  type="button"
+                  class="h2-ticket-btn h2-ticket-btn--featured"
+                  onclick="openEbModal('{{ st.eventbriteEventId }}'); gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ show.data.title }} {{ st.startDate | showTimeOnly }}', 'transport_type': 'beacon'});"
+                >Get Tickets {{ st.startDate | showTimeOnly }} &rarr;</button>
+                {%- else -%}
+                <a
+                  href="{{ st.ticketUrl }}"
+                  class="h2-ticket-btn h2-ticket-btn--featured"
+                  target="_blank"
+                  rel="noopener"
+                  onclick="gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ show.data.title }} {{ st.startDate | showTimeOnly }}', 'transport_type': 'beacon'});"
+                >Get Tickets {{ st.startDate | showTimeOnly }} &rarr;</a>
+                {%- endif -%}
+                {%- elif st.ticketAvailability == "https://schema.org/SoldOut" -%}
+                <span class="h2-ticket-unavailable">{{ st.startDate | showTimeOnly }} &mdash; Sold Out</span>
+                {%- else -%}
+                <span class="h2-ticket-unavailable">Coming Soon</span>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+
+            <div class="h2-show-featured-proof">
+              <div class="mc-stars" role="img" aria-label="5 out of 5 stars">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="#c9a96e" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="#c9a96e" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="#c9a96e" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="#c9a96e" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="#c9a96e" aria-hidden="true"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
+              </div>
+              <span class="h2-show-featured-review">&ldquo;Absolutely hilarious &mdash; best night out in Philly&rdquo;</span>
+            </div>
+
+          </div>
+        </article>
+        {%- endif -%}
+        {%- endfor -%}
+
+        {%- for show in collections.showsByDate -%}
+        {%- if not show.data.featured -%}
+        <!-- Compact row: non-featured shows -->
+        <article class="h2-show-compact{% if show.data.showtimes | allSoldOut %} h2-show-card--soldout{% endif %}">
+
+          <div class="h2-show-compact-img">
+            {%- if show.data.images and show.data.images.length -%}
+            <img src="{{ show.data.images[0].src | netlifyImg(400, null, 85) }}" srcset="{{ show.data.images[0].src | netlifyImgSrcset([200, 400, 600], 85) }}" sizes="(max-width: 768px) 200px, 300px" alt="{{ show.data.images[0].alt or show.data.title }}" loading="lazy" decoding="async">
+            {%- endif -%}
+          </div>
+
+          <div class="h2-show-compact-body">
+            <div class="h2-show-compact-info">
+              {%- if show.data.showType %}<span class="h2-show-eyebrow">{{ show.data.showType }}</span>{%- endif -%}
+              <h3 class="h2-show-compact-title">
+                <a href="{{ show.url }}" class="h2-show-link">{{ show.data.title }}</a>
+              </h3>
+              <div class="h2-show-compact-when">
+                {{ show.data.showtimes[0].startDate | showDayOfWeek }}, {{ show.data.showtimes[0].startDate | showDateOnly }}
+                &nbsp;&middot;&nbsp;
+                {%- for st in show.data.showtimes -%}{{ st.startDate | showTimeOnly }}{% if not loop.last %} &amp; {% endif %}{%- endfor -%}
+                &nbsp;&middot;&nbsp; From <strong>${{ show.data.showtimes[0].ticketPrice | int }}</strong>
+              </div>
+            </div>
+            <div class="h2-show-compact-tickets">
+              {%- for st in show.data.showtimes -%}
+                {%- if st.ticketAvailability == "https://schema.org/InStock" and st.ticketUrl -%}
+                {%- if st.eventbriteEventId -%}
+                <noscript><a href="{{ st.ticketUrl }}" rel="noopener noreferrer" target="_blank" class="h2-ticket-btn">{{ st.startDate | showTimeOnly }} &rarr;</a></noscript>
+                <button
+                  type="button"
+                  class="h2-ticket-btn"
+                  onclick="openEbModal('{{ st.eventbriteEventId }}'); gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ show.data.title }} {{ st.startDate | showTimeOnly }}', 'transport_type': 'beacon'});"
+                >{{ st.startDate | showTimeOnly }} &rarr;</button>
+                {%- else -%}
+                <a
+                  href="{{ st.ticketUrl }}"
+                  class="h2-ticket-btn"
+                  target="_blank"
+                  rel="noopener"
+                  onclick="gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ show.data.title }} {{ st.startDate | showTimeOnly }}', 'transport_type': 'beacon'});"
+                >{{ st.startDate | showTimeOnly }} &rarr;</a>
+                {%- endif -%}
+                {%- elif st.ticketAvailability == "https://schema.org/SoldOut" -%}
+                <span class="h2-ticket-unavailable">{{ st.startDate | showTimeOnly }} &mdash; Sold Out</span>
+                {%- else -%}
+                <span class="h2-ticket-unavailable">Coming Soon</span>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </div>
+
+        </article>
+        {%- endif -%}
+        {%- endfor -%}
+
+      </div>
+
+    </div>
+  </section><!-- /.h2-shows -->
+
+
+  <!-- ══════════════════════════════════════
+       ABOUT
+  ══════════════════════════════════════ -->
+  <section class="h2-section h2-about" id="about">
+    <div class="h2-section-inner">
+
+      <div class="h2-about-layout">
+
+        <!-- Left: intro -->
+        <div class="h2-about-left">
+          <div class="mc-topper">
+            <div class="mc-topper-rule" aria-hidden="true"></div>
+            <span class="mc-topper-text">The Lowdown</span>
+          </div>
+          <h2 class="h2-section-heading">About Misconduct Comedy</h2>
+          <p class="h2-about-intro">Misconduct Comedy is an indie comedy show run by local comedians striving to showcase Philadelphia's best stand-up comics. Whether you're looking for the perfect date night or a fun hang with friends, our shows feature local favorites and rising stars in an intimate, laid-back setting.</p>
+          <a href="#shows" class="h2-about-cta">See Upcoming Shows &rarr;</a>
+        </div>
+
+        <!-- Right: feature cards -->
+        <div class="h2-feature-grid">
+
+          <div class="h2-feature">
+            <div class="h2-feature-eyebrow">The Venue</div>
+            <h3>Misconduct Tavern</h3>
+            <p>
+              <a href="https://maps.google.com/?q=1511+Locust+Street,+Philadelphia+PA+19102" target="_blank" rel="noopener">1511 Locust St, Philadelphia PA 19102</a><br>
+              Cozy bar setting with a full drink menu and great atmosphere for comedy.
+            </p>
+          </div>
+
+          <div class="h2-feature">
+            <div class="h2-feature-eyebrow">What to Expect</div>
+            <h3>75&ndash;90 Min of Laughter</h3>
+            <p>Our showcases feature 5&ndash;7 talented local comedians and rising stars. Double Trouble Specials feature co-headliners doing extended 30-minute sets.</p>
+          </div>
+
+          <div class="h2-feature">
+            <div class="h2-feature-eyebrow">Show Details</div>
+            <h3>Good to Know</h3>
+            <p>
+              <strong>Age:</strong> 21+ with valid ID.<br>
+              <strong>Seating:</strong> First come, first served.<br>
+              <strong>Doors:</strong> 30 min before showtime.<br>
+              <strong>Bar:</strong> Full menu available.<br>
+            </p>
+          </div>
+
+          <div class="h2-feature">
+            <div class="h2-feature-eyebrow">2-Item Minimum</div>
+            <h3>Drinks &amp; Food</h3>
+            <p>There is a 2-item minimum per person. A bartender will be available throughout the show for food &amp; drink orders.</p>
+          </div>
+
+        </div><!-- /.h2-feature-grid -->
+      </div><!-- /.h2-about-layout -->
+
+    </div>
+  </section><!-- /.h2-about -->
+
+  </main>
+
+  {%- include "h2-footer.njk" -%}
+
+  <!-- ══════════════════════════════════════
+       MOBILE STICKY TICKET BAR
+  ══════════════════════════════════════ -->
+  {%- if heroShow -%}
+  <div class="h2-sticky-ticket-bar">
+    <div class="h2-sticky-ticket-content">
+      <div class="h2-sticky-ticket-info">
+        <div class="h2-sticky-ticket-label">Next Show</div>
+        <div class="h2-sticky-ticket-date">{{ heroShow.data.showtimes[0].startDate | showDayOfWeek }}, {{ heroShow.data.showtimes[0].startDate | showDateOnly }}</div>
+      </div>
+      {%- set heroTicketUrl = null -%}
+      {%- for st in heroShow.data.showtimes -%}
+        {%- if st.ticketUrl and not heroTicketUrl -%}{%- set heroTicketUrl = st.ticketUrl -%}{%- endif -%}
+      {%- endfor -%}
+      {%- if heroEbEventId -%}
+      <noscript><a href="{{ heroTicketUrl or heroShow.url }}" class="h2-sticky-ticket-btn" target="_blank" rel="noopener noreferrer">Get Tickets</a></noscript>
+      <button type="button" class="h2-sticky-ticket-btn" onclick="openEbModal('{{ heroEbEventId }}')">Get Tickets</button>
+      {%- else -%}
+      <a href="{{ heroTicketUrl or heroShow.url }}" class="h2-sticky-ticket-btn"{% if heroTicketUrl %} target="_blank" rel="noopener"{% endif %}>Get Tickets</a>
+      {%- endif -%}
+    </div>
+  </div>
+  {%- endif -%}
+
+</div><!-- /.h2-page -->
+
+<script>
+  (function () {
+    const btn = document.querySelector('.h2-hamburger');
+    const menu = document.getElementById('h2-nav-menu');
+
+    btn.addEventListener('click', function () {
+      const open = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!open));
+      menu.classList.toggle('is-open');
+    });
+
+    // Close menu when a link is clicked
+    menu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        btn.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('is-open');
+      });
+    });
+
+    // Clone grid images for infinite-scroll marquee animation (reduces initial HTML img count by 50%)
+    document.querySelectorAll('.h2-grid-track').forEach(function (track) {
+      var imgs = Array.prototype.slice.call(track.children);
+      imgs.forEach(function (img) { track.appendChild(img.cloneNode(true)); });
+    });
+
+    // Video player controls with lazy loading
+    const videoReels = document.querySelectorAll('.h2-video-reel');
+
+    function loadVideo(video) {
+      video.querySelectorAll('source[data-src]').forEach(function (source) {
+        source.src = source.dataset.src;
+        source.removeAttribute('data-src');
+      });
+      video.load();
+    }
+
+    // Lazy load videos via IntersectionObserver
+    if ('IntersectionObserver' in window) {
+      var videoObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            loadVideo(entry.target);
+            videoObserver.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '200px' });
+
+      videoReels.forEach(function (reel) {
+        videoObserver.observe(reel.querySelector('.h2-video-player'));
+      });
+    } else {
+      // Fallback: load all videos immediately
+      videoReels.forEach(function (reel) {
+        loadVideo(reel.querySelector('.h2-video-player'));
+      });
+    }
     
-    {%- for show in collections.showsByDate -%}
-    <div class="show-card{% if show.data.showtimes | allSoldOut %} show-card-disabled{% endif %}">
-        <div class="card-content">
-            <div class="show-image">
-                {% if show.data.images and show.data.images.length %}
-                <img src="{{ show.data.images[0].src }}" alt="{{ show.data.images[0].alt or show.data.title }} - Live Stand-Up Comedy in Philadelphia">
-                {% endif %}
-            </div>
-            <div class="show-info">
-                <h3><a href="{{ show.url }}" class="show-card-link">{{ show.data.title }}{% if show.data.subtitle %}<br><span class="show-subtitle">{{ show.data.subtitle }}</span>{% endif %}</a></h3>
-                <div class="show-details">
-                    <span>{{ show.data.showtimes[0].startDate | showDayOfWeek }}</span>
-                    {% if show.data.showType %}<span>{{ show.data.showType }}</span>{% endif %}
-                    {% if show.data.ageRestriction %}<span>{{ show.data.ageRestriction }}</span>{% endif %}
-                </div>
-                <h4>{{ show.data.showtimes[0].startDate | showDateOnly }} • {% for st in show.data.showtimes %}{{ st.startDate | showTimeOnly }}{% if not loop.last %} &amp; {% endif %}{% endfor %}</h4>
-            </div>
-            <div class="show-tickets">
-                {% for st in show.data.showtimes %}
-                    {% if st.ticketAvailability == "https://schema.org/InStock" and st.ticketUrl %}
-                    <a href="{{ st.ticketUrl }}" class="btn-tickets" target="_blank" rel="noopener" onclick="gtag('event', 'ticket_click', {'event_category': 'Tickets', 'event_label': '{{ show.data.title }} {{ st.startDate | showTimeOnly }}', 'transport_type': 'beacon'});">BUY {{ st.startDate | showTimeOnly }} TICKETS</a>
-                    {% elif st.ticketAvailability == "https://schema.org/SoldOut" %}
-                    <span class="coming-soon">{{ st.startDate | showTimeOnly }} — SOLD OUT</span>
-                    {% elif st.ticketAvailability == "https://schema.org/PreOrder" %}
-                    <span class="coming-soon">COMING SOON</span>
-                    {% else %}
-                    <span class="coming-soon">COMING SOON</span>
-                    {% endif %}
-                {% endfor %}
-            </div>
-        </div>
+    videoReels.forEach(function (reel) {
+      const video = reel.querySelector('.h2-video-player');
+      const playBtn = reel.querySelector('.h2-video-play-btn');
+      
+      // Play button click
+      playBtn.addEventListener('click', function () {
+        // Ensure source is loaded before playing
+        if (video.querySelector('source[data-src]')) { loadVideo(video); }
+        video.muted = false;
+        video.setAttribute('controls', 'controls');
+        video.play();
+        reel.classList.add('is-playing');
+      });
+      
+      // Click video to pause (controls will handle this now)
+      // Removed manual click handler since controls are now visible
+      
+      // Show play button when video ends
+      video.addEventListener('ended', function () {
+        reel.classList.remove('is-playing');
+      });
+      
+      // Show play button when video is paused
+      video.addEventListener('pause', function () {
+        reel.classList.remove('is-playing');
+      });
+      
+      // Hide play button when video is playing
+      video.addEventListener('play', function () {
+        reel.classList.add('is-playing');
+      });
+    });
+  })();
+</script>
+{%- set hasAnyEbWidget = false -%}
+{%- if heroEbEventId -%}{%- set hasAnyEbWidget = true -%}{%- endif -%}
+{%- for show in collections.showsByDate -%}
+  {%- for st in show.data.showtimes -%}
+    {%- if st.eventbriteEventId -%}{%- set hasAnyEbWidget = true -%}{%- endif -%}
+  {%- endfor -%}
+{%- endfor -%}
+{%- if hasAnyEbWidget -%}
+<!-- Eventbrite inline checkout modal -->
+<div id="eb-modal" class="eb-modal" role="dialog" aria-modal="true" aria-label="Get Tickets" hidden>
+  <div class="eb-modal-inner">
+    <div class="eb-modal-header">
+      <span class="eb-modal-title">Get Tickets</span>
+      <button class="eb-modal-close" aria-label="Close checkout">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
     </div>
-    {%- else -%}
-    <p style="text-align: center; color: #aaa; padding: 2rem;">No shows scheduled yet. Check back soon!</p>
-    {%- endfor -%}
-</section>
+    <div id="eb-modal-body" class="eb-modal-body"></div>
+  </div>
+</div>
+<script defer src="https://www.eventbrite.com/static/widgets/eb_widgets.js"></script>
+<script>
+  (function () {
+    var modal = document.getElementById('eb-modal');
+    var modalBody = document.getElementById('eb-modal-body');
+    var closeBtn = modal.querySelector('.eb-modal-close');
+    var orderCompleted = false;
 
-<!-- About Section -->
-<section class="about-section">
-    <h2>ABOUT MISCONDUCT COMEDY</h2>
-    <div class="about-intro">
-        <p>Misconduct Comedy brings you Philadelphia's best stand-up comedy shows in the heart of Center City. Whether you're looking for the perfect date night or a fun outing with friends, our shows feature a mix of local favorites and touring headliners in an intimate, laid-back setting.</p>
-    </div>
-    <div class="features">
-        <div class="feature">
-            <div class="feature-icon">📍</div>
-            <h3>The Venue</h3>
-            <p><strong>Misconduct Tavern</strong><br><a href="https://maps.google.com/?q=1511+Locust+Street,+Philadelphia+PA+19102" target="_blank" class="venue-address">1511 Locust Street, Philadelphia PA 19102</a><br>Cozy bar setting with full drink menu and great atmosphere for comedy.</p>
-        </div>
-        <div class="feature">
-            <div class="feature-icon">🎭</div>
-            <h3>What to Expect</h3>
-            <p>All of our shows run 75-90 minutes. Our showcases feature 5-7 talented local comedians and rising stars, while our Double Trouble Specials feature co-headliners doing extended 30-minute sets.</p>
-        </div>
-        <div class="feature">
-            <div class="feature-icon">🎟️</div>
-            <h3>Show Details</h3>
-            <p><strong>Age:</strong> 21+<br><strong>Seating:</strong> First come, first served<br><strong>Doors:</strong> 30 minutes before showtime<br>Arrive early for best seats!<br><strong>Food/Drink:</strong> Full Menu is available 30 minutes before showtime</p>
-        </div>
-    </div>
-</section>
+    window.openEbModal = function (eventId) {
+      orderCompleted = false;
+      modalBody.innerHTML =
+        '<div class="eb-loading"><div class="eb-spinner"></div><p class="eb-loading-text">Loading checkout…</p></div>' +
+        '<div id="eb-inline-' + eventId + '" class="eb-iframe-wrap"></div>';
+      window.EBWidgets.createWidget({
+        widgetType: 'checkout',
+        eventId: eventId,
+        iframeContainerId: 'eb-inline-' + eventId,
+        iframeContainerHeight: Math.floor(window.innerHeight * 0.8),
+        themeSettings: { brandColor: '#F17E3C', fontColor: '#f0e8d0', background: '#080e10' },
+        onOrderComplete: function () {
+          orderCompleted = true;
+          if (typeof gtag !== 'undefined') { gtag('event', 'purchase', { event_category: 'Tickets' }); }
+        }
+      });
+      modal.removeAttribute('hidden');
+      document.body.style.overflow = 'hidden';
+      if (typeof gtag !== 'undefined') { gtag('event', 'checkout_start', { event_category: 'Tickets' }); }
+    };
 
-<!-- FAQ Section -->
-<section class="faq-section">
-    <h2>FREQUENTLY ASKED QUESTIONS</h2>
-    
-    <div class="faq-item">
-        <h3>Is there an age limit?</h3>
-        <p>Yes, all attendees must be 21+ with a valid ID. This is strictly enforced at the door.</p>
-    </div>
+    window.closeEbModal = function () {
+      if (!orderCompleted) {
+        if (typeof gtag !== 'undefined') { gtag('event', 'checkout_cancelled', { event_category: 'Tickets' }); }
+      }
+      orderCompleted = false;
+      modal.setAttribute('hidden', '');
+      document.body.style.overflow = '';
+      modalBody.innerHTML = '';
+    };
 
-    <div class="faq-item">
-        <h3>How long is the show?</h3>
-        <p>All of our shows run between 75-90 minutes. There is no intermission.</p>
-    </div>
-
-    <div class="faq-item">
-        <h3>Can I bring a group?</h3>
-        <p>Absolutely! Groups are welcome. Since seating is first come, first served, we recommend arriving early to ensure your group can sit together.</p>
-    </div>
-
-    <div class="faq-item">
-        <h3>Is there an item minimum?</h3>
-        <p>There is a 2-item minimum and a bartender will be available for patrons to order food & drinks.</p>
-    </div>
-
-    <div class="faq-item">
-        <h3>Can I buy tickets at the door?</h3>
-        <p>We recommend purchasing tickets in advance as many shows sell out. If tickets are available, they may be purchased at the door for an additional fee.</p>
-    </div>
-
-    <div class="faq-item">
-        <h3>If it's sold out, can I still attend?</h3>
-        <p>Yes! We will be offering a small amount of tickets available at the door for $20, however we cannot guarantee that your party will be seated together.</p>
-    </div>
-
-    <div class="faq-item">
-        <h3>What is the refund policy?</h3>
-        <p>All sales are final. No refunds or exchanges. If you cannot attend, you may be able to receive a refund by contacting us at hausofcomedy@gmail.com.</p>
-    </div>
-
-    <div class="faq-item">
-        <h3>Where can I park?</h3>
-        <p>Street parking is available in the area, and there are several paid parking garages nearby. We recommend arriving with extra time to find parking.</p>
-    </div>
-</section>
-
-<!-- Contact Section -->
-<section class="contact-section">
-    <h2>GET IN TOUCH</h2>
-    <div class="contact-content">
-        <div class="contact-intro">
-            <p>Have questions about our shows? Want to book a private event? Looking to get your comedy group on our stage? We'd love to hear from you!</p>
-        </div>
-        <div class="contact-options">
-            <div class="contact-item">
-                <svg class="contact-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-                <h3>Email Us</h3>
-                <p><a href="mailto:hausofcomedy@gmail.com">hausofcomedy@gmail.com</a></p>
-                <p class="contact-desc">We typically respond within 24 hours</p>
-            </div>
-            <div class="contact-item">
-                <svg class="contact-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-                <h3>Follow Us</h3>
-                <p><a href="https://www.instagram.com/misconductcomedy" target="_blank">@misconductcomedy</a></p>
-                <p class="contact-desc">Stay updated on upcoming shows and behind-the-scenes content</p>
-            </div>
-            <div class="contact-item">
-                <svg class="contact-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-                    <circle cx="12" cy="12" r="3"></circle>
-                </svg>
-                <h3>Performer Inquiries</h3>
-                <p>Interested in performing at Misconduct Comedy?</p>
-                <p class="contact-desc">Send us your bio and recent set videos</p>
-            </div>
-            <div class="contact-item">
-                <svg class="contact-icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-                <h3>Private Events</h3>
-                <p>Looking to book a private comedy show?</p>
-                <p class="contact-desc">Contact us for availability and pricing</p>
-            </div>
-        </div>
-    </div>
-</section>
+    closeBtn.addEventListener('click', closeEbModal);
+    modal.addEventListener('click', function (e) { if (e.target === modal) closeEbModal(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.hasAttribute('hidden')) closeEbModal(); });
+  })();
+</script>
+{%- endif -%}
