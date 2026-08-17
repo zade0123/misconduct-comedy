@@ -570,6 +570,18 @@ body.home2-page {
   box-shadow: 0 4px 20px rgba(212, 98, 42, 0.38);
 }
 
+.h2-ticket-btn--coming-soon,
+.h2-ticket-btn--coming-soon:hover,
+.h2-ticket-btn--coming-soon:focus-visible {
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.32);
+  cursor: not-allowed;
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  transform: none;
+  pointer-events: none;
+}
+
 .h2-ticket-unavailable {
   display: inline-flex;
   align-items: center;

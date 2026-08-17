@@ -156,6 +156,12 @@ collections:
         default: false
         required: false
         hint: "Featured shows appear at the top of the shows list with a larger card"
+      - label: "Available"
+        name: "available"
+        widget: "boolean"
+        default: true
+        required: false
+        hint: "When false, ticket buttons are replaced with a greyed-out Coming Soon state"
       - label: "Show Type"
         name: "showType"
         widget: "string"

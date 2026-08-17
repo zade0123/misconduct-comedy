@@ -129,7 +129,9 @@ bodyClass: home2-page
       <!-- Ticket CTAs -->
       <div class="sp-hero-tickets">
         {%- for st in showtimes -%}
-          {%- if st.ticketAvailability == "https://schema.org/InStock" and st.ticketUrl -%}
+          {%- if available == false -%}
+          <span class="h2-ticket-btn h2-ticket-btn--featured h2-ticket-btn--coming-soon">{% if showtimes | length > 1 %}{{ st.startDate | showTimeOnly }} &mdash; {% endif %}Coming Soon</span>
+          {%- elif st.ticketAvailability == "https://schema.org/InStock" and st.ticketUrl -%}
           {%- if st.eventbriteEventId -%}
           <noscript><a href="{{ st.ticketUrl }}" rel="noopener noreferrer" target="_blank" class="h2-ticket-btn h2-ticket-btn--featured">Get Tickets {{ st.startDate | showTimeOnly }} &rarr;</a></noscript>
           <button
@@ -238,7 +240,9 @@ bodyClass: home2-page
           <div class="h2-feature-eyebrow">Tickets</div>
           <div class="sp-card-tickets">
             {%- for st in showtimes -%}
-              {%- if st.ticketAvailability == "https://schema.org/InStock" and st.ticketUrl -%}
+              {%- if available == false -%}
+              <span class="h2-ticket-btn h2-ticket-btn--coming-soon">{% if showtimes | length > 1 %}{{ st.startDate | showTimeOnly }} &mdash; {% endif %}Coming Soon</span>
+              {%- elif st.ticketAvailability == "https://schema.org/InStock" and st.ticketUrl -%}
               {%- if st.eventbriteEventId -%}
               <noscript><a href="{{ st.ticketUrl }}" rel="noopener noreferrer" target="_blank" class="h2-ticket-btn h2-ticket-btn--featured">{{ st.startDate | showTimeOnly }} Tickets &rarr;</a></noscript>
               <button
@@ -262,7 +266,7 @@ bodyClass: home2-page
               {%- endif -%}
             {%- endfor -%}
           </div>
-          {%- if not (showtimes | allSoldOut) -%}
+          {%- if not (showtimes | allSoldOut) and available != false -%}
           <div class="mc-scarcity" role="status" style="margin-top:12px;">
             <div class="mc-scarcity-dot" aria-hidden="true"></div>
             <span class="mc-scarcity-text">Selling fast!</span>

@@ -351,7 +351,7 @@ bodyClass: home2-page
               </div>
             </div>
 
-            {%- if not (show.data.showtimes | allSoldOut) -%}
+            {%- if not (show.data.showtimes | allSoldOut) and show.data.available != false -%}
             <div class="mc-scarcity h2-show-featured-scarcity" role="status">
               <div class="mc-scarcity-dot" aria-hidden="true"></div>
               <span class="mc-scarcity-text">Selling fast</span>
@@ -359,6 +359,9 @@ bodyClass: home2-page
             {%- endif -%}
 
             <div class="h2-show-featured-tickets">
+              {%- if show.data.available == false -%}
+              <span class="h2-ticket-btn h2-ticket-btn--featured h2-ticket-btn--coming-soon">Coming Soon</span>
+              {%- else -%}
               {%- for st in show.data.showtimes -%}
                 {%- if st.ticketAvailability == "https://schema.org/InStock" and st.ticketUrl -%}
                 {%- if st.eventbriteEventId -%}
@@ -383,6 +386,7 @@ bodyClass: home2-page
                 <span class="h2-ticket-unavailable">Coming Soon</span>
                 {%- endif -%}
               {%- endfor -%}
+              {%- endif -%}
             </div>
 
             <div class="h2-show-featured-proof">
@@ -426,6 +430,9 @@ bodyClass: home2-page
               </div>
             </div>
             <div class="h2-show-compact-tickets">
+              {%- if show.data.available == false -%}
+              <span class="h2-ticket-btn h2-ticket-btn--coming-soon">Coming Soon</span>
+              {%- else -%}
               {%- for st in show.data.showtimes -%}
                 {%- if st.ticketAvailability == "https://schema.org/InStock" and st.ticketUrl -%}
                 {%- if st.eventbriteEventId -%}
@@ -450,6 +457,7 @@ bodyClass: home2-page
                 <span class="h2-ticket-unavailable">Coming Soon</span>
                 {%- endif -%}
               {%- endfor -%}
+              {%- endif -%}
             </div>
           </div>
 
