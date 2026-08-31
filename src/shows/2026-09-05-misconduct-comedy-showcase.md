@@ -26,7 +26,7 @@ location:
   country: US
 images:
   - alt: Misconduct Comedy show poster
-    src: /photos/shows/BenS.webp
+    src: /photos/shows/PatrickS.webp
   - alt: Misconduct Comedy show poster
     src: /photos/shows/AnnaG.webp
   - alt: Misconduct Comedy show poster
