@@ -10,11 +10,13 @@ showtimes:
   - startDate: 2026-10-31T19:30:00.000-04:00
     endDate: 2026-10-31T21:00:00.000-04:00
     ticketUrl: https://misconductcomedy.com/shows/october-31-2026/
+    eventbriteEventId: "2000233496232"
     ticketPrice: 20
     ticketAvailability: https://schema.org/InStock
   - startDate: 2026-10-31T21:30:00.000-04:00
     endDate: 2026-10-31T23:00:00.000-04:00
     ticketUrl: https://misconductcomedy.com/shows/october-31-2026/
+    eventbriteEventId: "2000233496232"
     ticketPrice: 20
     ticketAvailability: https://schema.org/InStock
 eventStatus: https://schema.org/EventScheduled
@@ -28,7 +30,7 @@ location:
   country: US
 images:
   - alt: Misconduct Comedy show poster
-    src: /photos/shows/JamesM.webp
+    src: /photos/shows/ZoeD.webp
   - alt: Misconduct Comedy show poster
     src: /photos/shows/RachelP.webp
   - alt: Misconduct Comedy show poster
@@ -36,12 +38,12 @@ images:
   - alt: Misconduct Comedy show poster
     src: /photos/shows/RoomMic.webp
 priceCurrency: USD
-ticketSaleStart: 2026-10-01T12:00:00.000-04:00
+ticketSaleStart: 2026-8-01T12:00:00.000-04:00
 ticketSaleEnd: 2026-10-31T21:30:00.000-04:00
 totalTickets: 40
 showType: Special
 featured: false
-available: false
+available: true
 ageRestriction: 21+
 organizerName: Misconduct Comedy
 organizerUrl: https://misconductcomedy.com
