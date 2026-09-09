@@ -41,7 +41,7 @@ priceCurrency: USD
 ticketSaleStart: 2026-8-01T12:00:00.000-04:00
 ticketSaleEnd: 2026-10-31T21:30:00.000-04:00
 totalTickets: 40
-showType: Special
+showType: Halloween Special
 featured: false
 available: true
 ageRestriction: 21+
