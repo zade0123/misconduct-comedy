@@ -30,7 +30,7 @@ location:
   country: US
 images:
   - alt: Misconduct Comedy show poster
-    src: /photos/shows/KirstinC.webp
+    src: /photos/shows/ZoeD1.webp
   - alt: Misconduct Comedy show poster
     src: /photos/shows/RachelP.webp
   - alt: Misconduct Comedy show poster
