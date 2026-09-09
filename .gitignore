@@ -32,3 +32,6 @@ lerna-debug.log*
 .eleventy-cache/
 .temp/
 .tmp/
+
+# Large video files (use WebM instead)
+*.mp4

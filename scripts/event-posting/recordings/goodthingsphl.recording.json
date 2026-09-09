@@ -1,0 +1,2846 @@
+{
+  "site": "goodthingsphl",
+  "recordedAt": "2026-07-01T23:05:10.611Z",
+  "visitedUrls": [
+    "https://goodthingsphl.com/login",
+    "https://goodthingsphl.com/feed/zade",
+    "https://goodthingsphl.com/things",
+    "https://goodthingsphl.com/dashboard/zade?v=post&resume=1782946878021x719378610366369900",
+    "https://goodthingsphl.com/dashboard/zade?v=post",
+    "https://goodthingsphl.com/dash/zade"
+  ],
+  "events": [
+    {
+      "type": "submit",
+      "selectors": {
+        "css": "html > body > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div > div > div > div:nth-child(1) > button"
+      },
+      "label": "POST AN EVENT",
+      "url": "https://goodthingsphl.com/things",
+      "timestamp": 1782946878019
+    },
+    {
+      "type": "submit",
+      "selectors": {
+        "css": "html > body > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div > button:nth-child(1)"
+      },
+      "label": "Post an event",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946880679
+    },
+    {
+      "type": "submit",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(2) > button"
+      },
+      "label": "Next →",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946882242
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "M",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946883945
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Mi",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946884126
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Mis",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946884287
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misc",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946884437
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misco",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946884548
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Miscon",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946884623
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Miscond",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946884767
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Miscondu",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946884896
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduc",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946884994
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946885088
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct ",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946885205
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct C",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946885358
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct Co",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946885504
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct Com",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946885586
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct Come",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946885710
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct Comey",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946885942
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct Come",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946886327
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct Comed",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946886465
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct Comedy",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946886588
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct Comedy ",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946886793
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct Comedy S",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946887035
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct Comedy Sh",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946887206
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct Comedy Sho",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946887264
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct Comedy Show",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946887334
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct Comedy Showc",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946887547
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct Comedy Showca",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946887603
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct Comedy Showcas",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946887941
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "value": "Misconduct Comedy Showcase",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946888015
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div > input"
+      },
+      "value": "C:\\fakepath\\SEO Square Poster.png",
+      "inputType": "file",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946904828
+    },
+    {
+      "type": "submit",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(2) > div > button:nth-child(2)"
+      },
+      "label": "Next →",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946908309
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Name",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > textarea"
+      },
+      "value": "M",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946910398
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Name",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > textarea"
+      },
+      "value": "Mi",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946910539
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Name",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > textarea"
+      },
+      "value": "Mis",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946910929
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Name",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > textarea"
+      },
+      "value": "Misc",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946911274
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Name",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > textarea"
+      },
+      "value": "Misco",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946911459
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Name",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > textarea"
+      },
+      "value": "Miscon",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946912018
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Name",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > textarea"
+      },
+      "value": "Miscond",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946912236
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Name",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > textarea"
+      },
+      "value": "Miscondu",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946912378
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Name",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > textarea"
+      },
+      "value": "Misconduc",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946912523
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Name",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > textarea"
+      },
+      "value": "Misconduct",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946912616
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Name",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > textarea"
+      },
+      "value": "Misconduct ",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946912699
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Name",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > textarea"
+      },
+      "value": "Misconduct T",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946912903
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Name",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > textarea"
+      },
+      "value": "Misconduct Ta",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946913123
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Name",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > textarea"
+      },
+      "value": "Misconduct Tav",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946913266
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Name",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > textarea"
+      },
+      "value": "Misconduct Tave",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946913447
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Name",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > textarea"
+      },
+      "value": "Misconduct Taver",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946913509
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Name",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > textarea"
+      },
+      "value": "Misconduct Tavern",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946913616
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946914999
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "15",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946915436
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "151",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946915612
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946915785
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 ",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946915934
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 P",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946916208
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 ",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946916553
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 L",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946917834
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Lo",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946918009
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Loc",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946918097
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locu",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946918288
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locus",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946918435
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946918544
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust ",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946918629
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust S",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946918831
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust ST",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946918944
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust S",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946919842
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946920057
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St,",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946920312
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, ",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946920519
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, P",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946920697
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Ph",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946920868
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Phi",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946920964
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Phil",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946921021
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Phila",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946921157
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Philad",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946921271
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Philade",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946921439
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Philadel",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946921548
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Philadelp",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946921594
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Philadelph",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946921916
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Philadelphi",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946921953
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Philadelphia",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946922033
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Philadelphia ",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946922169
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Philadelphia P",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946922361
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Philadelphia PA",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946922471
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Philadelphia PA ",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946923122
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Philadelphia PA 1",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946923402
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Philadelphia PA 19",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946923522
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Philadelphia PA 191",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946923669
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Philadelphia PA 1910",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946923782
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "value": "1511 Locust St, Philadelphia PA 19103",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946923941
+    },
+    {
+      "type": "select",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(3) > select"
+      },
+      "value": "\"rittenhouse\"",
+      "inputType": "select-one",
+      "tagName": "SELECT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946928566
+    },
+    {
+      "type": "submit",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(2) > div:nth-child(3) > button:nth-child(2)"
+      },
+      "label": "Next →",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946939868
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "S",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946942872
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "Se",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946943067
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946943215
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See ",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946943324
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See O",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946943501
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See ",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946944115
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See P",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946944436
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Ph",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946944708
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Phi",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946944793
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Phil",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946944925
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Phill",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946945014
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946945189
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly'",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946946258
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946946420
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's ",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946946560
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's b",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946946744
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's be",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946946816
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's bes",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946946916
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946947023
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best ",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946947094
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best s",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946947587
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best st",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946947761
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best sta",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946947924
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stan",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946948108
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946948280
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best standu",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946948404
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best standup",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946948531
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best standu",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946949188
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946949342
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand ",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946949736
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand u",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946949929
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946949994
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up ",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946950109
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up c",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946950236
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up co",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946950317
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up com",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946950408
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up come",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946950459
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comed",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946950618
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946950688
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy ",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946950770
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy s",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946950976
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy sh",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946951103
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy sho",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946951130
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy show",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946951276
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showc",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946951425
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showca",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946951619
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcas",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946951719
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946951798
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase ",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946951932
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase f",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946952099
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase fe",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946952293
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase fea",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946952381
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase feat",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946952456
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featu",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946952546
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featur",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946952681
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuri",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946952767
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featurin",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946952846
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946952915
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring ",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946953056
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring l",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946954235
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring ",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946954479
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring t",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946954562
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring ta",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946954683
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring tal",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946954756
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring tale",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946954873
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talen",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946954960
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talent",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946955098
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talente",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946955193
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946955375
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented ",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946955493
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented l",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946955631
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented lo",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946955779
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented loc",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946955888
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented loca",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946955994
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946956064
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local ",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946956146
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local c",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946956274
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local co",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946956350
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local com",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946956449
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local come",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946956520
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comed",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946956706
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedi",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946956761
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedia",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946956885
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedian",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946956965
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946957110
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians ",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946957208
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians a",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946957306
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians an",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946957415
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946957491
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and ",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946957574
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and r",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946957705
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and ri",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946957828
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and ris",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946957919
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and risi",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946957995
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and risin",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946958085
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and rising",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946958099
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and rising ",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946958229
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and rising s",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946958390
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and rising st",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946958482
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and rising sta",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946958593
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and rising star",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946958683
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and rising start",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946958850
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and rising start.",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946958971
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and rising start",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946959380
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and rising star",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946959522
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and rising stars",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946959629
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and rising stars.",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946959810
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Write your event description here",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > textarea"
+      },
+      "value": "N",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946964926
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Write your event description here",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > textarea"
+      },
+      "value": "Need date night plans? Or just a fun hang with friends? Misconduct Comedy has got you covered with Philly's best comedians in a cozy venue. Experience Philadelphia's best stand-up comedy showcase featuring talented local comedians and rising stars. An unforgettable night of laughs in the heart of Center City. 21+ only.",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946965388
+    },
+    {
+      "type": "submit",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(2) > div:nth-child(4) > button:nth-child(2)"
+      },
+      "label": "Next →",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946967280
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Ticket or RSVP link",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(6) > div:nth-child(2) > div:nth-child(1) > textarea"
+      },
+      "value": "https://misconductcomedy.com/",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782946975616
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Ticket or RSVP link",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(6) > div:nth-child(2) > div:nth-child(1) > textarea"
+      },
+      "value": "https://misconductcomedy.com/?utm_source=goodthingphl&utm_medium=web&utm_campaign=july102026",
+      "inputType": "textarea",
+      "tagName": "TEXTAREA",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947012261
+    },
+    {
+      "type": "select",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(6) > div:nth-child(2) > div:nth-child(2) > select"
+      },
+      "value": "\"no\"",
+      "inputType": "select-one",
+      "tagName": "SELECT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947014784
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Min. price",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(6) > div:nth-child(2) > div:nth-child(2) > div > input:nth-child(1)"
+      },
+      "value": "",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947016062
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Min. price",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(6) > div:nth-child(2) > div:nth-child(2) > div > input:nth-child(1)"
+      },
+      "value": "$2",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947016141
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Max. price",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(6) > div:nth-child(2) > div:nth-child(2) > div > input:nth-child(2)"
+      },
+      "value": "",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947016649
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "placeholder": "Max. price",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(6) > div:nth-child(2) > div:nth-child(2) > div > input:nth-child(2)"
+      },
+      "value": "$2",
+      "inputType": "text",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947016714
+    },
+    {
+      "type": "submit",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(2) > div:nth-child(5) > button:nth-child(2)"
+      },
+      "label": "Next →",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947017411
+    },
+    {
+      "type": "select",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(2) > select:nth-child(1)"
+      },
+      "value": "\"comedy\"",
+      "inputType": "select-one",
+      "tagName": "SELECT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947020843
+    },
+    {
+      "type": "select",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(2) > select:nth-child(2)"
+      },
+      "value": "\"live_entertainment\"",
+      "inputType": "select-one",
+      "tagName": "SELECT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947027251
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(2) > input"
+      },
+      "value": "C",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947031351
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(2) > input"
+      },
+      "value": "Co",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947031578
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(2) > input"
+      },
+      "value": "Com",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947031661
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(2) > input"
+      },
+      "value": "Come",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947031798
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(2) > input"
+      },
+      "value": "Comed",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947031998
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(2) > input"
+      },
+      "value": "Comedy",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947032085
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(2) > input"
+      },
+      "value": "Comedy ",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947032455
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(3) > input"
+      },
+      "value": "S",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947032902
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(3) > input"
+      },
+      "value": "St",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947033095
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(3) > input"
+      },
+      "value": "Sta",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947033181
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(3) > input"
+      },
+      "value": "Stan",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947033301
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(3) > input"
+      },
+      "value": "Stand",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947033414
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(3) > input"
+      },
+      "value": "Standu",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947033528
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(3) > input"
+      },
+      "value": "Standup",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947033593
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(3) > input"
+      },
+      "value": "Standup ",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947033873
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(4) > input"
+      },
+      "value": "L",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947039808
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(4) > input"
+      },
+      "value": "La",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947039993
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(4) > input"
+      },
+      "value": "Lat",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947040196
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(4) > input"
+      },
+      "value": "Late",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947040278
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(4) > input"
+      },
+      "value": "Late ",
+      "inputType": "search",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947041146
+    },
+    {
+      "type": "submit",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(2) > div:nth-child(6) > button:nth-child(2)"
+      },
+      "label": "Next →",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947067661
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(8) > div > div:nth-child(2) > div:nth-child(1) > div > input"
+      },
+      "value": "C:\\fakepath\\SquareImage.png",
+      "inputType": "file",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947075703
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(8) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > input"
+      },
+      "value": "C:\\fakepath\\SquareImage2.png",
+      "inputType": "file",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947078717
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(8) > div > div:nth-child(2) > div:nth-child(3) > div > input"
+      },
+      "value": "C:\\fakepath\\SquareImage3.png",
+      "inputType": "file",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947081683
+    },
+    {
+      "type": "input",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(8) > div > div:nth-child(2) > div:nth-child(4) > div > input"
+      },
+      "value": "C:\\fakepath\\SquareImage4.png",
+      "inputType": "file",
+      "tagName": "INPUT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947084899
+    },
+    {
+      "type": "submit",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(2) > div:nth-child(7) > button:nth-child(2)"
+      },
+      "label": "Next →",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947088380
+    },
+    {
+      "type": "select",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(9) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) > select"
+      },
+      "value": "\"5_\"",
+      "inputType": "select-one",
+      "tagName": "SELECT",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947090869
+    },
+    {
+      "type": "submit",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(9) > div:nth-child(2) > button:nth-child(1)"
+      },
+      "label": "Submit payment",
+      "url": "https://goodthingsphl.com/dash/zade",
+      "timestamp": 1782947093874
+    }
+  ]
+}

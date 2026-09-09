@@ -10,7 +10,7 @@
         font-family: 'Smythe';
         font-style: normal;
         font-weight: 400;
-        src: url('/Smythe-Regular.ttf') format('truetype');
+        src: url('/fonts/Smythe-Regular.ttf') format('truetype');
     }
 
     body,
