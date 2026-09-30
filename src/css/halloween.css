@@ -1,0 +1,127 @@
+/* ===================================================
+   halloween.css — seasonal decorations overlay
+   Self-contained: delete this file + the halloween-decorations.njk
+   include + the "halloweenMode" flag in _data/site.js to remove
+   all Halloween theming after the holiday.
+   =================================================== */
+
+@font-face {
+  font-family: 'Eater';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Eater-Regular.ttf') format('truetype');
+}
+
+.hw-hero-badge {
+  display: inline-block;
+  font-family: 'Eater', 'DM Sans', sans-serif;
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  color: #ff8c1a;
+  text-shadow: 0 0 10px rgba(255, 140, 26, 0.55), 0 2px 4px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.75rem;
+}
+
+.hw-active .h2-hero .mc-scarcity {
+  display: none;
+}
+
+.hw-decorations {
+  position: fixed;
+  inset: 0;
+  z-index: 40; /* below the nav (100) so it never blocks it */
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hw-decorations img {
+  position: fixed;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
+}
+
+.hw-web-tl {
+  top: 0;
+  left: 0;
+  width: clamp(200px, 14vw, 400px);
+}
+
+.hw-web-tr {
+  top: 0;
+  right: 0;
+  width: clamp(150px, 14vw, 300px);
+  transform: scale(1, -1);
+}
+
+.hw-web-br {
+  bottom: 0;
+  right: 0;
+  width: clamp(150px, 10vw, 400px);
+  transform: scale(1, -1);
+}
+
+.hw-spider {
+  top: 0;
+  right: clamp(60px, 9vw, 130px);
+  width: clamp(28px, 4vw, 44px);
+  transform-origin: top center;
+  animation: hw-dangle 4.5s ease-in-out infinite;
+}
+
+.hw-ghost {
+  top: 18%;
+  left: clamp(-10px, 2vw, 20px);
+  width: clamp(40px, 5vw, 64px);
+  opacity: 0.9;
+  animation: hw-drift 7s ease-in-out infinite;
+}
+
+.hw-pumpkin {
+  bottom: clamp(-6px, 1vw, 10px);
+  right: clamp(10px, 3vw, 32px);
+  width: clamp(50px, 6vw, 84px);
+}
+
+.hw-hat {
+  bottom: clamp(-4px, 1vw, 12px);
+  left: clamp(70px, 9vw, 140px);
+  width: clamp(40px, 5vw, 60px);
+}
+
+.hw-gravestone {
+  bottom: clamp(-4px, 1vw, 12px);
+  left: clamp(10px, 3vw, 30px);
+  width: clamp(36px, 5vw, 56px);
+}
+
+.hw-hand {
+  bottom: clamp(-10px, 1vw, 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(30px, 4vw, 48px);
+}
+
+@keyframes hw-dangle {
+  0%, 100% { transform: rotate(-6deg); }
+  50% { transform: rotate(6deg); }
+}
+
+@keyframes hw-drift {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(16px); }
+}
+
+@media (max-width: 640px) {
+  .hw-hat,
+  .hw-gravestone,
+  .hw-hand {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hw-spider,
+  .hw-ghost {
+    animation: none;
+  }
+}

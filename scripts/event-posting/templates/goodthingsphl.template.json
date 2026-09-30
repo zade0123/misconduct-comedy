@@ -1,0 +1,330 @@
+{
+  "site": "goodthingsphl",
+  "generatedAt": "2026-07-01T23:05:10.619Z",
+  "recordingFile": "recordings/goodthingsphl.recording.json",
+  "imageRequirements": {
+    "comment": "Optional. Define image size requirements for this site.",
+    "width": 1200,
+    "height": 675,
+    "aspectRatio": "16:9",
+    "fit": "cover",
+    "format": "jpg",
+    "quality": 90
+  },
+  "steps": [
+    {
+      "action": "navigate",
+      "url": "https://goodthingsphl.com/login",
+      "value": "https://goodthingsphl.com/login",
+      "comment": "Opening the event submission page"
+    },
+    {
+      "action": "submit",
+      "label": "POST AN EVENT",
+      "selectors": {
+        "css": "html > body > div:nth-child(4) > div:nth-child(1) > div:nth-child(1) > div > div > div > div:nth-child(1) > button"
+      },
+      "url": "https://goodthingsphl.com/things",
+      "comment": "Submit the form"
+    },
+    {
+      "action": "submit",
+      "label": "Post an event",
+      "selectors": {
+        "css": "html > body > div:nth-child(4) > div:nth-child(1) > div > div:nth-child(1) > div:nth-child(2) > div > button:nth-child(1)"
+      },
+      "url": "https://goodthingsphl.com/dash/zade",
+      "comment": "Submit the form"
+    },
+    {
+      "action": "submit",
+      "label": "Next →",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(2) > button"
+      },
+      "url": "https://goodthingsphl.com/dash/zade",
+      "comment": "Submit the form"
+    },
+    {
+      "action": "fill",
+      "label": "Event Title",
+      "selectors": {
+        "placeholder": "Event Title",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(2) > textarea"
+      },
+      "recordedValue": "Misconduct Comedy Showcase",
+      "value": "Misconduct Comedy Showcase",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "fill",
+      "label": "",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(3) > div:nth-child(2) > div:nth-child(1) > div > input"
+      },
+      "recordedValue": "C:\\fakepath\\SEO Square Poster.png",
+      "value": "C:\\fakepath\\SEO Square Poster.png",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "submit",
+      "label": "Next →",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(2) > div > button:nth-child(2)"
+      },
+      "url": "https://goodthingsphl.com/dash/zade",
+      "comment": "Submit the form"
+    },
+    {
+      "action": "fill",
+      "label": "Venue Name",
+      "selectors": {
+        "placeholder": "Venue Name",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(1) > textarea"
+      },
+      "recordedValue": "Misconduct Tavern",
+      "value": "Misconduct Tavern",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "fill",
+      "label": "Venue Address",
+      "selectors": {
+        "placeholder": "Venue Address",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(2) > textarea"
+      },
+      "recordedValue": "1511 Locust St, Philadelphia PA 19103",
+      "value": "1511 Locust St, Philadelphia PA 19103",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "select",
+      "label": "",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(4) > div:nth-child(2) > div:nth-child(1) > div > div:nth-child(3) > select"
+      },
+      "recordedValue": "\"rittenhouse\"",
+      "value": "\"rittenhouse\"",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "submit",
+      "label": "Next →",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(2) > div:nth-child(3) > button:nth-child(2)"
+      },
+      "url": "https://goodthingsphl.com/dash/zade",
+      "comment": "Submit the form"
+    },
+    {
+      "action": "fill",
+      "label": "1 short sentence describing your event",
+      "selectors": {
+        "placeholder": "1 short sentence describing your event",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > input"
+      },
+      "recordedValue": "See Philly's best stand up comedy showcase featuring talented local comedians and rising stars.",
+      "value": "See Philly's best stand up comedy showcase featuring talented local comedians and rising stars.",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "fill",
+      "label": "Write your event description here",
+      "selectors": {
+        "placeholder": "Write your event description here",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(5) > div:nth-child(2) > div > textarea"
+      },
+      "recordedValue": "Need date night plans? Or just a fun hang with friends? Misconduct Comedy has got you covered with Philly's best comedians in a cozy venue. Experience Philadelphia's best stand-up comedy showcase featuring talented local comedians and rising stars. An unforgettable night of laughs in the heart of Center City. 21+ only.",
+      "value": "Need date night plans? Or just a fun hang with friends? Misconduct Comedy has got you covered with Philly's best comedians in a cozy venue. Experience Philadelphia's best stand-up comedy showcase featuring talented local comedians and rising stars. An unforgettable night of laughs in the heart of Center City. 21+ only.",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "submit",
+      "label": "Next →",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(2) > div:nth-child(4) > button:nth-child(2)"
+      },
+      "url": "https://goodthingsphl.com/dash/zade",
+      "comment": "Submit the form"
+    },
+    {
+      "action": "fill",
+      "label": "Ticket or RSVP link",
+      "selectors": {
+        "placeholder": "Ticket or RSVP link",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(6) > div:nth-child(2) > div:nth-child(1) > textarea"
+      },
+      "recordedValue": "https://misconductcomedy.com/?utm_source=goodthingphl&utm_medium=web&utm_campaign=july102026",
+      "value": "https://misconductcomedy.com/?utm_source=goodthingphl&utm_medium=web&utm_campaign=july102026",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "select",
+      "label": "",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(6) > div:nth-child(2) > div:nth-child(2) > select"
+      },
+      "recordedValue": "\"no\"",
+      "value": "\"no\"",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "fill",
+      "label": "Min. price",
+      "selectors": {
+        "placeholder": "Min. price",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(6) > div:nth-child(2) > div:nth-child(2) > div > input:nth-child(1)"
+      },
+      "recordedValue": "$2",
+      "value": "$2",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "fill",
+      "label": "Max. price",
+      "selectors": {
+        "placeholder": "Max. price",
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(6) > div:nth-child(2) > div:nth-child(2) > div > input:nth-child(2)"
+      },
+      "recordedValue": "$2",
+      "value": "$2",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "submit",
+      "label": "Next →",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(2) > div:nth-child(5) > button:nth-child(2)"
+      },
+      "url": "https://goodthingsphl.com/dash/zade",
+      "comment": "Submit the form"
+    },
+    {
+      "action": "select",
+      "label": "",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(2) > select:nth-child(1)"
+      },
+      "recordedValue": "\"comedy\"",
+      "value": "\"comedy\"",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "select",
+      "label": "",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(2) > select:nth-child(2)"
+      },
+      "recordedValue": "\"live_entertainment\"",
+      "value": "\"live_entertainment\"",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "fill",
+      "label": "",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(2) > input"
+      },
+      "recordedValue": "Comedy ",
+      "value": "Comedy ",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "fill",
+      "label": "",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(3) > input"
+      },
+      "recordedValue": "Standup ",
+      "value": "Standup ",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "fill",
+      "label": "",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(7) > div:nth-child(3) > div:nth-child(2) > span > span:nth-child(1) > span > ul > li:nth-child(4) > input"
+      },
+      "recordedValue": "Late ",
+      "value": "Late ",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "submit",
+      "label": "Next →",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(2) > div:nth-child(6) > button:nth-child(2)"
+      },
+      "url": "https://goodthingsphl.com/dash/zade",
+      "comment": "Submit the form"
+    },
+    {
+      "action": "fill",
+      "label": "",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(8) > div > div:nth-child(2) > div:nth-child(1) > div > input"
+      },
+      "recordedValue": "C:\\fakepath\\SquareImage.png",
+      "value": "C:\\fakepath\\SquareImage.png",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "fill",
+      "label": "",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(8) > div > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) > input"
+      },
+      "recordedValue": "C:\\fakepath\\SquareImage2.png",
+      "value": "C:\\fakepath\\SquareImage2.png",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "fill",
+      "label": "",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(8) > div > div:nth-child(2) > div:nth-child(3) > div > input"
+      },
+      "recordedValue": "C:\\fakepath\\SquareImage3.png",
+      "value": "C:\\fakepath\\SquareImage3.png",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "fill",
+      "label": "",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(8) > div > div:nth-child(2) > div:nth-child(4) > div > input"
+      },
+      "recordedValue": "C:\\fakepath\\SquareImage4.png",
+      "value": "C:\\fakepath\\SquareImage4.png",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "submit",
+      "label": "Next →",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(2) > div:nth-child(7) > button:nth-child(2)"
+      },
+      "url": "https://goodthingsphl.com/dash/zade",
+      "comment": "Submit the form"
+    },
+    {
+      "action": "select",
+      "label": "",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(9) > div:nth-child(1) > div:nth-child(2) > div > div:nth-child(1) > select"
+      },
+      "recordedValue": "\"5_\"",
+      "value": "\"5_\"",
+      "comment": "Replace recordedValue with a {{variable}} expression"
+    },
+    {
+      "action": "submit",
+      "label": "Submit payment",
+      "selectors": {
+        "css": "html > body > div:nth-child(34) > div > div:nth-child(1) > div:nth-child(9) > div:nth-child(2) > button:nth-child(1)"
+      },
+      "url": "https://goodthingsphl.com/dash/zade",
+      "comment": "Submit the form"
+    }
+  ]
+}
