@@ -123,6 +123,10 @@ bodyClass: home2-page
         <span class="mc-headline-accent">Night Out.</span>
       </h1>
 
+      {%- if site.halloweenMode -%}
+      <div class="hw-hero-badge">🎃 Halloween Special! 🎃</div>
+      {%- endif -%}
+      
       {%- set heroShow = null -%}
       {%- for show in collections.showsByDate -%}
         {%- if show.data.featured and not heroShow -%}{%- set heroShow = show -%}{%- endif -%}

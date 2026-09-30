@@ -16,7 +16,7 @@
         <link rel="preload" as="font" href="/fonts/dm-sans-latin.woff2" type="font/woff2" crossorigin>
         <link rel="preload" as="font" href="/fonts/dm-sans-italic-latin.woff2" type="font/woff2" crossorigin>
         <link rel="preload" as="font" href="/fonts/fontdiner-swanky-latin.woff2" type="font/woff2" crossorigin>
-        <style>{{ "root.css" | inlineCss | safe }}{{ (stylesheet or "index.css") | inlineCss | safe }}</style>
+        <style>{{ "root.css" | inlineCss | safe }}{{ (stylesheet or "index.css") | inlineCss | safe }}{% if site.halloweenMode %}{{ "halloween.css" | inlineCss | safe }}{% endif %}</style>
 
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-H7GJ0KWS9R"></script>
@@ -37,7 +37,8 @@
         
         <title>{{ pageTitle or title }}</title>
     </head>
-    <body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
+    <body{% if bodyClass or site.halloweenMode %} class="{{ bodyClass }}{% if bodyClass and site.halloweenMode %} {% endif %}{% if site.halloweenMode %}hw-active{% endif %}"{% endif %}>
+        {% include "halloween-decorations.njk" %}
         {{ content | safe }}
     </body>
 </html>

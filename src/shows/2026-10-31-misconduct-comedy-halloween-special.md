@@ -2,7 +2,7 @@
 layout: show.njk
 title: Misconduct Comedy Halloween Special
 showDate: October 31, 2026
-subtitle: A Spooky Night of Stand-Up Comedy
+subtitle: A Spooky Night of Stand-Up Comedy (Costumes Encouraged!)
 description: Celebrate Halloween with Philly's best comedians! Misconduct
   Comedy is taking over Halloween night with a special two-show event in the
   heart of Center City. Costumes encouraged. 21+ only.
@@ -42,7 +42,7 @@ ticketSaleStart: 2026-8-01T12:00:00.000-04:00
 ticketSaleEnd: 2026-10-31T21:30:00.000-04:00
 totalTickets: 40
 showType: 🎃 Halloween Special 🎃
-featured: false
+featured: true
 available: true
 ageRestriction: 21+
 organizerName: Misconduct Comedy
