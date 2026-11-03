@@ -2,6 +2,67 @@
   command = "npm run build"
   publish = "_site"
 
+# 301 redirects for past show pages (removed after each show)
+[[redirects]]
+  from = "/shows/april-19-2026/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/shows/april-25-2026/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/shows/may-8-2026/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/shows/may-9-2026/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/shows/may-29-2026/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/shows/may-30-2026/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/shows/july-10-2026/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/shows/july-25-2026/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/shows/august-22-2026/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/shows/september-5-2026/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/shows/september-26-2026/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/shows/october-31-2026/"
+  to = "/"
+  status = 301
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
