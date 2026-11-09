@@ -79,6 +79,7 @@
   font-weight: 400;
   line-height: 1.15;
   color: var(--h2-cream);
+  text-shadow: 6px 6px 0 rgba(0, 0, 0, 0.8);
   margin: 0;
 }
 

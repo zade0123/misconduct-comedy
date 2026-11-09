@@ -113,6 +113,12 @@ bodyClass: home2-page
     <!-- CTA panel (left on desktop, bottom on mobile) -->
     <div class="h2-hero-panel">
 
+      <div class="mc-tickets-badge mc-tickets-badge--mobile" role="status">
+        <span class="mc-tickets-badge-line">Over</span>
+        <span class="mc-tickets-badge-num">2,000</span>
+        <span class="mc-tickets-badge-line">Tickets Sold</span>
+      </div>
+
       <div class="mc-topper">
         <div class="mc-topper-rule" aria-hidden="true"></div>
         <span class="mc-topper-text">Standup Comedy &middot; Philadelphia</span>
@@ -160,11 +166,6 @@ bodyClass: home2-page
         <span class="mc-headshots-label">5&ndash;7 of Philly &amp; NYC's Best Comics</span>
       </div>
 
-      <div class="mc-scarcity" role="status">
-        <div class="mc-scarcity-dot" aria-hidden="true"></div>
-        <span class="mc-scarcity-text">Shows sell out fast &mdash; grab your tickets</span>
-      </div>
-
       {%- if heroShow -%}
         {%- set heroTicketUrl = null -%}
         {%- set heroEbEventId = null -%}
@@ -193,6 +194,12 @@ bodyClass: home2-page
         <span class="mc-review-text">&ldquo;Perfect date night&rdquo; &mdash; Jess K.</span>
       </div>
     </div><!-- /.h2-hero-panel -->
+
+    <div class="mc-tickets-badge mc-tickets-badge--desktop" role="status">
+      <span class="mc-tickets-badge-line">Over</span>
+      <span class="mc-tickets-badge-num">2,000</span>
+      <span class="mc-tickets-badge-line">Tickets Sold</span>
+    </div>
 
   </section><!-- /.h2-hero -->
 

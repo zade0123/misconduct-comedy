@@ -532,6 +532,47 @@ body.home2-page {
   color: var(--h2-accent);
 }
 
+/* ── Tickets sold badge ── */
+.mc-tickets-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: var(--h2-bg-deep);
+  border: 3px solid var(--h2-accent);
+  border-radius: 999px;
+  padding: 14px 34px;
+  white-space: nowrap;
+}
+
+.mc-tickets-badge--desktop {
+  position: absolute;
+  bottom: 64px;
+  right: 64px;
+  z-index: 3;
+  transform: rotate(-8deg);
+}
+
+.mc-tickets-badge--mobile {
+  display: none;
+}
+
+.mc-tickets-badge-line {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--h2-cream);
+}
+
+.mc-tickets-badge-num {
+  font-family: 'Fontdiner Swanky', cursive;
+  font-size: 44px;
+  line-height: 1;
+  color: var(--h2-accent);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.8);
+}
+
 /* ── Ticket buttons ── */
 .h2-ticket-btn {
   display: inline-flex;
@@ -623,8 +664,36 @@ body.home2-page {
     font-size: 11px;
   }
 
+  .h2-hero .mc-topper {
+    display: none;
+  }
+
   .mc-scarcity-text {
     font-size: 13px;
+  }
+
+  .mc-tickets-badge--desktop {
+    display: none;
+  }
+
+  .mc-tickets-badge--mobile {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 6px;
+    padding: 6px 14px;
+    border-width: 2px;
+    transform: rotate(-2deg);
+    align-self: flex-start;
+  }
+
+  .mc-tickets-badge-line {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+  }
+
+  .mc-tickets-badge-num {
+    font-size: 18px;
   }
 }
 
