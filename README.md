@@ -5,7 +5,7 @@ This website is built with 11ty (Eleventy) static site generator and Decap CMS f
 ## Getting Started
 
 ### Prerequisites
-- Node.js and npm installed
+- Node.js 24 LTS (recommended; includes npm)
 
 ### Installation
 
@@ -13,6 +13,19 @@ This website is built with 11ty (Eleventy) static site generator and Decap CMS f
 ```bash
 npm install
 ```
+
+In PowerShell, if script execution blocks `npm.ps1`, use `npm.cmd` instead
+(for example, `npm.cmd install`).
+
+### Dependency Security
+
+Run `npm audit` to check dependencies and `npm test` to run the security
+regression tests. Temporary overrides for `@decap/cli@0.1.3` replace the
+unmaintained `@hapi/joi` with patched Joi 17 and use Zod 4 for the MCP SDK.
+Zod 4 is outside the CLI's declared version range, so verify the local CMS
+and MCP functionality when updating Decap or removing these overrides. Zod 4
+still bundles a legacy `zod/v3` compatibility API that is susceptible to
+oversized-array validation; do not use it to validate untrusted input.
 
 ### Development
 
@@ -175,6 +188,7 @@ misconduct-comedy/
 | `npm start` | Start 11ty dev server only |
 | `npm run cms` | Start Decap CMS backend only |
 | `npm run build` | Build site for production |
+| `npm test` | Run security regression tests |
 - Modify layouts in `src/_includes/`
 - Update styles in `src/css/`
 - Configure CMS in `src/admin/config.yml`

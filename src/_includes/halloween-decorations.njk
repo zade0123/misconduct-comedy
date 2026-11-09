@@ -1,0 +1,15 @@
+{# Seasonal Halloween decorations — remove this include + halloween.css
+   + the halloweenMode flag in _data/site.js to take them down after the holiday. #}
+{% if site.halloweenMode %}
+<div class="hw-decorations" aria-hidden="true">
+  <img class="hw-web-tl" src="/images/Halloween/spider-web-corner-1.png" alt="" loading="eager">
+  <img class="hw-web-tr" src="/images/Halloween/spider-web-corner-3.png" alt="" loading="eager">
+  <img class="hw-web-br" src="/images/Halloween/spider-web-corner-2.png" alt="" loading="eager">
+  <img class="hw-spider" src="/images/Halloween/spider.png" alt="" loading="eager">
+  <img class="hw-ghost" src="/images/Halloween/ghost.png" alt="" loading="eager">
+  <img class="hw-pumpkin" src="/images/Halloween/jack-o-lantern.png" alt="" loading="eager">
+  <img class="hw-hat" src="/images/Halloween/hat.png" alt="" loading="eager">
+  <img class="hw-gravestone" src="/images/Halloween/gravestone.png" alt="" loading="eager">
+  <img class="hw-hand" src="/images/Halloween/evil-hand.png" alt="" loading="eager">
+</div>
+{% endif %}
