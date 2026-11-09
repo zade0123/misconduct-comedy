@@ -38,7 +38,7 @@ ticketSaleStart: 2026-11-03T12:00:00.000-05:00
 ticketSaleEnd: 2026-12-18T20:00:00.000-05:00
 totalTickets: 40
 showType: Showcase
-featured: false
+featured: true
 available: true
 ageRestriction: 21+
 organizerName: Misconduct Comedy

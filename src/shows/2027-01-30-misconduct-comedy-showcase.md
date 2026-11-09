@@ -1,7 +1,7 @@
 ---
 layout: show.njk
 title: Misconduct Comedy Showcase
-showDate: November 21, 2026
+showDate: January 30, 2027
 subtitle: Featuring Philly's Best Standup Acts
 description: Need date night plans? Or just a fun hang with friends? Misconduct
   Comedy has got you covered with Philly's best comedians in a cozy venue.
@@ -9,8 +9,8 @@ description: Need date night plans? Or just a fun hang with friends? Misconduct
   local comedians and rising stars. An unforgettable night of laughs in the
   heart of Center City. 21+ only.
 showtimes:
-  - startDate: 2026-11-21T20:00:00.000-05:00
-    endDate: 2026-11-21T21:30:00.000-05:00
+  - startDate: 2027-01-30T20:00:00.000-05:00
+    endDate: 2027-01-30T21:30:00.000-05:00
     ticketUrl: https://www.eventbrite.com/e/misconduct-comedy-show-featuring-phillys-best-standup-acts-november-tickets-2004329060174
     eventbriteEventId: "2004329060174"
     ticketPrice: 20
@@ -35,10 +35,10 @@ images:
     src: /photos/shows/RoomMic.webp
 priceCurrency: USD
 ticketSaleStart: 2026-11-03T12:00:00.000-05:00
-ticketSaleEnd: 2026-11-21T20:00:00.000-05:00
+ticketSaleEnd: 2027-01-30T20:00:00.000-05:00
 totalTickets: 40
 showType: Showcase
-featured: true
+featured: false
 available: true
 ageRestriction: 21+
 organizerName: Misconduct Comedy
